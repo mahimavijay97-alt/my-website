@@ -8326,3 +8326,13 @@ main { position: relative; z-index: 10; }
     height: 1250px;
   }
 }
+
+.mobile-toggle {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-toggle {
+    display: none;
+  }
+}

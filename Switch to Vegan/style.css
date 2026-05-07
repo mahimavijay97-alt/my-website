@@ -8336,3 +8336,12 @@ main { position: relative; z-index: 10; }
     display: none;
   }
 }
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "name": "Switch To Vegan",
+ "url": "https://switchtovegan.in/"
+}
+</script>

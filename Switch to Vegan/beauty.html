@@ -13,6 +13,409 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="beauty.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .beauty-page {
+  --bt-primary: var(--primary-color, #2f6b47);
+  --bt-primary-dark: #214d33;
+  --bt-rose: #b87a7a;
+  --bt-rose-soft: #f5e6e6;
+  --bt-accent: var(--accent-color, #d7efe1);
+  --bt-gold: var(--accent2-color, #d6b970);
+  --bt-surface: rgba(255, 255, 255, 0.85);
+  --bt-surface-strong: #ffffff;
+  --bt-border: rgba(34, 55, 36, 0.12);
+  --bt-text: var(--text-primary, #1f2a22);
+  --bt-muted: var(--text-secondary, #5f6d63);
+  --bt-shadow-soft: 0 14px 32px rgba(21, 31, 23, 0.06);
+  --bt-shadow-medium: 0 24px 60px rgba(21, 31, 23, 0.08);
+  --bt-radius-sm: 14px;
+  --bt-radius-md: 20px;
+  --bt-radius-lg: 28px;
+  --bt-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Layout & rhythm */
+.beauty-page main { padding-bottom: 24px; }
+.beauty-page .section { padding: 72px 0; }
+.beauty-page .alt-section {
+  background:
+    radial-gradient(circle at top right, rgba(215, 239, 225, 0.55), transparent 45%),
+    rgba(255, 255, 255, 0.45);
+}
+.beauty-page .narrow-container { max-width: 1200px; }
+.beauty-page .nutrition-hero { padding: 88px 0 48px; }
+
+/* Typography */
+.beauty-page h1 em {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-style: italic; color: var(--bt-primary);
+}
+.beauty-page h2 { font-size: clamp(1.9rem, 3.4vw, 2.4rem); margin-bottom: 16px; }
+.beauty-page h3 { font-size: 1.15rem; }
+.beauty-page p  { line-height: 1.75; }
+
+.beauty-page .hero-meta {
+  display: flex; flex-wrap: wrap; gap: 28px;
+  margin-top: 28px; padding-top: 24px;
+  border-top: 1px solid var(--bt-border);
+}
+.beauty-page .hero-meta div { display: flex; flex-direction: column; }
+.beauty-page .hero-meta strong {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.6rem; color: var(--bt-primary); line-height: 1;
+}
+.beauty-page .hero-meta span {
+  font-size: .78rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--bt-muted); margin-top: 6px;
+}
+
+/* 1. Intro pillars */
+.beauty-page .intro-pillars {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 18px; margin-top: 28px;
+}
+.beauty-page .pillar {
+  background: var(--bt-surface); border: 1px solid var(--bt-border);
+  border-radius: var(--bt-radius-md); padding: 24px;
+  box-shadow: var(--bt-shadow-soft);
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease);
+}
+.beauty-page .pillar:hover {
+  transform: translateY(-3px); box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .pillar-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(47, 107, 71, .1); color: var(--bt-primary);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; margin-bottom: 12px;
+}
+.beauty-page .pillar h3 { margin: 4px 0 6px; color: var(--bt-primary-dark); }
+.beauty-page .pillar p { color: var(--bt-muted); margin: 0; line-height: 1.6; }
+
+/* 2. Ingredient cards */
+.beauty-page .ingredient-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 14px; margin-top: 28px;
+}
+.beauty-page .ingredient-card {
+  background: var(--bt-surface-strong); border: 1px solid var(--bt-border);
+  border-left: 4px solid var(--bt-rose);
+  border-radius: var(--bt-radius-sm); padding: 20px 22px;
+  box-shadow: var(--bt-shadow-soft);
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease);
+}
+.beauty-page .ingredient-card:hover {
+  transform: translateY(-3px); box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .ingredient-name {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.4rem; font-weight: 700; color: var(--bt-primary-dark);
+  margin-bottom: 4px;
+}
+.beauty-page .ingredient-card p { color: var(--bt-muted); margin: 0; line-height: 1.55; font-size: .92rem; }
+
+/* Comfort callout (shared) */
+.beauty-page .comfort-callout {
+  margin-top: 28px; padding: 18px 22px;
+  border-radius: var(--bt-radius-sm);
+  background: rgba(215, 239, 225, .55);
+  border-left: 4px solid var(--bt-primary);
+  color: var(--bt-text); line-height: 1.6;
+}
+.beauty-page .comfort-callout.soft {
+  background: rgba(214, 185, 112, .12);
+  border-left-color: var(--bt-gold);
+}
+
+/* 3. Vegan vs Cruelty-Free */
+.beauty-page .compare-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 18px; margin-top: 28px;
+}
+.beauty-page .compare-card {
+  background: var(--bt-surface-strong); border: 1px solid var(--bt-border);
+  border-radius: var(--bt-radius-md); padding: 28px;
+  box-shadow: var(--bt-shadow-soft); text-align: center;
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease), border-color .25s var(--bt-ease);
+}
+.beauty-page .compare-card:hover {
+  transform: translateY(-4px); border-color: rgba(47, 107, 71, .35);
+  box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .compare-icon {
+  width: 56px; height: 56px; border-radius: 16px;
+  background: linear-gradient(135deg, rgba(47,107,71,.12), rgba(214,185,112,.18));
+  color: var(--bt-primary);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin-bottom: 14px;
+}
+.beauty-page .compare-card h3 {
+  margin: 0 0 10px; font-size: 1.5rem;
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  color: var(--bt-primary-dark);
+}
+.beauty-page .compare-meaning {
+  font-weight: 600; color: var(--bt-text); margin: 0 0 8px;
+}
+.beauty-page .compare-detail {
+  font-size: .9rem; color: var(--bt-muted); margin: 0; line-height: 1.55;
+}
+.beauty-page .venn-note {
+  margin-top: 22px; padding: 18px 22px;
+  background: linear-gradient(135deg, rgba(47,107,71,.08), rgba(215,239,225,.6));
+  border-radius: var(--bt-radius-sm);
+  border-left: 4px solid var(--bt-primary);
+}
+.beauty-page .venn-note p { margin: 0; line-height: 1.65; }
+.beauty-page .venn-note em {
+  font-style: italic; color: var(--bt-primary-dark); font-weight: 600;
+}
+
+/* 4. Check steps */
+.beauty-page .check-steps {
+  list-style: none; padding: 0; margin: 32px 0 0;
+  display: grid; gap: 20px;
+}
+.beauty-page .check-step {
+  background: var(--bt-surface-strong); border: 1px solid var(--bt-border);
+  border-radius: var(--bt-radius-md); padding: 26px;
+  box-shadow: var(--bt-shadow-soft);
+  display: grid; grid-template-columns: 56px 1fr; gap: 20px;
+  align-items: start;
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease);
+}
+.beauty-page .check-step:hover {
+  transform: translateY(-2px); box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .step-num {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--bt-primary); color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.5rem; font-weight: 700;
+}
+.beauty-page .step-body h3 { margin: 0 0 6px; color: var(--bt-primary-dark); }
+.beauty-page .step-body p { margin: 0 0 10px; color: var(--bt-text); line-height: 1.7; }
+.beauty-page .step-note {
+  font-size: .9rem !important; color: var(--bt-muted) !important;
+  font-style: italic;
+}
+.beauty-page .resource-list {
+  margin: 8px 0 0; padding-left: 20px;
+}
+.beauty-page .resource-list li {
+  margin: 6px 0; color: var(--bt-text); line-height: 1.65;
+}
+
+.beauty-page .logo-row {
+  display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0;
+}
+.beauty-page .logo-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(47, 107, 71, .08); color: var(--bt-primary);
+  font-size: .85rem; font-weight: 600;
+  border: 1px solid rgba(47, 107, 71, .15);
+}
+
+/* 5. Priority cards */
+.beauty-page .priority-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 18px; margin-top: 28px;
+}
+.beauty-page .priority-card {
+  background: var(--bt-surface); border: 1px solid var(--bt-border);
+  border-radius: var(--bt-radius-md); padding: 26px;
+  box-shadow: var(--bt-shadow-soft); position: relative;
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease);
+}
+.beauty-page .priority-card:hover {
+  transform: translateY(-3px); box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .priority-rank {
+  display: inline-block; padding: 4px 12px;
+  background: var(--bt-primary); color: #fff;
+  font-size: .72rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  border-radius: 999px; margin-bottom: 12px;
+}
+.beauty-page .priority-card h3 {
+  margin: 0 0 8px; color: var(--bt-primary-dark);
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.4rem;
+}
+.beauty-page .priority-card p { color: var(--bt-muted); margin: 0; line-height: 1.6; }
+
+/* 6. Don'ts */
+.beauty-page .dont-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 18px; margin-top: 28px;
+}
+.beauty-page .dont-card {
+  background: var(--bt-surface); border: 1px solid var(--bt-border);
+  border-top: 4px solid var(--bt-rose);
+  border-radius: var(--bt-radius-md); padding: 24px;
+  box-shadow: var(--bt-shadow-soft);
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease);
+}
+.beauty-page .dont-card:hover {
+  transform: translateY(-3px); box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .dont-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--bt-rose-soft); color: var(--bt-rose);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; margin-bottom: 12px;
+}
+.beauty-page .dont-card h3 { margin: 4px 0 6px; color: var(--bt-rose); }
+.beauty-page .dont-card p { color: var(--bt-muted); margin: 0; line-height: 1.6; }
+
+/* 7. Mistake list */
+.beauty-page .mistake-list { margin-top: 28px; display: grid; gap: 12px; }
+.beauty-page .mistake-item {
+  background: var(--bt-surface); border: 1px solid var(--bt-border);
+  border-radius: var(--bt-radius-sm); padding: 20px 22px;
+  box-shadow: var(--bt-shadow-soft);
+  display: grid; grid-template-columns: 44px 1fr; gap: 16px;
+  align-items: start;
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease);
+}
+.beauty-page .mistake-item:hover {
+  transform: translateX(2px); box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .mistake-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: rgba(214, 185, 112, .15); color: #8a6f1f;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+}
+.beauty-page .mistake-item h3 {
+  margin: 4px 0 4px; color: var(--bt-primary-dark);
+  font-size: 1.05rem;
+}
+.beauty-page .mistake-item p { margin: 0; color: var(--bt-muted); line-height: 1.6; font-size: .95rem; }
+
+/* 8. First step box */
+.beauty-page .first-step-box {
+  background: linear-gradient(135deg, var(--bt-primary), #3f8159);
+  color: #fff;
+  border-radius: var(--bt-radius-lg);
+  padding: 44px;
+  text-align: center;
+  box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .first-step-box .step-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255,255,255,.18);
+  border-radius: 999px;
+  font-size: .72rem; letter-spacing: .12em;
+  text-transform: uppercase; font-weight: 700;
+  margin-bottom: 16px; color: #fff;
+}
+.beauty-page .first-step-box h2 {
+  color: #fff; margin: 0 0 16px;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.35;
+}
+.beauty-page .first-step-box p {
+  color: rgba(255,255,255,.92);
+  margin: 0; max-width: 580px; margin-left: auto; margin-right: auto;
+  line-height: 1.7;
+}
+
+/* 9. Bridge cards (3 across) */
+.beauty-page .bridge-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 18px; margin-top: 28px;
+}
+.beauty-page .bridge-card {
+  display: block; background: var(--bt-surface-strong);
+  border: 1px solid var(--bt-border); border-radius: var(--bt-radius-lg);
+  padding: 26px; text-decoration: none; color: inherit;
+  box-shadow: var(--bt-shadow-soft);
+  transition: transform .25s var(--bt-ease), box-shadow .25s var(--bt-ease), border-color .25s var(--bt-ease);
+}
+.beauty-page .bridge-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--bt-primary);
+  box-shadow: var(--bt-shadow-medium);
+}
+.beauty-page .bridge-card.is-action {
+  background: linear-gradient(135deg, var(--bt-primary), #3f8159);
+  color: #fff; border-color: transparent;
+}
+.beauty-page .bridge-card.is-action h3,
+.beauty-page .bridge-card.is-action .bridge-step,
+.beauty-page .bridge-card.is-action .bridge-cta { color: #fff; }
+.beauty-page .bridge-card.is-action p { color: rgba(255,255,255,.88); }
+.beauty-page .bridge-card.is-action .bridge-icon {
+  background: rgba(255,255,255,.18); color: #fff;
+}
+
+.beauty-page .bridge-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  background: rgba(47, 107, 71, .1); color: var(--bt-primary);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; margin-bottom: 10px;
+}
+.beauty-page .bridge-step {
+  font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--bt-muted); margin: 0 0 4px; font-weight: 700;
+}
+.beauty-page .bridge-card h3 {
+  margin: 0 0 6px; font-size: 1.25rem; color: var(--bt-primary-dark);
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+}
+.beauty-page .bridge-card p {
+  color: var(--bt-muted); margin: 0 0 14px; line-height: 1.55; font-size: .92rem;
+}
+.beauty-page .bridge-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 600; color: var(--bt-primary); font-size: .9rem;
+  transition: gap .25s var(--bt-ease);
+}
+.beauty-page .bridge-card:hover .bridge-cta { gap: 12px; }
+
+/* Disclaimer */
+.beauty-page .disclaimer-box {
+  padding: 24px 28px;
+  background: rgba(214, 185, 112, .12);
+  border-left: 4px solid var(--bt-gold);
+  border-radius: var(--bt-radius-sm);
+}
+.beauty-page .disclaimer-box h2 {
+  color: #8a6f1f; font-size: 1.4rem; margin-top: 0;
+}
+
+/* Mobile */
+@media (max-width: 820px) {
+  .beauty-page .section { padding: 56px 0; }
+  .beauty-page .intro-pillars,
+  .beauty-page .ingredient-grid,
+  .beauty-page .compare-grid,
+  .beauty-page .priority-grid,
+  .beauty-page .dont-grid,
+  .beauty-page .bridge-grid { grid-template-columns: 1fr; }
+  .beauty-page .check-step { padding: 22px; gap: 16px; }
+  .beauty-page .first-step-box { padding: 32px 24px; }
+  .beauty-page .hero-meta { gap: 18px; }
+}
+
+@media (max-width: 480px) {
+  .beauty-page .pillar,
+  .beauty-page .compare-card,
+  .beauty-page .priority-card,
+  .beauty-page .dont-card,
+  .beauty-page .bridge-card { padding: 20px; }
+  .beauty-page .check-step {
+    grid-template-columns: 1fr; gap: 12px;
+  }
+  .beauty-page .step-num { width: 40px; height: 40px; font-size: 1.3rem; }
+  .beauty-page .mistake-item { padding: 18px; gap: 12px; grid-template-columns: 36px 1fr; }
+  .beauty-page .mistake-icon { width: 36px; height: 36px; }
+}
+  </style>
 </head>
 <body class="nutrition-page beauty-page">
   <header class="site-header" id="siteHeader">

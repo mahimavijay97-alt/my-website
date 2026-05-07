@@ -70,7 +70,7 @@
   padding: 0;
 }
 
-..gallery-page .main-nav__links a {
+.gallery-page .main-nav__links a {
   color: var(--home-text);
   font-size: 0.95rem;
   font-weight: 500;

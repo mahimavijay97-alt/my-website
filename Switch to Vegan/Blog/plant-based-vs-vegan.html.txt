@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is Veganism — SwitchToVegan</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #1f2a22;
+      background: #fcfaf5;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      border-bottom: 1px solid rgba(47, 107, 71, 0.12);
+      background: #fcfaf5;
+      padding: 0 2rem;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 64px;
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #2f6b47;
+    }
+
+    .breadcrumb-sep {
+      color: rgba(47, 107, 71, 0.3);
+      font-weight: 300;
+    }
+
+    .breadcrumb-label {
+      font-size: 0.95rem;
+      color: #5f6d63;
+    }
+
+    /* BADGE */
+    .badge {
+      display: inline-block;
+      background: #2f6b47;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(47, 107, 71, 0.12);
+      margin-top: 4rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: #5f6d63;
+      font-size: 0.88rem;
+    }
+
+    /* BLOG POST PAGE */
+    .post-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1rem 5rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #2f6b47;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .post-header {
+      margin-bottom: 1.25rem;
+    }
+
+    .post-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .post-header .meta {
+      display: flex;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: #5f6d63;
+    }
+
+    .post-hero {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 2.5rem;
+    }
+
+    .post-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #1f2a22;
+    }
+
+    .post-body p {
+      color: #5f6d63;
+      line-height: 1.75;
+      margin-bottom: 1.1rem;
+      font-size: 1.02rem;
+    }
+
+    .post-body ul,
+    .post-body ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-body li {
+      color: #5f6d63;
+      margin-bottom: 0.4rem;
+      line-height: 1.65;
+    }
+
+    .post-body strong {
+      color: #1f2a22;
+    }
+
+    .post-body em {
+      font-style: italic;
+    }
+
+    .post-body table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.92rem;
+      margin-bottom: 1.25rem;
+      display: block;
+      overflow-x: auto;
+    }
+
+    .post-body th {
+      padding: 8px 14px;
+      background: #f0f7f2;
+      border-bottom: 2px solid rgba(47, 107, 71, 0.2);
+      text-align: left;
+      color: #2f6b47;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .post-body td {
+      padding: 8px 14px;
+      border-bottom: 1px solid rgba(47, 107, 71, 0.1);
+      color: #5f6d63;
+    }
+
+    .post-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(47, 107, 71, 0.12);
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #2f6b47;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 10px 22px;
+      border-radius: 999px;
+      transition: background 0.15s;
+    }
+
+    .btn-back:hover {
+      background: #255838;
+    }
+
+    @media (max-width: 700px) {
+      .post-header h1 {
+        font-size: 1.9rem;
+      }
+
+      .post-hero {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">SwitchToVegan</a>
+      <span class="breadcrumb-sep">/</span>
+      <a class="breadcrumb-label" href="index.html">Blog</a>
+      <span class="breadcrumb-sep">/</span>
+      <span style="font-size:0.9rem; color:#2f6b47; font-weight:500;">What is Veganism</span>
+    </div>
+  </header>
+
+  <div class="post-container">
+
+    <a class="back-link" href="index.html">← All Posts</a>
+
+    <div class="post-header">
+      <span class="badge">Sustainability</span>
+      <h1>What is Veganism</h1>
+      <div class="meta">
+        <span>May 2, 2025</span>
+        <span>·</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+
+    <img
+      class="post-hero"
+      src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&h=500"
+      alt="What is Veganism"
+    />
+
+   <h2 id="introduction">Introduction</h2>
+<p>If you’ve been exploring veganism or trying to make better food choices, you’ve probably come across the terms vegan and plant-based and wondered whether they mean the same thing.</p>
+<p>At first, they seem interchangeable because both avoid meat, dairy, and other animal products. But once you look deeper, you realize that the difference is not just about food—it’s about intention, mindset, and how far those choices extend into everyday life.</p>
+<p>This confusion is very common, especially for beginners. Many people start with the idea of “eating more plant-based” and eventually come across veganism, without clearly understanding how the two are connected or where they differ. As a result, they either mix the terms or assume one automatically means the other.</p>
+<p>Understanding this difference matters because it shapes how you approach your lifestyle. Whether you’re making changes for health, for animals, or simply out of curiosity, knowing the distinction helps you move forward with clarity instead of confusion.</p>
+<hr>
+<h2 id="what-is-a-plant-based-diet">What Is a Plant-Based Diet?</h2>
+<p>A plant-based diet focuses primarily on food choices. It means building your meals around foods that come from plants—such as vegetables, fruits, grains, legumes, nuts, and seeds—while reducing or avoiding animal-based products. The central idea is to shift your diet toward plant foods, either partially or completely.</p>
+<p>For most people, the motivation behind a plant-based diet is related to health. They may want to improve their digestion, manage their weight, increase their energy levels, or simply eat cleaner and more natural foods. In this sense, plant-based eating is often seen as a nutritional approach rather than a philosophical one.</p>
+<p>In everyday life, a plant-based diet might look like cooking simple meals at home using whole ingredients, replacing meat with lentils or beans, or choosing plant-based milk instead of dairy. Some people follow it strictly, while others take a flexible approach, occasionally including animal products depending on their preferences.</p>
+<p>It’s important to understand that plant-based does not automatically extend beyond food. Someone can follow a fully plant-based diet but still use products that involve animals, such as leather items or cosmetics tested on animals. This is why plant-based is best described as a dietary pattern, not a complete lifestyle.</p>
+<hr>
+<h2 id="what-is-veganism">What Is Veganism?</h2>
+<p>Veganism is broader and more comprehensive than a plant-based diet. While it includes eating plant-based foods, it is not limited to diet. Veganism is based on the idea of reducing harm and exploitation of animals wherever possible, which means it extends into multiple areas of life.</p>
+<p>A person following veganism pays attention not only to what they eat, but also to what they wear, what they buy, and what they support. This includes avoiding materials like leather, wool, and silk, as well as choosing products that are not tested on animals or made using animal-derived ingredients.</p>
+<p>What makes veganism different is its foundation. It is not just about personal benefit, such as health or convenience. Instead, it is driven by a broader perspective that considers the impact of human choices on animals.</p>
+<p>In real life, this does not mean changing everything overnight. It means becoming aware and gradually making choices that align with the intention to reduce harm. Over time, these choices build into a lifestyle that reflects that awareness consistently.</p>
+<hr>
+<h2 id="key-differences-between-vegan-and-plant-based">Key Differences Between Vegan and Plant-Based</h2>
+<p>Although vegan and plant-based lifestyles may look similar on the surface, especially in terms of food, their core differences become clear when you look at their purpose and scope.</p>
+<h3 id="purpose">Purpose</h3>
+<p>The purpose of a plant-based diet is usually centered around personal health or well-being. People choose it to feel better physically or to adopt a cleaner way of eating. Veganism, on the other hand, is driven by ethical considerations, particularly the desire to reduce harm to animals.</p>
+<h3 id="scope">Scope</h3>
+<p>Plant-based living mainly focuses on diet, while veganism extends into multiple aspects of life. A plant-based eater may not think about clothing or product choices, whereas a vegan lifestyle includes those considerations as well.</p>
+<h3 id="decision-making">Decision-Making</h3>
+<p>The way decisions are made also differs. A plant-based approach often asks, “Is this good for my body?” while a vegan approach asks, “Does this involve harm to animals?” This shift in thinking influences long-term behavior.</p>
+<h3 id="flexibility">Flexibility</h3>
+<p>Plant-based diets can be flexible, depending on the individual. Some people follow them strictly, while others take a more relaxed approach. Veganism tends to be more consistent in its direction, even though it still allows for learning and gradual change.</p>
+<hr>
+<h2 id="which-one-should-you-choose">Which One Should You Choose?</h2>
+<p>Choosing between plant-based and vegan is not about selecting the “better” option. It depends on your starting point, your motivation, and what feels realistic for you at the moment.</p>
+<p>If your primary goal is to improve your diet or explore healthier eating habits, starting with a plant-based approach may feel more approachable. It allows you to focus on food without overcomplicating things, and it helps you build a strong foundation.</p>
+<p>If your interest comes from a deeper concern about animals, you may find yourself naturally moving toward veganism over time. In many cases, people begin with plant-based eating and gradually expand their awareness into other areas of life.</p>
+<p>The important thing is not to rush the process. What matters is that your choices feel sustainable and aligned with your understanding.</p>
+<hr>
+<h2 id="can-you-be-both-vegan-and-plant-based">Can You Be Both Vegan and Plant-Based?</h2>
+<p>Yes, and in many cases, people are.</p>
+<p>A vegan diet is inherently plant-based because it avoids animal products in food. However, a plant-based diet does not always include the broader lifestyle choices associated with veganism.</p>
+<p>This means that someone who is vegan will naturally follow a plant-based diet, but they will also consider other aspects of their lifestyle. Understanding this overlap helps avoid confusion and makes it easier to see how the two concepts relate to each other.</p>
+<hr>
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<p>There are several misconceptions that often create confusion between vegan and plant-based lifestyles, especially for beginners.</p>
+<p>One of the most common misunderstandings is that both terms mean exactly the same thing. While they overlap in terms of food choices, their intentions and scope are different.</p>
+<p>Another misconception is that plant-based automatically means completely free of animal involvement in all areas of life. In reality, plant-based primarily refers to diet and may not extend beyond it.</p>
+<p>Some people also assume that veganism is only about food, which limits its meaning. In reality, diet is just one part of a broader lifestyle that includes multiple aspects of daily life.</p>
+<p>Clarifying these misconceptions is important because it helps you approach the topic with a clearer mindset and avoid unnecessary confusion.</p>
+<hr>
+<h2 id="what-this-means-for-you">What This Means for You</h2>
+<p>If you are just starting out, you don’t need to define yourself immediately as either plant-based or vegan. What matters more is understanding your choices and gradually becoming more aware of their impact.</p>
+<p>You can begin with small, manageable steps, such as trying plant-based meals or learning more about where your products come from. As your awareness grows, your decisions will naturally evolve.</p>
+<p>This approach allows you to move forward without pressure. Instead of focusing on labels, you focus on progress and understanding, which makes the journey more sustainable in the long run.</p>
+<hr>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>The difference between vegan and plant-based is not just about what you eat—it’s about why you make those choices and how far those choices extend into your life.</p>
+<p>A plant-based approach focuses on improving what goes on your plate, often for personal benefit. Veganism builds on that by considering the broader impact of those choices, especially when it comes to animals.</p>
+<p>You don’t need to decide everything right away. What matters is that you begin to understand your choices and take steps that feel realistic for you. Over time, those small steps create clarity, and clarity makes your decisions easier.</p>
+<p>Because in the end, this is not about choosing a label. It’s about becoming more aware and choosing better where you can.</p>
+<hr>
+<h2 id="what-you-can-do-next">What You Can Do Next</h2>
+<p>If you’re just getting started, focus on simple actions that feel manageable.</p>
+<ul>
+<li>
+<p>Try a few plant-based meals this week</p>
+</li>
+<li>
+<p>Pay attention to where your food and products come from</p>
+</li>
+<li>
+<p>Explore small alternatives instead of making drastic changes</p>
+</li>
+</ul>
+<p>As you learn more, your choices will become clearer.</p>
+<p>If you want a practical way to begin, you can also explore a simple vegan meal planner to help you take your first steps without overthinking everything.</p>
+<p>Because real change doesn’t come from doing everything at once—it comes from starting and continuing.</p>
+
+
+
+  <footer>
+    <p>© 2025 SwitchToVegan · Compassionate living for everyone</p>
+  </footer>
+
+</body>
+</html>

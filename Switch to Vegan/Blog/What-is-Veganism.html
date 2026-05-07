@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>What Is Veganism? The Complete Lifestyle Guide (Food, Fashion, Beauty & Beyond)</title>
+<meta name="description" content="A complete, honest guide to veganism as a lifestyle — not just what you eat, but what you wear, use, watch, and buy. Everything from food and fashion to beauty and entertainment."/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Outfit',sans-serif;background:#faf9f6;color:#1a1a1a;line-height:1.88;font-size:17px}
+a{color:#2d6a4f;font-weight:700;text-decoration:underline}
+a:hover{color:#1b4332}
+
+/* HERO */
+.hero{position:relative;background:#0d2818;padding:0;overflow:hidden;min-height:520px;display:flex;align-items:center;justify-content:center}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0d2818 0%,#1b4332 40%,#2d6a4f 70%,#52b788 100%);opacity:1}
+.hero-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.hero-leaf{position:absolute;font-size:300px;right:-60px;top:-40px;opacity:0.04;transform:rotate(-20deg);pointer-events:none;user-select:none}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:90px 24px 80px;max-width:900px}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(82,183,136,0.18);border:1px solid rgba(82,183,136,0.4);color:#95d5b2;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:8px 22px;border-radius:100px;margin-bottom:28px}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(30px,5.5vw,58px);line-height:1.15;color:#fff;margin-bottom:22px}
+.hero h1 span{color:#95d5b2;font-style:italic}
+.hero-sub{color:rgba(255,255,255,0.6);font-size:17px;max-width:620px;margin:0 auto 34px;line-height:1.8}
+.hero-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;font-size:12.5px;color:rgba(255,255,255,0.36)}
+.hero-wave{position:absolute;bottom:0;left:0;right:0}
+.hero-wave svg{display:block;width:100%}
+
+/* LAYOUT */
+.wrap{max-width:840px;margin:0 auto;padding:58px 24px 100px}
+
+/* TOC */
+.toc{background:#fff;border:2px solid #b7e4c7;border-radius:20px;padding:30px 34px;margin-bottom:60px;box-shadow:0 4px 28px rgba(45,106,79,0.08)}
+.toc-label{font-size:11px;font-weight:800;color:#2d6a4f;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:16px}
+.toc ol{padding-left:20px;column-count:2;column-gap:28px}
+.toc li{margin-bottom:9px;break-inside:avoid}
+.toc a{color:#1b4332;text-decoration:none;font-size:14.5px;font-weight:600}
+.toc a:hover{text-decoration:underline}
+@media(max-width:560px){.toc ol{column-count:1}}
+
+/* TYPOGRAPHY */
+h2{font-family:'Fraunces',serif;font-size:31px;color:#0d2818;margin:68px 0 20px;padding-bottom:12px;border-bottom:2.5px solid #b7e4c7}
+h2 .emoji{font-style:normal;margin-right:8px}
+h3{font-size:21px;font-weight:800;color:#1b4332;margin:36px 0 12px}
+h4{font-size:16.5px;font-weight:800;color:#0d2818;margin:26px 0 8px}
+p{margin-bottom:22px;color:#2c2c2c}
+ul,ol{margin:8px 0 24px 22px}
+li{margin-bottom:10px;color:#2c2c2c}
+strong{color:#0d2818}
+hr{border:none;border-top:2.5px solid #d8f3dc;margin:60px 0}
+blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:21px;color:#1b4332;background:#f0fdf4;border-left:5px solid #52b788;padding:24px 30px;border-radius:0 16px 16px 0;margin:42px 0;line-height:1.7}
+
+/* CALLOUT BOXES */
+.box{padding:22px 28px;margin:30px 0;border-left:5px solid;border-radius:0 16px 16px 0}
+.box .lbl{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;opacity:.65}
+.box p{margin:0;font-size:15.5px}
+.green{background:#f0fdf4;border-color:#2d6a4f;color:#082912}
+.amber{background:#fffbeb;border-color:#f59e0b;color:#78350f}
+.blue{background:#eff6ff;border-color:#3b82f6;color:#1e3a5f}
+.red{background:#fff1f2;border-color:#f43f5e;color:#881337}
+.sage{background:#f4f9f6;border-color:#52b788;color:#0d2818}
+
+/* STAT ROW */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:14px;margin:32px 0}
+.stat{background:#fff;border:2px solid #b7e4c7;border-radius:14px;padding:22px 16px;text-align:center;box-shadow:0 2px 10px rgba(45,106,79,0.06)}
+.stat .num{font-family:'Fraunces',serif;font-size:30px;font-weight:700;color:#2d6a4f;line-height:1.2}
+.stat .lbl{font-size:12px;color:#555;margin-top:5px;line-height:1.45}
+
+/* PILLAR CARDS */
+.pillars{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin:28px 0}
+.pillar{background:#fff;border:2px solid #b7e4c7;border-radius:18px;padding:24px 22px;box-shadow:0 2px 12px rgba(45,106,79,0.06)}
+.pillar .pi{font-size:32px;margin-bottom:10px}
+.pillar h4{margin:0 0 8px;font-size:17px;color:#0d2818}
+.pillar p{margin:0;font-size:14.5px;color:#444;line-height:1.65}
+
+/* MATERIAL TABLE */
+.mat-table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px}
+.mat-table th{background:#0d2818;color:#fff;padding:12px 16px;text-align:left;font-size:13px;font-weight:700}
+.mat-table th:first-child{border-radius:8px 0 0 0}
+.mat-table th:last-child{border-radius:0 8px 0 0}
+.mat-table td{padding:12px 16px;border-bottom:1px solid #d8f3dc;vertical-align:top}
+.mat-table tr:nth-child(even) td{background:#f6fef8}
+.mat-table td:first-child{font-weight:700;color:#881337}
+.mat-table td:nth-child(2){color:#333}
+.mat-table td:last-child{font-weight:700;color:#15803d}
+
+/* INGREDIENT GRID */
+.ing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:22px 0}
+.ing-card{background:#fff1f2;border:1.5px solid #fca5a5;border-radius:12px;padding:14px 16px}
+.ing-card .ic-name{font-weight:800;font-size:14px;color:#881337;margin-bottom:4px}
+.ing-card .ic-found{font-size:12.5px;color:#7f1d1d;line-height:1.5}
+
+/* VEGAN ALT GRID */
+.alt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:22px 0}
+.alt-card{background:#f0fdf4;border:1.5px solid #86efac;border-radius:12px;padding:14px 16px}
+.alt-card .ac-name{font-weight:800;font-size:14px;color:#166534;margin-bottom:4px}
+.alt-card .ac-note{font-size:12.5px;color:#14532d;line-height:1.5}
+
+/* SPECTRUM */
+.spectrum{background:#fff;border:2px solid #b7e4c7;border-radius:18px;overflow:hidden;margin:28px 0;box-shadow:0 2px 12px rgba(45,106,79,0.07)}
+.spectrum-row{display:grid;grid-template-columns:200px 1fr;border-bottom:1px solid #d8f3dc}
+.spectrum-row:last-child{border-bottom:none}
+.spectrum-label{background:#1b4332;color:#fff;padding:16px 20px;font-weight:700;font-size:14.5px;display:flex;align-items:center}
+.spectrum-body{padding:16px 20px;font-size:15px;color:#2c2c2c}
+@media(max-width:560px){.spectrum-row{grid-template-columns:1fr}.spectrum-label{border-radius:0}}
+
+/* CLOSING */
+.closing{background:linear-gradient(140deg,#0d2818,#1b4332,#2d6a4f);color:#fff;padding:64px 48px;border-radius:24px;margin-top:70px;text-align:center}
+.closing h2{font-family:'Fraunces',serif;font-size:30px;color:#95d5b2;margin-bottom:20px;border:none;padding:0}
+.closing p{color:rgba(255,255,255,0.74);max-width:580px;margin:0 auto}
+.closing p+p{margin-top:16px}
+
+/* FAQ */
+.faq{border-top:2.5px solid #d8f3dc;margin-top:10px}
+.faq-item{border-bottom:1.5px solid #d8f3dc;padding:26px 0}
+.faq-q{font-weight:800;color:#1b4332;font-size:17px;margin-bottom:10px}
+.faq-a{color:#333;font-size:15.5px;margin:0}
+
+@media(max-width:600px){
+  .closing{padding:44px 24px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .pillars{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-leaf">🌿</div>
+  <div class="hero-inner">
+    <div class="hero-pill">🌱 The Complete Guide · 2025</div>
+    <h1>What Is Veganism?<br/><span>It's Much More Than a Diet.</span></h1>
+    <p class="hero-sub">Most people think veganism is about not eating meat. The real picture is bigger — it covers what you wear, what you put on your skin, what you watch, and how you think about the world. Here's the complete, honest guide.</p>
+    <div class="hero-meta">
+      <span>🔍 Full Lifestyle Breakdown</span><span>·</span>
+      <span>4,000+ words</span><span>·</span>
+      <span>18 min read</span><span>·</span>
+      <span>Honest & Balanced</span>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#faf9f6"/>
+    </svg>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-label">What's inside this guide</div>
+    <ol>
+      <li><a href="#definition">The real definition of veganism</a></li>
+      <li><a href="#history">Where veganism came from</a></li>
+      <li><a href="#why">Why people go vegan — the three big reasons</a></li>
+      <li><a href="#food">Food: what vegans eat (and don't eat)</a></li>
+      <li><a href="#clothing">Clothing & fashion: materials to avoid & alternatives</a></li>
+      <li><a href="#beauty">Beauty & personal care: the hidden animal ingredients</a></li>
+      <li><a href="#entertainment">Entertainment & lifestyle</a></li>
+      <li><a href="#household">Household products & everyday items</a></li>
+      <li><a href="#spectrum">The spectrum: dietary to ethical veganism</a></li>
+      <li><a href="#misconceptions">What veganism is NOT</a></li>
+      <li><a href="#faq">FAQs — the questions people actually ask</a></li>
+    </ol>
+  </div>
+
+  <!-- INTRO -->
+  <p>If someone asked you "what is veganism?" right now, you'd probably say something like "not eating meat or dairy." And you'd be partially right. But you'd be missing most of the picture.</p>
+
+  <p>Veganism, as defined by <a href="https://www.vegansociety.com/go-vegan/definition-veganism" target="_blank" rel="noopener">The Vegan Society</a> — the organization that literally invented the word in 1944 — is <strong>a philosophy and way of living which seeks to exclude all forms of exploitation of, and cruelty to, animals as far as is possible and practicable.</strong> That's a much bigger idea than a diet.</p>
+
+  <p>It touches your plate, yes. But it also touches your wardrobe, your bathroom shelf, the films you watch, the places you go for entertainment, and even the household products you clean your kitchen with. The scope of it is genuinely significant — and also, honestly, one of the reasons veganism gets misunderstood and sometimes unfairly mocked.</p>
+
+  <p>This guide walks through all of it — without cheerleading or guilt-tripping. Just a clear, honest breakdown of what the vegan lifestyle actually involves.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">1944</div><div class="lbl">Year Donald Watson coined the word "vegan" in the UK</div></div>
+    <div class="stat"><div class="num">79M+</div><div class="lbl">Estimated vegans worldwide as of 2025</div></div>
+    <div class="stat"><div class="num">70–80%</div><div class="lbl">Potential reduction in greenhouse gas emissions from a vegan diet, per German Nutrition Society research</div></div>
+    <div class="stat"><div class="num">4</div><div class="lbl">Main areas of life veganism covers: food, fashion, beauty, and entertainment</div></div>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 1: DEFINITION -->
+  <h2 id="definition"><span class="emoji">📖</span>The Real Definition of Veganism</h2>
+
+  <p>Let's start at the very foundation. The word "vegan" was coined in 1944 by <strong>Donald Watson</strong>, who co-founded The Vegan Society in the UK. Watson wanted a word that distinguished people who avoided all animal products — not just meat — from vegetarians, who were still consuming dairy and eggs.</p>
+
+  <p>The Vegan Society's official definition, updated over time, now reads:</p>
+
+  <blockquote>"Veganism is a philosophy and way of living which seeks to exclude — as far as is possible and practicable — all forms of exploitation of, and cruelty to, animals for food, clothing or any other purpose."</blockquote>
+
+  <p>Three things stand out in that definition. First: <em>philosophy and way of living</em> — not just a diet. Second: <em>all forms of exploitation</em> — not just food. Third, and this one matters: <em>as far as is possible and practicable</em> — which acknowledges that perfect veganism is difficult, and that the goal is to minimize harm, not achieve impossible purity.</p>
+
+  <p>That last phrase is important because it's realistic. It means veganism isn't about being perfect — it's about making conscious choices across all areas of life to reduce animal exploitation wherever you can.</p>
+
+  <div class="box green">
+    <div class="lbl">Vegan vs. Plant-Based — not the same thing</div>
+    <p><strong>Plant-based</strong> is a dietary term — it refers to eating a diet centered around plants, and may or may not include some animal products. <strong>Vegan</strong> is a lifestyle and ethical philosophy — it extends well beyond food to all products and choices. Someone can eat a plant-based diet for health reasons without identifying as vegan at all. And many ethical vegans would tell you the lifestyle is actually more important to them than the diet.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 2: HISTORY -->
+  <h2 id="history"><span class="emoji">📜</span>Where Veganism Came From</h2>
+
+  <p>The idea of abstaining from animal products is far older than the word itself. Plant-based diets have been practiced for thousands of years — in ancient Indian philosophy, Jain traditions, Buddhist practice, and Greek philosophical traditions all had strong arguments for living without harming animals.</p>
+
+  <p>But the modern vegan movement traces specifically to <strong>August 1944</strong>, when Donald Watson and a small group in the UK formed The Vegan Society. They were vegetarians who felt that vegetarianism didn't go far enough — that the dairy and egg industries involved significant animal suffering and exploitation too. They needed a new word, and Watson combined the beginning and end of "vegetarian" to create "vegan."</p>
+
+  <p>The ethical framework expanded significantly in the 1970s when Australian philosopher <strong>Peter Singer</strong> published <em>Animal Liberation</em> (1975), which provided a rigorous philosophical argument for why causing unnecessary suffering to animals is morally unjustifiable. It became one of the most influential books in the history of the animal rights movement and brought veganism into mainstream academic and ethical discourse.</p>
+
+  <p>Since then, the movement has grown steadily — accelerated in recent years by mounting environmental evidence linking animal agriculture to climate change, and by the increasing availability of genuinely good plant-based food, fashion, and beauty alternatives.</p>
+
+  <hr/>
+
+  <!-- SECTION 3: WHY -->
+  <h2 id="why"><span class="emoji">💡</span>Why People Go Vegan — The Three Big Reasons</h2>
+
+  <p>There isn't one single type of vegan. People arrive at veganism from very different starting points, and their motivations shape how they practice it. There are three main driving forces:</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pi">🐄</div>
+      <h4>For the Animals</h4>
+      <p>The original and most common motivation. The argument is straightforward: animals can suffer, and causing unnecessary suffering is wrong. Industrial animal agriculture — factory farming, slaughterhouses, fur farms, live export — causes enormous, documentable suffering. If you don't need animal products to live a healthy life (and most people in developed countries don't), then using them involves an ethical trade-off that many people aren't comfortable making.</p>
+    </div>
+    <div class="pillar">
+      <div class="pi">🌍</div>
+      <h4>For the Environment</h4>
+      <p>Animal agriculture is one of the largest contributors to greenhouse gas emissions, deforestation, water use, and biodiversity loss on the planet. The German Society for Nutrition notes that a vegan diet can reduce greenhouse gas emissions by 70–80% compared to a meat-heavy diet. For environmentally motivated vegans, the diet is an expression of climate activism — a direct, daily reduction of their ecological footprint.</p>
+    </div>
+    <div class="pillar">
+      <div class="pi">🏥</div>
+      <h4>For Personal Health</h4>
+      <p>Research links well-planned vegan diets to lower risk of heart disease, type 2 diabetes, certain cancers, and obesity. Some people go vegan purely for these health benefits, with no particular interest in the ethics. These are sometimes called "dietary vegans" — they follow the diet but may not extend vegan principles to other areas of life.</p>
+    </div>
+  </div>
+
+  <div class="box sage">
+    <div class="lbl">What motivates most vegans?</div>
+    <p>Surveys consistently show that animal welfare is the most common primary motivation for long-term vegans. Health tends to be a strong secondary motivation. Environmental concerns have grown significantly as a primary driver in recent years, particularly among younger vegans. Many vegans cite all three — and find that the motivations reinforce each other.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 4: FOOD -->
+  <h2 id="food"><span class="emoji">🥗</span>Food: What Vegans Eat (and Don't Eat)</h2>
+
+  <p>The food part is the most well-known, so let's be clear and complete about it.</p>
+
+  <h3>What vegans don't eat</h3>
+  <ul>
+    <li><strong>Meat</strong> — beef, pork, chicken, turkey, lamb, all game meats</li>
+    <li><strong>Fish and seafood</strong> — this surprises some people, but fish are animals and feel pain. All fish, shellfish, and other seafood are excluded.</li>
+    <li><strong>Dairy</strong> — milk, cheese, butter, ghee, cream, yogurt, ice cream</li>
+    <li><strong>Eggs</strong> — including eggs in baked goods, pasta, sauces</li>
+    <li><strong>Honey</strong> — bees are animals; the harvesting of honey involves exploitation of bee colonies. This is one of the more debated aspects of veganism, but most vegans exclude it.</li>
+    <li><strong>Other animal derivatives</strong> — gelatin (from animal bones), lard, suet, some food colorings (like carmine, made from crushed insects)</li>
+  </ul>
+
+  <h3>What vegans do eat</h3>
+  <p>This is where the real story is — and it's a story of abundance, not restriction. The entire plant kingdom is available:</p>
+  <ul>
+    <li>All fruits and vegetables</li>
+    <li>All legumes — lentils, chickpeas, black beans, kidney beans, edamame, peas</li>
+    <li>All grains — rice, wheat, oats, quinoa, millet, barley, corn</li>
+    <li>All nuts and seeds — almonds, cashews, walnuts, sunflower seeds, chia, flax</li>
+    <li>Plant oils — olive, coconut, sunflower, mustard</li>
+    <li>Tofu, tempeh, seitan, and other plant proteins</li>
+    <li>Plant milks — soy, oat, almond, coconut, rice, cashew</li>
+    <li>All herbs and spices</li>
+    <li>Coffee and tea (check that milk isn't added)</li>
+    <li>Most alcohols (though some are filtered using animal products — see below)</li>
+  </ul>
+
+  <div class="box amber">
+    <div class="lbl">Hidden animal products in food</div>
+    <p>Some things aren't obviously non-vegan. Gelatin is in many gummy sweets and marshmallows. Some wines and beers are clarified using casein (milk protein), isinglass (fish bladder), or egg whites. Some bread contains milk. Some crisps are flavored with cheese powder. Some vitamins are in gelatin capsules. The vegan label-reading habit is a real thing — but it gets faster with experience.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 5: CLOTHING -->
+  <h2 id="clothing"><span class="emoji">👗</span>Clothing & Fashion: The Materials to Know</h2>
+
+  <p>This is the part most people don't think about when they first encounter veganism. But clothing is a significant area where animal exploitation occurs — and it's one that most people are completely unaware of when they buy their clothes.</p>
+
+  <h3>Materials vegans avoid</h3>
+  <p>The obvious ones are well known. The less obvious ones catch a lot of people off guard:</p>
+
+  <table class="mat-table">
+    <thead>
+      <tr>
+        <th>Material</th>
+        <th>Where it comes from & why it's avoided</th>
+        <th>Vegan alternative</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Leather</td>
+        <td>Animal hides (cow, goat, sheep, crocodile, kangaroo). Involves slaughter. Tanning is also highly toxic.</td>
+        <td>Piñatex (pineapple), mushroom leather, apple leather, cactus leather, cork, PU leather</td>
+      </tr>
+      <tr>
+        <td>Wool</td>
+        <td>Sheared from sheep. Industrial wool farming involves mulesing — cutting away folds of skin to prevent fly strike — and other welfare issues.</td>
+        <td>Tencel/Lyocell, organic cotton, bamboo, hemp, recycled polyester fleece</td>
+      </tr>
+      <tr>
+        <td>Silk</td>
+        <td>Produced by silkworms, which are boiled alive inside their cocoons during processing. At least 3,000 silkworms are killed per pound of silk.</td>
+        <td>Bamboo silk, banana fiber, pineapple silk, Lyocell, modal</td>
+      </tr>
+      <tr>
+        <td>Fur</td>
+        <td>Mink, fox, rabbit, chinchilla — trapped or farmed in inhumane conditions. Treated with toxic chemicals.</td>
+        <td>Faux fur (synthetic or plant-based high-pile fabrics)</td>
+      </tr>
+      <tr>
+        <td>Down & Feathers</td>
+        <td>Duck and goose feathers, often live-plucked. Used in puffer jackets, duvets, and pillows.</td>
+        <td>Synthetic down (Primaloft, Thinsulate), plant-based fiber insulation</td>
+      </tr>
+      <tr>
+        <td>Suede</td>
+        <td>Underside of animal hides (mainly lamb). It's leather — just a different finish.</td>
+        <td>Microfiber suede, recycled polyester suede</td>
+      </tr>
+      <tr>
+        <td>Cashmere</td>
+        <td>From cashmere goats. High-intensity harvesting causes welfare problems; overgrazing has devastated ecosystems in Mongolia and China.</td>
+        <td>High-quality organic cotton, plant-fiber blends, recycled materials</td>
+      </tr>
+      <tr>
+        <td>Shell / Bone buttons</td>
+        <td>Some buttons are made from oyster/mussel shells or animal bone. Often just labeled "natural."</td>
+        <td>Corozo (plant ivory from South American palm), recycled plastic, wood buttons</td>
+      </tr>
+      <tr>
+        <td>Beeswax coatings</td>
+        <td>Some waterproof jackets, coats, and bags use beeswax or lanolin coatings for water resistance.</td>
+        <td>Plant-based wax coatings, synthetic DWR treatments</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Vegan fashion in 2025</h3>
+  <p>The good news is that vegan fashion has come a very long way. <a href="https://www.weavabel.com/blog/vegan-fashion-leading-the-charge-towards-sustainability" target="_blank" rel="noopener">The global vegan fashion market is projected to grow by over 14% annually</a>, and major designers are leading the charge. British designer <strong>Stella McCartney</strong> has long refused to use leather or fur, and has partnered with materials science company NFW to develop a plastic-free leather alternative called MIRUM. <strong>Vivienne Westwood</strong> is exploring cactus leather. <strong>Adidas</strong> has developed mushroom leather options.</p>
+
+  <p>From everyday basics to luxury goods, the options are genuinely impressive now:</p>
+
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="ac-name">🍍 Piñatex</div>
+      <div class="ac-note">Leather made from pineapple leaf fibers — a byproduct of the pineapple harvest. Durable, flexible, and widely used in shoes, bags, and accessories.</div>
+    </div>
+    <div class="alt-card">
+      <div class="ac-name">🍄 Mylo / Mushroom Leather</div>
+      <div class="ac-note">Made from mycelium (the root structure of mushrooms). Soft, biodegradable, and already used by Stella McCartney and Lululemon.</div>
+    </div>
+    <div class="alt-card">
+      <div class="ac-name">🌵 Cactus Leather (Desserto)</div>
+      <div class="ac-note">Made from nopal cactus in Mexico. Water-efficient and partial-biodegradable. Used by BMW, H&M, and others.</div>
+    </div>
+    <div class="alt-card">
+      <div class="ac-name">🍎 Apple Leather</div>
+      <div class="ac-note">Made from apple waste — skins and cores from the juice and food industry. Used in bags, shoes, and accessories.</div>
+    </div>
+    <div class="alt-card">
+      <div class="ac-name">🌲 Tencel / Lyocell</div>
+      <div class="ac-note">Made from wood pulp using an eco-friendly closed-loop process. Soft, drapes well, breathable, and biodegradable. Replaces silk and wool beautifully.</div>
+    </div>
+    <div class="alt-card">
+      <div class="ac-name">🌿 Hemp & Organic Cotton</div>
+      <div class="ac-note">Time-tested plant fibers. Hemp requires very little water or pesticides. Organic cotton eliminates toxic farming chemicals. Both fully vegan and durable.</div>
+    </div>
+  </div>
+
+  <div class="box blue">
+    <div class="lbl">Important: vegan ≠ automatically eco-friendly</div>
+    <p>This is a genuinely important caveat. Most vegan leather alternatives still involve some plastic coating, which means they're not fully biodegradable. PVC leather is particularly bad for the environment. The most sustainable vegan fashion choices are: <strong>secondhand</strong> (buying any material second-hand), followed by natural plant fibers, followed by recycled synthetic materials. Buying a new PVC handbag instead of a leather one isn't necessarily a net environmental win.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 6: BEAUTY -->
+  <h2 id="beauty"><span class="emoji">💄</span>Beauty & Personal Care: The Hidden Animal Ingredients</h2>
+
+  <p>This is probably the most complicated and least-understood area of vegan living. The beauty industry has been using animal-derived ingredients for centuries — and many of them are hidden behind scientific names that give no hint of their animal origin.</p>
+
+  <p>First, it's critical to understand a distinction that confuses almost everyone:</p>
+
+  <div class="box red">
+    <div class="lbl">Vegan ≠ Cruelty-Free (and vice versa)</div>
+    <p><strong>Cruelty-free</strong> means the product was not tested on animals. It says nothing about what's IN the product — a cruelty-free moisturiser can still contain honey, carmine, lanolin, or collagen. <strong>Vegan</strong> means the product contains no animal-derived ingredients. But a vegan product could technically still have been tested on animals. To be both ethical from an animal perspective, you want products that are <strong>both vegan AND cruelty-free</strong> — and ideally certified by a recognized body like <a href="https://www.vegansociety.com/news/blog/TM2025/say-vegan-cosmetics" target="_blank" rel="noopener">The Vegan Society</a> or Leaping Bunny.</p>
+  </div>
+
+  <h3>Hidden animal-derived ingredients in beauty products</h3>
+  <p>When The Vegan Society asked 1,000 consumers to identify animal-derived ingredients from a list of ten common cosmetic components, only 2.6% correctly identified all of them. This isn't surprising — many are listed under Latin or chemical names that reveal nothing. Here's what to watch for:</p>
+
+  <div class="ing-grid">
+    <div class="ing-card">
+      <div class="ic-name">Carmine / CI 75470</div>
+      <div class="ic-found">Red pigment crushed from cochineal insects. Found in lipsticks, blushes, red eyeshadows, and some food colorings.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Lanolin</div>
+      <div class="ic-found">Waxy substance extracted from sheep's wool. Found in lip balms, moisturisers, hair conditioners, and baby products.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Collagen</div>
+      <div class="ic-found">Protein taken from cows' bones, skin, and ligaments. Found in anti-ageing face creams, serums, and masks.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Keratin</div>
+      <div class="ic-found">Protein from animal hair, horns, and feathers. Found in hair strengthening treatments, shampoos, and nail hardeners.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Guanine</div>
+      <div class="ic-found">Harvested from fish scales. Gives that pearl-like shimmer to eyeshadows, highlighters, and nail polishes.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Tallow</div>
+      <div class="ic-found">Fat rendered from farmed animals. Found in soaps, foundations, and some lipsticks as a binding and moisturising agent.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Beeswax (Cera Alba)</div>
+      <div class="ic-found">Produced by bees. Very common in lip balms, mascaras, and solid foundations. Often labeled as "Cera Alba" on ingredient lists.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Squalene</div>
+      <div class="ic-found">Historically extracted from shark liver oil. Now also available from plant sources (olives, sugarcane). Check the source — plant squalene is vegan.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Gelatin</div>
+      <div class="ic-found">From boiled animal bones and skin. Found in some nail polishes, face masks, and capsule supplements.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Silk Protein</div>
+      <div class="ic-found">From silkworms. Used in some shampoos, conditioners, and skin care products for a smoothing effect.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Honey</div>
+      <div class="ic-found">From bees. Found in face masks, body lotions, lip balms, and hair products.</div>
+    </div>
+    <div class="ing-card">
+      <div class="ic-name">Pearl Powder</div>
+      <div class="ic-found">Ground up oyster shells. Used in some foundations and face powders as a finishing agent.</div>
+    </div>
+  </div>
+
+  <h3>So what do vegan beauty products use instead?</h3>
+  <p>The vegan beauty industry has exploded in recent years. <a href="https://www.insighttrendsworld.com/post/insight-of-the-day-beauty-2025-how-veganism-is-transforming-the-industry" target="_blank" rel="noopener">Beauty brands are increasingly adopting biotechnology and precision fermentation to create plant-based and lab-grown alternatives</a> to animal-derived ingredients. Lab-created collagen (identical to animal collagen, but grown from yeast or bacteria), plant peptides, and synthetic alternatives to nearly every animal ingredient now exist.</p>
+
+  <p>Brands like <strong>e.l.f. Cosmetics</strong>, <strong>The Ordinary</strong>, <strong>Pacifica</strong>, <strong>Tarte</strong>, and <strong>Urban Decay</strong> have committed to 100% vegan product lines. The affordable everyday market is now very well served — you don't need to spend a lot of money to find genuinely good vegan beauty.</p>
+
+  <div class="box green">
+    <div class="lbl">How to shop vegan beauty with confidence</div>
+    <p>Look for the <a href="https://www.vegansociety.com/products/vegan-trademark" target="_blank" rel="noopener">Vegan Society Trademark</a> (a sunflower logo) or the <strong>Leaping Bunny</strong> certification for cruelty-free. Don't rely solely on a brand's self-declared "vegan" label — these terms aren't legally regulated in most countries. Third-party certification is the gold standard. PETA's "Beauty Without Bunnies" database is also a good free resource.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 7: ENTERTAINMENT -->
+  <h2 id="entertainment"><span class="emoji">🎭</span>Entertainment, Tourism & Lifestyle</h2>
+
+  <p>This is the area that surprises people the most, and the one that's most subject to debate even within the vegan community. Veganism extends beyond products to the activities and entertainment you choose to support — specifically, whether those activities involve animal exploitation.</p>
+
+  <h3>What ethical vegans typically avoid</h3>
+  <p>According to <a href="https://en.wikipedia.org/wiki/Veganism" target="_blank" rel="noopener">the ethical vegan framework</a>, the following are generally considered incompatible with veganism:</p>
+
+  <ul>
+    <li><strong>Zoos and aquariums</strong> — even well-funded zoos confine animals in spaces that cannot replicate their natural habitat. Vegans typically prefer visiting animal sanctuaries, which rescue and rehabilitate animals rather than display them.</li>
+    <li><strong>Circuses with animals</strong> — animals used in circuses spend enormous amounts of time confined, transported, and performing under duress. Many countries have banned animal circuses. Animal-free circuses like Cirque du Soleil offer a genuinely spectacular alternative.</li>
+    <li><strong>Horse racing and greyhound racing</strong> — both involve animals bred for racing, whip use, high injury and death rates, and disposal of animals when they're no longer useful.</li>
+    <li><strong>Rodeos and bullfighting</strong> — involve direct, observable animal suffering and are widely condemned outside their cultural contexts as well.</li>
+    <li><strong>Marine parks and dolphinariums</strong> — keeping intelligent, wide-ranging marine mammals in small enclosures for performance purposes is broadly seen as inhumane.</li>
+    <li><strong>Hunting and fishing for sport</strong> — not for survival, but as recreational activities where the purpose is killing or catching animals.</li>
+    <li><strong>Exotic animal experiences</strong> — "swim with dolphins" tourism, elephant rides, tiger petting. Many of these involve brutal training methods and deeply unsuitable living conditions.</li>
+  </ul>
+
+  <h3>The grey areas — where vegans disagree</h3>
+  <p>Not everything is clear-cut, and vegans themselves have different views on some of these:</p>
+
+  <ul>
+    <li><strong>Horse riding</strong> — some vegans oppose it entirely; others are comfortable with it in welfare-positive contexts. The Vegan Society opposes it as unnecessary exploitation. The debate is genuine and ongoing.</li>
+    <li><strong>Visiting wildlife sanctuaries</strong> — generally considered fine and actively supported, as long as they're genuinely rescue-and-rehabilitate operations, not just petting zoos in disguise.</li>
+    <li><strong>Keeping pets</strong> — most vegans do keep pets, particularly those adopted from shelters. The ethical tension is around breeding, which perpetuates commercial animal trade. Adopting rather than buying is the vegan-aligned choice.</li>
+    <li><strong>Films and media featuring animals</strong> — some ethical vegans avoid films that used live animals in production. Others see this as an impractical standard.</li>
+  </ul>
+
+  <div class="box amber">
+    <div class="lbl">The principle underneath all of this</div>
+    <p>The consistent thread through all of these entertainment choices is the same question: <em>does this activity require animals to be confined, trained under duress, put at risk, or otherwise exploited for human amusement?</em> If yes, most ethical vegans would prefer to choose an alternative. If no — like watching a nature documentary, visiting a legitimate wildlife sanctuary, or enjoying a human-only circus performance — it's fully compatible with veganism.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 8: HOUSEHOLD -->
+  <h2 id="household"><span class="emoji">🏠</span>Household Products & Everyday Items</h2>
+
+  <p>Beyond food, fashion, and beauty, animal products show up in places most people would never think to check. The deeper you go into vegan living, the more of these surprises you encounter.</p>
+
+  <h3>Household products that may contain animal ingredients</h3>
+  <ul>
+    <li><strong>Cleaning products</strong> — some contain casein (milk protein) or tallow. Brands like Method, Ecover, and many "natural" cleaning brands are fully vegan.</li>
+    <li><strong>Candles</strong> — many are made with beeswax or stearic acid from animal fat. Soy wax and coconut wax candles are vegan alternatives and widely available.</li>
+    <li><strong>Paint</strong> — some paints contain casein or ox bile as additives. Most modern commercial paints are vegan, but worth checking specialty art paints.</li>
+    <li><strong>Glue</strong> — traditional animal glue (from bones and skin) still exists, though modern synthetic glues have largely replaced it.</li>
+    <li><strong>Plaster and some building materials</strong> — traditionally used animal hair as binder. Modern variants use synthetic alternatives.</li>
+    <li><strong>Photographic film</strong> — traditional photographic film uses gelatin as a base layer. Largely irrelevant now in the digital age.</li>
+    <li><strong>Condoms</strong> — most mainstream condoms are made from latex and are vegan. However, some brands use casein to soften the latex. Brands like HANX, Durex Naturals, and Glyde are fully vegan.</li>
+    <li><strong>Medicines and supplements</strong> — many come in gelatin capsules. Most supplement brands now offer vegetable capsule alternatives. Prescription medicines often involve animal testing as a legal requirement — this is one area where "as far as possible and practicable" becomes relevant.</li>
+  </ul>
+
+  <div class="box blue">
+    <div class="lbl">On medicines and practicability</div>
+    <p>This is where the "as far as is possible and practicable" clause in veganism's definition really matters. Most prescription medications were at some point tested on animals (a legal requirement in most countries). Some contain animal-derived ingredients. Ethical vegans don't refuse life-saving medicine — the purpose of veganism is to reduce harm where it's possible, not to let yourself suffer in the name of ideological purity. No serious vegan organization argues against taking necessary medication.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 9: SPECTRUM -->
+  <h2 id="spectrum"><span class="emoji">🌈</span>The Spectrum: Not All Vegans Are the Same</h2>
+
+  <p>Veganism isn't a monolith. People practice it at different levels, for different reasons, and with different degrees of strictness. Understanding this spectrum helps remove the all-or-nothing thinking that puts people off exploring plant-based living entirely.</p>
+
+  <div class="spectrum">
+    <div class="spectrum-row">
+      <div class="spectrum-label">Dietary Vegan</div>
+      <div class="spectrum-body">Eats a fully plant-based diet but doesn't extend vegan principles to clothing, beauty, or entertainment. Often motivated primarily by health. May still wear leather, use non-vegan cosmetics, and visit zoos. Vegans in the ethical camp sometimes don't consider this "true" veganism, but it's a starting point many people take.</div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-label">Flexitarian / Vegan-Curious</div>
+      <div class="spectrum-body">Predominantly plant-based but occasionally eats animal products. Not claiming to be vegan — just moving in the direction. Growing rapidly as a category, particularly among people motivated by environment rather than animal ethics.</div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-label">Lifestyle Vegan</div>
+      <div class="spectrum-body">Applies vegan principles across food, clothing, and beauty. May not go as far as refusing entertainment with animals. This represents the majority of people who identify as vegan in surveys — they're doing it across the main categories but aren't consumed by edge cases.</div>
+    </div>
+    <div class="spectrum-row">
+      <div class="spectrum-label">Ethical Vegan</div>
+      <div class="spectrum-body">Applies veganism as a comprehensive ethical philosophy across all areas of life — food, fashion, beauty, entertainment, household, and beyond. Views veganism as a moral framework rooted in animal rights. This is the original definition as intended by Donald Watson and The Vegan Society.</div>
+    </div>
+  </div>
+
+  <blockquote>"There are degrees of veganism. What matters is the direction of travel — consistently trying to cause less harm — not achieving some impossible standard of ideological perfection."</blockquote>
+
+  <hr/>
+
+  <!-- SECTION 10: MISCONCEPTIONS -->
+  <h2 id="misconceptions"><span class="emoji">🚫</span>What Veganism Is NOT</h2>
+
+  <p>There's a lot of misunderstanding about veganism — from both critics and, sometimes, from within the vegan community itself. Let's clear up some of the most common ones:</p>
+
+  <ul>
+    <li><strong>Veganism is not automatically healthy.</strong> A vegan diet of chips, cookies, and processed food is still unhealthy. Health benefits come from a whole-food plant-based diet, not just the absence of animal products.</li>
+    <li><strong>Veganism is not automatically expensive.</strong> Lentils, beans, rice, oats, and seasonal vegetables are among the cheapest foods in the world. The expensive parts are specialty vegan products — and those are entirely optional.</li>
+    <li><strong>Veganism is not a religion.</strong> There are no commandments, no authority, no heresy. People practice it differently, debate its limits thoughtfully, and sometimes change their minds.</li>
+    <li><strong>Veganism is not about perfection.</strong> The definition explicitly says "as far as is possible and practicable." Someone who's 90% vegan is doing significantly less harm than someone who isn't trying at all. The goal is reduction, not purity.</li>
+    <li><strong>Vegans are not all preachy activists.</strong> Surveys consistently show that most vegans don't regularly tell other people they should be vegan. The "annoying vegan" is a cultural caricature that doesn't match reality for the vast majority.</li>
+    <li><strong>Going vegan doesn't mean giving up good food.</strong> Indian, Ethiopian, Thai, Middle Eastern, and many other world cuisines are built on extraordinarily flavorful plant-based cooking. The idea that vegan food is bland or depressing reflects a very limited view of world cuisine.</li>
+    <li><strong>Veganism isn't only for privileged people.</strong> Access is a genuine issue in food deserts and low-income contexts. But for most people in most countries, a basic whole-food plant-based diet is actually more affordable than one centered around meat and dairy.</li>
+  </ul>
+
+  <hr/>
+
+  <!-- FAQ -->
+  <h2 id="faq"><span class="emoji">❓</span>FAQs — The Questions People Actually Ask</h2>
+
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">Is veganism the same as being vegetarian?</div>
+      <p class="faq-a">No — they're related but different. Vegetarians don't eat meat but typically still consume dairy and eggs. Vegans exclude all animal products across food and, in the fuller lifestyle sense, clothing, beauty, and entertainment too. Veganism grew out of vegetarianism — its founders felt vegetarianism didn't go far enough in excluding animal exploitation.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Do vegans eat honey?</div>
+      <p class="faq-a">Most ethical vegans don't. Bees are animals, and honey production involves exploiting bee colonies — including the killing of bees, replacing their honey with sugar syrup, and selective breeding. It's one of the more debated aspects of veganism, and some people who otherwise follow a vegan lifestyle still eat honey. The mainstream vegan position, including The Vegan Society's, is that honey is not vegan.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can you go vegan partially or gradually?</div>
+      <p class="faq-a">Absolutely — and for most people, this is actually the most sustainable approach. Starting with food, then gradually looking at beauty and clothing, is perfectly legitimate. Nobody becomes a comprehensive lifestyle vegan overnight. Many people start with "Meatless Mondays," then go fully plant-based, then start switching out non-vegan beauty products as they run out. The direction matters more than the speed.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Does buying secondhand leather make it OK for vegans?</div>
+      <p class="faq-a">This divides vegans. The animal is already dead and no new money is going to the leather industry, so many vegans are comfortable buying secondhand leather. Others feel that wearing it still normalizes leather as a material and makes it visible. There's no consensus — it's a personal decision within the vegan community, and both positions are held by thoughtful people.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What's the environmental impact of veganism?</div>
+      <p class="faq-a">Significant, and well-documented. Animal agriculture accounts for approximately 14.5% of global greenhouse gas emissions (UN FAO estimate), is the leading driver of deforestation in the Amazon, and uses enormous amounts of water and land. <a href="https://en.wikipedia.org/wiki/Veganism" target="_blank" rel="noopener">The German Society for Nutrition</a> notes that a vegan diet can reduce greenhouse gas emissions by 70–80% compared to a meat-heavy diet. This is one of the most direct individual actions a person can take on climate. That said, not all plant agriculture is environmentally clean — industrial monocrop farming has its own issues. Local, seasonal, organic whole foods are the most environmentally sound version of vegan eating.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is veganism a recent trend or is it here to stay?</div>
+      <p class="faq-a">While the processed plant-based food market (Beyond Meat, Impossible Burger, etc.) has faced market corrections, ethical veganism as a lifestyle has grown steadily since the 1940s and continues to grow globally. The environmental and health drivers are structural — they're not going away. The more thoughtful analysis suggests that while veganism won't replace all animal product consumption anytime soon, it is permanently reshaping the food, fashion, and beauty industries. The direction of travel is clear.</p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <h2>More Than a Diet. A Way of Seeing the World.</h2>
+    <p>Veganism at its core is a single, consistent idea: that animals are not ours to exploit. That idea, taken seriously, ripples outward from your plate to your wardrobe, your bathroom, your entertainment choices, and beyond.</p>
+    <p>It doesn't require perfection. It doesn't require overnight transformation. It doesn't even require you to call yourself a vegan. What it does ask is that you look at the choices in front of you — in food, in fashion, in beauty — and ask whether there's a way to make them with less harm.</p>
+    <p style="margin-top:16px">Most of the time, there is. And increasingly, those alternatives are just as good — and sometimes better than — the ones they replace. 🌱</p>
+  </div>
+
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

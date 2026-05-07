@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Switch To Vegan</title>
+  <meta name="description" content="Browse all posted vegan recipes in a visual gallery with meals, snacks, and desserts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="gallery.css">
+
+</head>
+<body class="gallery-page">
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="site-brand">
+        <img src="25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
+        <span>Switch To Vegan</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
+        <ul class="main-nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="vegan-guide.html">Vegan Guide</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-hero">
+      <div class="container">
+        <div class="gallery-hero__grid">
+          <div class="gallery-hero__copy">
+            <span class="eyebrow">Recipe collection</span>
+            <h1>Cookbook-style <span class="gradient-text">Recipe Gallery</span></h1>
+            <p>Browse all posted vegan recipes in a more visual, curated format with featured meals, practical categories, and clearer entry points.</p>
+
+            <div class="gallery-hero__actions">
+              <a href="#recipe-gallery" class="cta-link">Explore Recipes <span aria-hidden="true">→</span></a>
+              <a href="blog.html" class="cta-link cta-link--soft">Open Blog <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <div class="gallery-hero__feature">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Colorful vegan food spread">
+            <div class="gallery-hero__badge">Fresh weekly inspiration</div>
+          </div>
+
+          <aside class="gallery-hero__notes">
+            <div class="gallery-note">
+              <span class="gallery-note__label">What you’ll find</span>
+              <p>Meals, snacks, and desserts in a more visual format.</p>
+            </div>
+            <div class="gallery-note">
+              <span class="gallery-note__label">Best for</span>
+              <p>Quick browsing when you want recipe inspiration without reading a full article first.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-filter-section">
+      <div class="container">
+        <div class="gallery-filters">
+          <button class="gallery-filter active" type="button" data-filter="all">All Recipes</button>
+          <button class="gallery-filter" type="button" data-filter="meals">Meals</button>
+          <button class="gallery-filter" type="button" data-filter="snacks">Snacks</button>
+          <button class="gallery-filter" type="button" data-filter="desserts">Desserts</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="recipe-gallery-section" id="recipe-gallery">
+      <div class="container">
+        <div class="recipe-gallery-grid">
+          <article class="recipe-card" data-category="meals">
+            <div class="recipe-card__media">
+              <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=1200&q=80" alt="Berry oat breakfast bowl">
+              <span class="recipe-card__tag">Meal</span>
+            </div>
+            <div class="recipe-card__body">
+              <div class="recipe-card__meta">
+                <span>10 min</span>
+                <span>Easy</span>
+              </div>
+              <h2>Berry Oat Bowl</h2>
+              <p>A simple fiber-rich breakfast with oats, berries, seeds, and plant milk.</p>
+              <a href="Gallery/berry-oat-bowl.html" class="cta-link">View Recipe <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="recipe-card recipe-card--offset" data-category="meals">
+            <div class="recipe-card__media">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80" alt="Rainbow nourish bowl">
+              <span class="recipe-card__tag">Meal</span>
+            </div>
+            <div class="recipe-card__body">
+              <div class="recipe-card__meta">
+                <span>20 min</span>
+                <span>Balanced</span>
+              </div>
+              <h2>Rainbow Nourish Bowl</h2>
+              <p>Roasted vegetables, grains, greens, and tahini dressing in one balanced bowl.</p>
+              <a href="blog.html" class="cta-link">View Recipe <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-category="meals">
+            <div class="recipe-card__media">
+              <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Creamy tomato pasta">
+              <span class="recipe-card__tag">Meal</span>
+            </div>
+            <div class="recipe-card__body">
+              <div class="recipe-card__meta">
+                <span>30 min</span>
+                <span>Comfort</span>
+              </div>
+              <h2>Creamy Tomato Pasta</h2>
+              <p>A cozy dinner with tomato sauce, herbs, and a rich plant-based finish.</p>
+              <a href="blog.html" class="cta-link">View Recipe <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-category="snacks">
+            <div class="recipe-card__media">
+              <img src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=1200&q=80" alt="Plant-based snack board">
+              <span class="recipe-card__tag">Snack</span>
+            </div>
+            <div class="recipe-card__body">
+              <div class="recipe-card__meta">
+                <span>8 min</span>
+                <span>Quick</span>
+              </div>
+              <h2>Snack Board</h2>
+              <p>Fruit, hummus, nuts, and crunchy vegetables for an easy plant-based snack.</p>
+              <a href="blog.html" class="cta-link">View Recipe <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="recipe-card recipe-card--offset" data-category="desserts">
+            <div class="recipe-card__media">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1200&q=80" alt="Chocolate chia pudding">
+              <span class="recipe-card__tag">Dessert</span>
+            </div>
+            <div class="recipe-card__body">
+              <div class="recipe-card__meta">
+                <span>12 min</span>
+                <span>No-bake</span>
+              </div>
+              <h2>Chocolate Chia Pudding</h2>
+              <p>A quick dessert with cocoa, chia seeds, and creamy plant milk.</p>
+              <a href="blog.html" class="cta-link">View Recipe <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-category="meals">
+            <div class="recipe-card__media">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Vegetable coconut curry">
+              <span class="recipe-card__tag">Meal</span>
+            </div>
+            <div class="recipe-card__body">
+              <div class="recipe-card__meta">
+                <span>28 min</span>
+                <span>Cozy</span>
+              </div>
+              <h2>Vegetable Coconut Curry</h2>
+              <p>A rich and warming curry for easy weeknight plant-based dinners.</p>
+              <a href="blog.html" class="cta-link">View Recipe <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-promo">
+      <div class="container">
+        <div class="gallery-promo__panel">
+          <div class="gallery-promo__copy">
+            <span class="eyebrow">Need more guidance?</span>
+            <h2>Build meals that fit your nutrition needs and daily routine</h2>
+            <p>Use the meal planning tool to organize balanced vegan meals, explore ideas based on your goals, and make everyday planning feel simpler and more practical.</p>
+          </div>
+
+          <div class="gallery-promo__links">
+            <a href="meal-planner.html" class="cta-link">Open Meal Planning Tool <span aria-hidden="true">→</span></a>
+            <a href="Vegan-Guide.html" class="cta-link cta-link--soft">Browse Resources <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--rich">
+  <div class="container footer-shell footer-shell--simple">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand__logo">
+        <img src="25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
+        <span>Switch To Vegan</span>
+      </a>
+      <p>
+        Practical, calm support for building a vegan lifestyle that feels clear,
+        realistic, and sustainable in everyday life.
+      </p>
+    </div>
+
+    <div class="footer-contact-block">
+      <h4>Contact</h4>
+      <a href="mailto:switchtovegan01@gmail.com" class="footer-email">
+        <i class="fas fa-envelope"></i>
+        <span>switchtovegan01@gmail.com</span>
+      </a>
+      <p class="footer-note">
+        Questions, suggestions, or feedback are always welcome.
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom footer-bottom--simple">
+    <p>&copy; 2026 Switch To Vegan. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

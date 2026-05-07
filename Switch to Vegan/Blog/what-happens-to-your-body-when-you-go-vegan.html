@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>What Happens to Your Body When You Go Vegan? (The Complete Guide)</title>
+<meta name="description" content="A science-backed, honest breakdown of what really happens to your body — week by week — when you switch to a vegan diet. From gut changes to cholesterol drops to B12 deficiency risks."/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+body{font-family:'Nunito',sans-serif;background:#f7f4ef;color:#1c1c1c;line-height:1.9;font-size:17px}
+
+a{color:#2d6a4f;font-weight:700;text-decoration:underline}
+a:hover{color:#1b4332}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#081c15 0%,#1b4332 50%,#2d6a4f 100%);padding:88px 24px 72px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60px;background:#f7f4ef;clip-path:ellipse(55% 100% at 50% 100%)}
+.hero .pill{display:inline-block;background:rgba(255,255,255,0.12);color:#95d5b2;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;padding:7px 20px;border-radius:100px;margin-bottom:26px;border:1px solid rgba(149,213,178,0.3)}
+.hero h1{font-family:'Lora',serif;font-size:clamp(28px,5vw,54px);line-height:1.18;color:#fff;max-width:820px;margin:0 auto 22px}
+.hero h1 em{font-style:italic;color:#95d5b2}
+.hero .sub{color:rgba(255,255,255,0.62);font-size:16.5px;max-width:580px;margin:0 auto 32px;line-height:1.8}
+.hero .meta{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 22px;font-size:13px;color:rgba(255,255,255,0.38)}
+
+/* WRAP */
+.wrap{max-width:820px;margin:0 auto;padding:56px 24px 100px}
+
+/* TOC */
+.toc{background:#fff;border:2px solid #b7e4c7;border-radius:20px;padding:30px 36px;margin-bottom:56px;box-shadow:0 4px 24px rgba(45,106,79,0.07)}
+.toc-head{font-size:11px;font-weight:800;color:#2d6a4f;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:18px}
+.toc ol{padding-left:20px;column-count:2;column-gap:28px}
+.toc li{margin-bottom:9px;break-inside:avoid}
+.toc a{color:#1b4332;text-decoration:none;font-size:14.5px;font-weight:600;line-height:1.5}
+.toc a:hover{text-decoration:underline;color:#2d6a4f}
+@media(max-width:560px){.toc ol{column-count:1}}
+
+/* HEADINGS */
+h2{font-family:'Lora',serif;font-size:30px;color:#081c15;margin:64px 0 20px;padding-bottom:12px;border-bottom:2.5px solid #b7e4c7}
+h3{font-size:21px;font-weight:800;color:#1b4332;margin:36px 0 12px}
+h4{font-size:16.5px;font-weight:800;color:#081c15;margin:24px 0 8px}
+p{margin-bottom:22px;color:#2c2c2c}
+ul,ol{margin:8px 0 24px 22px}
+li{margin-bottom:11px;color:#2c2c2c}
+strong{color:#081c15}
+hr{border:none;border-top:2.5px solid #d8f3dc;margin:56px 0}
+
+/* CALLOUT BOXES */
+.box{padding:22px 28px;margin:30px 0;border-left:5px solid;border-radius:0 16px 16px 0}
+.box .lbl{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:10px;opacity:.65}
+.box p{margin:0;font-size:15.5px}
+.green{background:#f0fdf4;border-color:#2d6a4f;color:#082912}
+.amber{background:#fffbeb;border-color:#f59e0b;color:#78350f}
+.blue{background:#eff6ff;border-color:#3b82f6;color:#1e3a5f}
+.red{background:#fff1f2;border-color:#f43f5e;color:#881337}
+.purple{background:#faf5ff;border-color:#8b5cf6;color:#3b0764}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:16px;margin:30px 0}
+.stat{background:#fff;border:2px solid #b7e4c7;border-radius:14px;padding:22px 16px;text-align:center;box-shadow:0 2px 10px rgba(45,106,79,0.06)}
+.stat .num{font-family:'Lora',serif;font-size:32px;font-weight:700;color:#2d6a4f}
+.stat .lbl{font-size:12px;color:#555;margin-top:5px;line-height:1.45}
+
+/* TIMELINE BLOCKS */
+.timeline{margin:30px 0}
+.tl-item{display:flex;gap:22px;margin-bottom:32px;align-items:flex-start}
+.tl-badge{flex-shrink:0;width:80px;text-align:center;padding:10px 6px;border-radius:12px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;line-height:1.4}
+.tl-dark{background:#1b4332;color:#95d5b2}
+.tl-mid{background:#2d6a4f;color:#d8f3dc}
+.tl-light{background:#52b788;color:#fff}
+.tl-amber{background:#d97706;color:#fff}
+.tl-body{flex:1;background:#fff;border:1.5px solid #d8f3dc;border-radius:0 16px 16px 0;padding:20px 24px;box-shadow:0 2px 8px rgba(45,106,79,0.05)}
+.tl-body h4{margin:0 0 8px;font-size:17px;color:#1b4332}
+.tl-body p{margin:0;font-size:15.5px;color:#333}
+
+/* NUTRIENT TABLE */
+.nut-table{width:100%;border-collapse:collapse;margin:22px 0;font-size:15px}
+.nut-table th{background:#1b4332;color:#fff;padding:12px 16px;text-align:left;font-size:13px;font-weight:800}
+.nut-table td{padding:12px 16px;border-bottom:1px solid #d8f3dc;vertical-align:top}
+.nut-table tr:nth-child(even) td{background:#f6fef8}
+.nut-table td:first-child{font-weight:700;color:#1b4332}
+.nut-table td:last-child{color:#2d6a4f;font-weight:600}
+.nut-table .risk{color:#dc2626;font-weight:700}
+.nut-table .ok{color:#15803d;font-weight:700}
+
+/* MYTH VS FACT */
+.myth-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+@media(max-width:560px){.myth-grid{grid-template-columns:1fr}}
+.myth-card{padding:18px 20px;border-radius:14px}
+.myth{background:#fff1f2;border:1.5px solid #fca5a5}
+.myth .mh{font-size:11px;font-weight:800;color:#dc2626;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.myth p{margin:0;font-size:14.5px;color:#7f1d1d}
+.fact{background:#f0fdf4;border:1.5px solid #86efac}
+.fact .mh{font-size:11px;font-weight:800;color:#16a34a;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
+.fact p{margin:0;font-size:14.5px;color:#14532d}
+
+/* CLOSING */
+.closing{background:linear-gradient(140deg,#081c15,#1b4332,#2d6a4f);color:#fff;padding:60px 48px;border-radius:24px;margin-top:68px;text-align:center}
+.closing h2{font-family:'Lora',serif;font-size:30px;color:#95d5b2;margin-bottom:20px;border:none;padding:0}
+.closing p{color:rgba(255,255,255,0.75);max-width:560px;margin:0 auto}
+.closing p+p{margin-top:16px}
+
+/* FAQ */
+.faq{border-top:2.5px solid #d8f3dc;margin-top:10px}
+.faq-item{border-bottom:1.5px solid #d8f3dc;padding:24px 0}
+.faq-q{font-weight:800;color:#1b4332;font-size:17px;margin-bottom:10px}
+.faq-a{color:#333;font-size:15.5px;margin:0}
+
+blockquote{font-family:'Lora',serif;font-style:italic;font-size:21px;color:#1b4332;background:#f0fdf4;border-left:5px solid #2d6a4f;padding:24px 30px;border-radius:0 16px 16px 0;margin:42px 0;line-height:1.7}
+
+@media(max-width:600px){
+  .closing{padding:44px 24px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="pill">Science-Backed · 2025 Guide</div>
+  <h1>What Happens to Your Body<br/><em>When You Go Vegan?</em></h1>
+  <p class="sub">From your gut bacteria shifting overnight to your cholesterol dropping in weeks — here's the real, research-backed story of what a plant-based diet does to your body.</p>
+  <div class="meta">
+    <span>🔬 Research-backed</span><span>·</span>
+    <span>3,500+ words</span><span>·</span>
+    <span>17 min read</span><span>·</span>
+    <span>Balanced & Honest</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-head">Jump to a section</div>
+    <ol>
+      <li><a href="#first-days">The first 24–72 hours: your gut starts changing</a></li>
+      <li><a href="#week-one">Week 1: energy, digestion, and bloating</a></li>
+      <li><a href="#month-one">Month 1: skin, weight, and blood sugar</a></li>
+      <li><a href="#three-months">3 months: cholesterol and heart health</a></li>
+      <li><a href="#long-term">Long-term: cancer risk, bones, and longevity</a></li>
+      <li><a href="#nutrients">Nutrients to watch: what can go wrong</a></li>
+      <li><a href="#myths">Common myths — busted</a></li>
+      <li><a href="#who-should-be-careful">Who should be extra careful</a></li>
+      <li><a href="#faq">FAQs answered honestly</a></li>
+    </ol>
+  </div>
+
+  <!-- INTRO -->
+  <p>So you're thinking about going vegan — or maybe you just did — and you want to know what's actually going to happen to your body. Not the Instagram version. Not the "I cured everything with plants" testimonial. The real, science-backed answer.</p>
+
+  <p>The honest truth is this: your body notices almost immediately. Within a single day, the microbiome in your gut starts shifting. Within weeks, blood pressure and cholesterol can move in meaningful ways. Within months, the changes become measurable on a lab report. But — and this is important — there are also some things that can go wrong if you're not paying attention.</p>
+
+  <p>This guide covers both sides. What gets better, what needs watching, and what the actual research says — not just the cheerleading version.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">72hrs</div><div class="lbl">Time it takes for gut bacteria to start shifting on a vegan diet</div></div>
+    <div class="stat"><div class="num">~10%</div><div class="lbl">Average drop in LDL ("bad") cholesterol after going vegan, per Harvard research</div></div>
+    <div class="stat"><div class="num">8 wks</div><div class="lbl">Time for significant cardiovascular improvements per Stanford twin study</div></div>
+    <div class="stat"><div class="num">1 pill</div><div class="lbl">The one supplement nearly every vegan absolutely must take: Vitamin B12</div></div>
+  </div>
+
+  <div class="box green">
+    <div class="lbl">Quick note before we begin</div>
+    <p>This guide is informational, not medical advice. Everyone's body is different — someone transitioning from a diet of processed junk will experience different changes than someone who already ate mostly vegetables. When in doubt, talk to your doctor or a registered dietitian, especially if you have a pre-existing health condition.</p>
+  </div>
+
+  <hr/>
+
+  <!-- SECTION 1: FIRST DAYS -->
+  <h2 id="first-days">The First 24–72 Hours: Your Gut Starts Changing</h2>
+
+  <p>Here's something most people don't expect: the fastest changes when you go vegan happen somewhere you can't see — your gut. And they start almost immediately.</p>
+
+  <p>Your intestines are home to trillions of bacteria (your "microbiome"), and <strong>these bacteria are deeply sensitive to what you eat</strong>. The moment you stop eating meat and dairy and start eating more fiber-rich plants, the microbial landscape in your gut starts to shift. <a href="https://www.nature.com/articles/s41398-019-0552-0" target="_blank" rel="noopener">Research published in the journal Translational Psychiatry</a> and studies going back to 2013 in Nature have documented these rapid shifts.</p>
+
+  <p>Fiber-loving bacteria like Bifidobacterium and Lactobacillus increase significantly — by as much as 20% within the first few days — while bacteria that thrive on animal protein tend to decline. This is generally considered a positive change — these bacteria are associated with better digestion, lower inflammation, and a stronger immune response.</p>
+
+  <div class="box amber">
+    <div class="lbl">But here's the catch</div>
+    <p>All that extra fiber is also why many new vegans experience <strong>bloating and gas</strong> in the first week. Your gut bacteria need time to adjust to processing more fiber. This usually settles down within 2–3 weeks. The trick is to increase fiber gradually rather than going from 0 to 100 overnight.</p>
+  </div>
+
+  <h3>What else happens early on</h3>
+  <p>Besides the gut shift, here's what most people notice in the first few days:</p>
+  <ul>
+    <li><strong>Lighter feeling after meals</strong> — animal products, especially red meat, take significantly longer to digest. Without them, meals move through faster and you feel less heavy.</li>
+    <li><strong>Possible energy boost</strong> — many new vegans report feeling more alert and energetic within days, likely because plant foods are easier to digest and deliver nutrients more cleanly. Your body may also release water it was retaining from a meat-heavy, higher-sodium diet.</li>
+    <li><strong>Cravings can intensify temporarily</strong> — especially for cheese, meat, or your usual comfort foods. This is normal. Most people report these cravings weakening significantly after 3–4 weeks.</li>
+  </ul>
+
+  <hr/>
+
+  <!-- SECTION 2: WEEK ONE -->
+  <h2 id="week-one">Week 1: Energy, Digestion, and a Few Surprises</h2>
+
+  <p>The first full week of being vegan is usually a mix of feeling great in some ways and noticing some unexpected adjustments in others. Let's break it down honestly.</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-badge tl-dark">Day 1–3</div>
+      <div class="tl-body">
+        <h4>Gut bacteria shift begins</h4>
+        <p>Fiber-feeding bacteria start multiplying. You might feel cleaner after meals. Possible bloating as your microbiome adjusts to more fiber than it's used to.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-badge tl-mid">Day 3–5</div>
+      <div class="tl-body">
+        <h4>Energy & digestion change</h4>
+        <p>Many people notice improved energy levels. The high intake of complex carbohydrates and antioxidants found in plant foods contributes to improved mood and vitality — especially if you're switching away from a processed-food heavy diet. Digestion speeds up noticeably.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-badge tl-light">Day 5–7</div>
+      <div class="tl-body">
+        <h4>Skin and sleep start improving</h4>
+        <p>Many people report that skin begins clearing up and complexion brightens in the first few days. By the end of the first week, sleep quality often improves too — not necessarily more hours, but better quality, waking up more refreshed.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-badge tl-amber">Days 1–7</div>
+      <div class="tl-body">
+        <h4>The adjustment phase (not always fun)</h4>
+        <p>Some people feel tired or foggy in the first week, especially if they're not eating enough total calories. Plant foods are less calorie-dense — you need to eat more volume to hit your needs. Don't undereat. This phase passes.</p>
+      </div>
+    </div>
+  </div>
+
+  <blockquote>"The most dramatic shifts happen in your gut, and they start almost immediately — usually within the first 24 to 72 hours of changing what you eat."</blockquote>
+
+  <h3>What about protein in week one?</h3>
+  <p>This is what everyone worries about, and honestly — it's less of an issue than most people think, as long as you're actually eating. Lentils, chickpeas, tofu, tempeh, beans, edamame, peas, quinoa, and nuts are all solid protein sources. The bigger risk for beginners isn't protein deficiency — it's <strong>not eating enough calories overall</strong>, which leads to fatigue and can be mistaken for a protein problem.</p>
+
+  <p>If you're eating a varied diet that includes legumes at most meals, your protein intake is almost certainly fine. <a href="https://www.healthline.com/nutrition/protein-for-vegans-vegetarians" target="_blank" rel="noopener">Registered dietitians and nutritional research consistently confirm that well-planned vegan diets provide adequate protein</a> for most healthy adults.</p>
+
+  <hr/>
+
+  <!-- SECTION 3: MONTH ONE -->
+  <h2 id="month-one">Month 1: Skin, Weight & Blood Sugar</h2>
+
+  <p>By the end of the first month, the changes start becoming more visible — both to you and on paper. This is usually when people become true believers, because the improvements are real and measurable.</p>
+
+  <h3>Your skin</h3>
+  <p>This one catches a lot of people off guard. Dairy is one of the main dietary culprits behind hormonal acne — it contains animal hormones that can disrupt your natural hormone balance. Removing dairy from your diet, combined with consuming more antioxidant-rich fruits and vegetables, naturally leads to healthier skin.</p>
+
+  <p>After about 3–6 weeks, most people experience clearer skin, a reduction in acne, and a healthier glow. This isn't magic — it's the combination of removing dairy (which affects hormones) and loading up on antioxidants from plants that fight oxidative damage in skin cells.</p>
+
+  <h3>Weight changes</h3>
+  <p>Most people lose some weight in the first month of going vegan — not because of some magical fat-burning property of plants, but because:</p>
+  <ul>
+    <li>Plant foods are generally lower in calories for the same volume of food</li>
+    <li>You're almost certainly eating less saturated fat</li>
+    <li>Higher fiber intake means you feel full faster and longer</li>
+    <li>Your body stops retaining as much water (from high-sodium processed foods)</li>
+  </ul>
+
+  <p>A <a href="https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2774561" target="_blank" rel="noopener">randomized clinical trial published in JAMA Network Open</a> found that participants on a low-fat vegan diet lost significantly more body weight and body fat compared to those continuing an omnivorous diet — without any calorie counting required. The weight loss was directly linked to reduced intramyocellular lipids (fat stored in muscle cells).</p>
+
+  <div class="box blue">
+    <div class="lbl">Important caveat</div>
+    <p>Not all vegan diets lead to weight loss. A diet of Oreos, french fries, and vegan pizza is technically vegan. The weight and health benefits come from a <em>whole food</em> plant-based diet — not just eliminating animal products without thinking about what replaces them.</p>
+  </div>
+
+  <h3>Blood sugar stabilizes</h3>
+  <p>One of the less-talked-about benefits of going vegan is what happens to your blood sugar. Plant foods — especially legumes and whole grains — have a lower glycemic index than most animal-protein-heavy meals. This means your blood sugar rises more slowly and steadily after eating, rather than spiking and crashing.</p>
+
+  <p>An NIH study found that a plant-based diet controlled blood sugar in people with type 2 diabetes three times more effectively than a traditional diabetes diet — and within weeks, many participants saw dramatic health improvements. The Stanford twin study found that insulin levels in the blood dropped by around 20% in vegan participants within just eight weeks.</p>
+
+  <hr/>
+
+  <!-- SECTION 4: 3 MONTHS -->
+  <h2 id="three-months">3 Months: The Cholesterol & Heart Health Shift</h2>
+
+  <p>This is where the changes become truly impressive — and measurable on a blood test. By the 3-month mark, most consistent vegans see meaningful improvements in their cardiovascular markers.</p>
+
+  <h3>Cholesterol drops</h3>
+  <p>This is one of the most well-documented effects of a vegan diet. A large analysis pooling results from 30 clinical trials found that compared to people eating an omnivorous diet, those following a vegetarian or vegan diet experienced average drops in total cholesterol, LDL cholesterol ("bad" cholesterol), and apolipoprotein B of 7%, 10%, and 14% respectively.</p>
+
+  <p>The landmark <a href="https://med.stanford.edu/news/all-news/2023/11/twin-diet-vegan-cardiovascular.html" target="_blank" rel="noopener">Stanford identical twins study (2023)</a> was particularly compelling because it used twins — people with the same genes — to isolate the effect of diet. The authors found the most improvement over the first four weeks of the diet change, and concluded that anyone who chooses a vegan diet can improve their long-term health within two months. Vegan twins had significantly lower LDL cholesterol, insulin levels, and body weight than their omnivore twins by the end of the 8-week trial.</p>
+
+  <h3>Blood pressure improves</h3>
+  <p>Research found that vegans had systolic blood pressure readings that averaged 7 points lower than meat-eaters — enough to significantly reduce stroke and heart attack risk. Plant foods are naturally low in sodium and high in potassium, a mineral that helps relax blood vessel walls. They're also rich in nitrates (in leafy greens and beets), which the body converts to nitric oxide — a compound that dilates blood vessels and improves circulation.</p>
+
+  <h3>Inflammation goes down</h3>
+  <p>Chronic inflammation is one of the underlying drivers of most modern diseases — heart disease, diabetes, cancer, and even depression. A whole-food vegan diet is naturally anti-inflammatory because it's rich in antioxidants, phytochemicals, and fiber, while being low in the saturated fats and processed compounds that drive inflammatory responses.</p>
+
+  <p>A <a href="https://www.sciencedaily.com/releases/2024/05/240515164230.htm" target="_blank" rel="noopener">major umbrella review published in PLOS ONE in 2024</a> analyzed 49 studies spanning two decades and concluded that plant-based diets are associated with reduced risk of ischemic heart disease, gastrointestinal and prostate cancer, and death from cardiovascular disease.</p>
+
+  <hr/>
+
+  <!-- SECTION 5: LONG TERM -->
+  <h2 id="long-term">Long-Term: Cancer Risk, Bone Health & Longevity</h2>
+
+  <p>This is where things get nuanced. The long-term benefits of a vegan diet are real — but so are some genuine risks if you're not careful about nutrition. Here's the balanced picture.</p>
+
+  <h3>Cancer risk reduction</h3>
+  <p>Decades of research point to plant-heavy diets being protective against certain cancers — particularly colorectal, breast, and prostate cancer. The reasons are multiple: higher fiber intake keeps things moving in the gut (reducing carcinogen exposure time), higher antioxidant intake combats oxidative damage to DNA, and lower intake of processed and red meat removes known carcinogens.</p>
+
+  <p>Carotenoids — the pigments in orange, red, and yellow vegetables — exert protective effects against several types of cancers, in addition to their benefits for vision and skin. Glucosinolates (found in broccoli, cauliflower, and kale) have protective roles against cancer and dementia.</p>
+
+  <h3>Sleep quality</h3>
+  <p>This is one of the quieter benefits that doesn't get much press. Dietary interventions emphasizing micronutrient-dense, plant-rich diets have shown promise in enhancing sleep quality in multiple studies. A 9-week trial found that Pittsburgh Sleep Quality Index scores improved significantly — from a median score of 8 to 4 — consistent with a substantial improvement in sleep quality.</p>
+
+  <h3>Bone health — the real concern</h3>
+  <p>Here's where we have to be honest about a genuine risk. A recent study found an increased risk of hip fractures in vegans compared to meat-eaters — approximately 2.3 times higher — as well as greater incidence of overall fracture and leg fractures. The higher risk may be related to vegans' significantly lower calcium intake, reduced dietary protein intake, and lower BMI.</p>
+
+  <p>This doesn't mean going vegan will break your bones — but it does mean you need to be deliberate about calcium and Vitamin D. Sources of plant-based calcium include fortified plant milks, tofu (especially calcium-set), sesame seeds, chia seeds, almonds, and dark leafy greens like kale and bok choy. This isn't hard to manage, but it requires intention, especially if you've stopped consuming dairy.</p>
+
+  <hr/>
+
+  <!-- SECTION 6: NUTRIENTS -->
+  <h2 id="nutrients">Nutrients to Watch: What Can Go Wrong</h2>
+
+  <p>A well-planned vegan diet is healthy for most people. A badly planned one can leave real gaps. Here's an honest breakdown of the nutrients that need attention:</p>
+
+  <table class="nut-table">
+    <thead>
+      <tr>
+        <th>Nutrient</th>
+        <th>The risk level</th>
+        <th>Plant sources</th>
+        <th>What to do</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Vitamin B12</td>
+        <td class="risk">🔴 Critical</td>
+        <td>Almost none in plant foods</td>
+        <td>Supplement daily — non-negotiable. Cyanocobalamin 1000mcg/day. <a href="https://www.vegansociety.com/resources/nutrition-and-health/nutrients/vitamin-b12/what-every-vegan-should-know-about-vitamin-b12" target="_blank" rel="noopener">Vegan Society guidance here.</a></td>
+      </tr>
+      <tr>
+        <td>Vitamin D</td>
+        <td class="risk">🟠 Moderate</td>
+        <td>Fortified foods, sunlight</td>
+        <td>Supplement in winter. Vegans and non-vegans alike are often deficient. D3 from lichen is vegan-friendly.</td>
+      </tr>
+      <tr>
+        <td>Calcium</td>
+        <td class="risk">🟠 Moderate</td>
+        <td>Fortified plant milk, tofu, sesame, kale, almonds</td>
+        <td>Eat calcium-rich foods daily. Consider a supplement if intake is consistently low.</td>
+      </tr>
+      <tr>
+        <td>Iron</td>
+        <td class="risk">🟡 Watch</td>
+        <td>Lentils, spinach, pumpkin seeds, fortified cereals</td>
+        <td>Eat with Vitamin C for better absorption. Avoid tea/coffee with iron-rich meals (inhibits absorption).</td>
+      </tr>
+      <tr>
+        <td>Omega-3 (DHA/EPA)</td>
+        <td class="risk">🟡 Watch</td>
+        <td>Walnuts, flaxseeds, chia seeds (ALA only)</td>
+        <td>Consider an algae-based omega-3 supplement. Algae is where fish get their omega-3 anyway.</td>
+      </tr>
+      <tr>
+        <td>Zinc</td>
+        <td class="ok">🟢 Manageable</td>
+        <td>Legumes, pumpkin seeds, cashews, oats</td>
+        <td>Variety covers it for most people. Soaking legumes before cooking improves zinc absorption.</td>
+      </tr>
+      <tr>
+        <td>Iodine</td>
+        <td class="risk">🟠 Moderate</td>
+        <td>Seaweed (variable), iodized salt</td>
+        <td>Use iodized salt or consider a supplement — dairy and seafood are the main iodine sources in omnivore diets.</td>
+      </tr>
+      <tr>
+        <td>Protein</td>
+        <td class="ok">🟢 Fine with variety</td>
+        <td>Lentils, beans, tofu, tempeh, edamame, seitan, quinoa</td>
+        <td>Eat legumes at most meals. Combine grains + legumes across the day for all essential amino acids.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box red">
+    <div class="lbl">Vitamin B12 — say it louder</div>
+    <p><strong>B12 deficiency is not optional to ignore.</strong> It builds up slowly, sometimes taking years to show symptoms, and by the time you notice neurological signs (tingling, brain fog, weakness), real damage may have occurred. Every single vegan should supplement B12. This is the one non-negotiable. No plant food provides reliable B12 — not spirulina, not nutritional yeast (unless fortified), not anything except supplements or fortified foods. Take the pill.</p>
+  </div>
+
+  <hr/>
+
+  <!-- MYTHS -->
+  <h2 id="myths">Common Myths — Busted</h2>
+
+  <p>There's a lot of noise around veganism — from both cheerleaders and critics. Here's what the evidence actually says on some common claims:</p>
+
+  <div class="myth-grid">
+    <div class="myth-card myth">
+      <div class="mh">❌ Myth</div>
+      <p>"You can't get enough protein on a vegan diet."</p>
+    </div>
+    <div class="myth-card fact">
+      <div class="mh">✅ Fact</div>
+      <p>You absolutely can. Lentils, beans, tofu, tempeh, edamame, seitan, and quinoa are all high-protein foods. Eat legumes at most meals and you're covered.</p>
+    </div>
+    <div class="myth-card myth">
+      <div class="mh">❌ Myth</div>
+      <p>"Soy is dangerous because of its estrogen-like compounds."</p>
+    </div>
+    <div class="myth-card fact">
+      <div class="mh">✅ Fact</div>
+      <p>Current nutritional research consistently shows that moderate, regular consumption of whole soy foods is safe and beneficial for most adults. The hormone concern is largely based on misinterpreted animal studies.</p>
+    </div>
+    <div class="myth-card myth">
+      <div class="mh">❌ Myth</div>
+      <p>"Going vegan automatically makes you healthy."</p>
+    </div>
+    <div class="myth-card fact">
+      <div class="mh">✅ Fact</div>
+      <p>A vegan diet of processed food, chips, and soda is still junk. The health benefits come from a <em>whole food</em> plant-based diet — not simply removing animal products.</p>
+    </div>
+    <div class="myth-card myth">
+      <div class="mh">❌ Myth</div>
+      <p>"Vegans are always nutrient deficient."</p>
+    </div>
+    <div class="myth-card fact">
+      <div class="mh">✅ Fact</div>
+      <p>B12 is the only near-universal deficiency risk. Everything else can be covered by a varied whole-food diet with attention to a few key foods. It's manageable with knowledge.</p>
+    </div>
+    <div class="myth-card myth">
+      <div class="mh">❌ Myth</div>
+      <p>"Vegan diets are always expensive."</p>
+    </div>
+    <div class="myth-card fact">
+      <div class="mh">✅ Fact</div>
+      <p>Dal, lentils, rice, beans, oats, and seasonal vegetables are some of the cheapest foods in the world. Specialty vegan products are expensive. Whole plant foods are not.</p>
+    </div>
+    <div class="myth-card myth">
+      <div class="mh">❌ Myth</div>
+      <p>"Plant protein is inferior to animal protein."</p>
+    </div>
+    <div class="myth-card fact">
+      <div class="mh">✅ Fact</div>
+      <p>Individual plant proteins may be incomplete, but eating a variety across the day covers all essential amino acids. Combinations like rice + dal create complete protein profiles.</p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- WHO SHOULD BE CAREFUL -->
+  <h2 id="who-should-be-careful">Who Should Be Extra Careful</h2>
+
+  <p>A vegan diet is healthy for most adults — but there are some groups who need to be especially thoughtful and should work closely with a doctor or dietitian:</p>
+
+  <ul>
+    <li><strong>Pregnant or breastfeeding women:</strong> Veganism has been associated with adverse outcomes in vulnerable populations, including children, adolescents, and pregnant women, due to the potential for micro and macronutrient deficits. B12, iodine, DHA, iron, and calcium are all critical during pregnancy. A vegan pregnancy is possible and has been done successfully by many, but requires careful supplementation and monitoring.</li>
+    <li><strong>Children and teenagers:</strong> Growing bodies have higher demands for calcium, vitamin D, iron, and zinc. Vegan children can thrive, but parents should work with a pediatric dietitian to ensure their needs are consistently met.</li>
+    <li><strong>People with thyroid conditions:</strong> Iodine is important for thyroid function and is primarily found in dairy and seafood in omnivore diets. Make sure you're getting it via iodized salt or a supplement.</li>
+    <li><strong>People with a history of eating disorders:</strong> Any restrictive diet framework — vegan or otherwise — can be a trigger. Focus on nourishment and abundance, not restriction.</li>
+    <li><strong>Elderly adults:</strong> Protein needs increase with age, and calcium and Vitamin D become even more critical for preventing fractures. Get a blood panel done and supplement based on results.</li>
+  </ul>
+
+  <div class="box purple">
+    <div class="lbl">The bottom line on safety</div>
+    <p>Major nutrition organizations — including the <a href="https://www.eatright.org/health/wellness/vegetarian-and-special-diets/vegetarian-and-vegan-diet" target="_blank" rel="noopener">Academy of Nutrition and Dietetics</a> — state that a well-planned vegan diet is nutritionally adequate for all stages of life. The key phrase is <em>well-planned</em>. It doesn't happen by accident — it requires intention, variety, and B12 supplementation.</p>
+  </div>
+
+  <hr/>
+
+  <!-- FAQ -->
+  <h2 id="faq">Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">How quickly will I feel a difference after going vegan?</div>
+      <p class="faq-a">Most people notice something within the first few days — usually energy, digestion, or feeling lighter after meals. Immediate benefits can include heightened energy and improved blood sugar control, followed by short-term gains like weight loss and clearer skin. Bigger measurable changes — like cholesterol and blood pressure — typically show up over weeks to months. The timeline varies depending on what your diet was like before and how whole-food-based your vegan diet is.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Will I lose weight going vegan?</div>
+      <p class="faq-a">Probably, if you're eating mostly whole foods. Multiple studies confirm that vegan diets tend to lead to lower body weight — not because of some calorie-burning magic, but because plant foods are naturally lower in calorie density and higher in fiber (which fills you up). That said, you can absolutely eat a vegan diet and not lose weight, especially if it's heavy on processed foods and oils. Weight loss on any diet comes down to calories in vs. out, but a whole-food vegan diet tends to make it easier.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is it normal to feel tired in the first week of going vegan?</div>
+      <p class="faq-a">Yes, and it's usually because you're not eating enough. Plant foods are less calorie-dense than animal products, which means you need to eat more volume to hit the same calorie intake. If you go vegan and feel exhausted, the most likely explanation is that you're undereating — not that you're deficient in something. Track your food for a few days to check. If you're eating enough and still fatigued after a few weeks, get your iron and B12 levels checked.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Do I actually need to take B12, or is it overhyped?</div>
+      <p class="faq-a">Not overhyped — it's completely real and completely critical. B12 is produced by bacteria and is found almost exclusively in animal products. Plants don't produce it. Long-term deficiency causes serious neurological damage that can be irreversible. <a href="https://www.vegansociety.com/resources/nutrition-and-health/nutrients/vitamin-b12/what-every-vegan-should-know-about-vitamin-b12" target="_blank" rel="noopener">The Vegan Society</a> recommends supplementing with at least 10mcg daily or 2000mcg twice weekly. Take the supplement. There's no debate about this one in the nutrition science community.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can going vegan improve mental health?</div>
+      <p class="faq-a">The relationship is complex and the research is mixed. Among observational studies, one large cross-sectional study showed a higher occurrence of depressive symptoms for vegetarian dieters compared to non-vegetarians, while another found a beneficial association between a vegan diet and mood. Overall, the causal relationship remains uninvestigated. What's clear is that a well-nourished vegan — getting adequate B12, omega-3, and iron — is more likely to experience mental health benefits than one with deficiencies, which can negatively affect mood and cognition. Gut health also influences mental health through the gut-brain axis, and the microbiome improvements from a plant-rich diet may play a role here too.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How is my hair and skin affected?</div>
+      <p class="faq-a">Many people notice that their complexion brightens and skin feels softer within a few days. Within a few weeks, hair quality can also improve — the transition from dull, unhealthy strands to healthier, shinier hair is a common report, attributed to the healthy plant-based fats from coconut oil, nuts, and seeds. Removing dairy is particularly impactful for people who experience hormonal acne, as dairy is a known hormonal disruptor for many people. The caveat: if you develop deficiencies in B12, zinc, or iron, your skin and hair can suffer. Nourishment is the whole game.</p>
+    </div>
+  </div>
+
+  <hr/>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <h2>The Bottom Line</h2>
+    <p>Going vegan, done right, triggers a cascade of measurable and meaningful changes in your body — from your gut bacteria shifting within days, to your cholesterol dropping over weeks, to your long-term cancer and heart disease risk declining over years. The research behind these benefits is genuinely solid.</p>
+    <p>But it requires intention. B12 is non-negotiable. Calcium and Vitamin D need attention. Eating enough total calories matters. A junk-food vegan diet helps nobody.</p>
+    <p style="margin-top:16px">Do it thoughtfully — eat varied whole plants, supplement what you can't get from food (B12 first, D3 second), and give your gut a few weeks to adjust — and your body will very likely thank you for it. 🌱</p>
+  </div>
+
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>

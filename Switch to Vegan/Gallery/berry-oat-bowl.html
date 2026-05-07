@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Oat Bowl — Recipe</title>
+
+  <!-- Same fonts as the website -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ── CSS Variables (copied from your style.css) ───────────────────── */
+    :root {
+      --primary-color: #2f6b47;
+      --secondary-color: #5c9271;
+      --accent-color: #d7efe1;
+      --accent2-color: #d6b970;
+      --light-bg: #fcfaf5;
+      --dark-bg: #f6f2e9;
+      --text-primary: #1f2a22;
+      --text-secondary: #5f6d63;
+      --text-light: #ffffff;
+      --border-color: rgba(34,55,36,0.12);
+
+      --font-heading: 'Cormorant Garamond', serif;
+      --font-body: 'Outfit', sans-serif;
+
+      --spacing-xs: 0.25rem;
+      --spacing-sm: 0.5rem;
+      --spacing-md: 1rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+      --spacing-xxl: 5rem;
+
+      --border-radius-sm: 4px;
+      --border-radius-md: 14px;
+      --border-radius-lg: 20px;
+      --border-radius-xl: 28px;
+
+      --shadow-light:  0 14px 32px rgba(21,31,23,0.06);
+      --shadow-medium: 0 24px 60px rgba(21,31,23,0.08);
+      --shadow-dark:   0 28px 70px rgba(21,31,23,0.12);
+
+      --transition-fast:   0.2s ease;
+      --transition-medium: 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* ── Reset & Base ─────────────────────────────────────────────────── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    html { font-size:16px; scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-primary);
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at top left,  rgba(215,239,225,0.9), transparent 36%),
+        radial-gradient(circle at top right, rgba(214,185,112,0.18), transparent 26%),
+        linear-gradient(180deg, #fcfaf5 0%, #f6f2e9 100%);
+      min-height: 100vh;
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text-primary);
+      text-rendering: optimizeLegibility;
+    }
+    p { color: var(--text-secondary); line-height: 1.75; }
+    a { color: var(--primary-color); text-decoration: none; transition: color var(--transition-fast); }
+    a:hover { color: var(--secondary-color); }
+    img { max-width:100%; height:auto; display:block; }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+
+    /* ── Sticky Header (matches your site header style) ───────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(18px);
+      background: rgba(252,250,245,0.82);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(18,30,21,0.05);
+    }
+    .header-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .site-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+    .site-brand .brand-icon {
+      width: 38px; height: 38px;
+      background: var(--primary-color);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1rem;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: var(--accent-color);
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: background var(--transition-fast), transform var(--transition-fast);
+    }
+    .back-btn:hover { background: #c3e4d1; color: var(--primary-color); transform: translateX(-2px); }
+
+    /* ── Breadcrumb ───────────────────────────────────────────────────── */
+    .breadcrumb {
+      padding: 16px 0 0;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumb a { color: var(--primary-color); font-weight: 500; }
+    .breadcrumb span { color: #b0baac; }
+
+    /* ── Hero Section ─────────────────────────────────────────────────── */
+    .recipe-hero {
+      padding: 28px 0 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(47,107,71,0.10);
+      color: var(--primary-color);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .recipe-title {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .recipe-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 24px;
+      max-width: 480px;
+    }
+
+    /* Quick stats row */
+    .quick-stats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-light);
+    }
+    .stat-pill .stat-icon {
+      width: 32px; height: 32px;
+      background: rgba(47,107,71,0.10);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+    }
+    .stat-pill .stat-label { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+    .stat-pill .stat-value { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+
+    /* Dietary badges */
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .badge {
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+    .badge-green  { background: rgba(47,107,71,0.10);  color: #2f6b47; border-color: rgba(47,107,71,0.18); }
+    .badge-gold   { background: rgba(214,185,112,0.18); color: #7a5e0a; border-color: rgba(214,185,112,0.35); }
+    .badge-blue   { background: rgba(92,146,175,0.12);  color: #2a5d7e; border-color: rgba(92,146,175,0.25); }
+
+    /* Hero Image */
+    .hero-img-wrap {
+      position: relative;
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark);
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #d7efe1 0%, #e8f7ef 100%);
+    }
+    .hero-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .hero-img-wrap:hover img { transform: scale(1.03); }
+    .hero-img-badge {
+      position: absolute;
+      top: 18px; left: 18px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      padding: 10px 16px;
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    .hero-img-badge i { color: var(--accent2-color); }
+
+    /* ── Divider ──────────────────────────────────────────────────────── */
+    .section-divider {
+      height: 1px;
+      background: var(--border-color);
+      margin: 0;
+    }
+
+    /* ── Main Content Grid ────────────────────────────────────────────── */
+    .recipe-body {
+      padding: 56px 0 80px;
+    }
+    .recipe-layout {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* ── Sidebar ──────────────────────────────────────────────────────── */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-xl);
+      padding: 28px;
+      box-shadow: var(--shadow-light);
+    }
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-title i {
+      width: 34px; height: 34px;
+      background: rgba(47,107,71,0.10);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--primary-color);
+      font-size: 0.9rem;
+    }
+
+    /* Serving adjuster */
+    .serving-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .serving-label { font-size: 0.88rem; color: var(--text-secondary); }
+    .serving-ctrl {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .serving-btn {
+      width: 34px; height: 34px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--primary-color);
+      font-size: 1rem;
+      transition: background var(--transition-fast);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .serving-btn:hover { background: var(--accent-color); }
+    #serving-count {
+      min-width: 28px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+    }
+
+    /* Ingredient list */
+    .ingredient-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ingredient-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: var(--border-radius-md);
+      background: var(--light-bg);
+      font-size: 0.9rem;
+      transition: background var(--transition-fast);
+    }
+    .ingredient-list li:hover { background: var(--accent-color); }
+    .ing-name { color: var(--text-primary); font-weight: 500; }
+    .ing-amount {
+      font-weight: 700;
+      color: var(--primary-color);
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    /* Nutrition mini card */
+    .nutrition-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .nut-item {
+      background: var(--light-bg);
+      border-radius: var(--border-radius-md);
+      padding: 12px;
+      text-align: center;
+    }
+    .nut-val  { font-size: 1.3rem; font-weight: 700; color: var(--primary-color); display: block; }
+    .nut-label { font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Main Column ──────────────────────────────────────────────────── */
+    .main-col {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    /* Section heading */
+    .section-heading {
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+    }
+    .section-subtext {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    /* Steps */
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step-item {
+      display: flex;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-color);
+      animation: fadeUp 0.4s ease both;
+    }
+    .step-item:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 14px rgba(47,107,71,0.3);
+      margin-top: 2px;
+    }
+    .step-content { flex: 1; }
+    .step-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .step-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .step-timer {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      padding: 5px 12px;
+      background: rgba(214,185,112,0.15);
+      border: 1px solid rgba(214,185,112,0.35);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #7a5e0a;
+    }
+
+    /* Tips card */
+    .tips-card {
+      background: linear-gradient(135deg, rgba(47,107,71,0.06), rgba(215,239,225,0.4));
+      border: 1px solid rgba(47,107,71,0.15);
+      border-radius: var(--border-radius-xl);
+      padding: 32px;
+    }
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .tip-item {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius-lg);
+      padding: 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-light);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .tip-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-medium); }
+    .tip-icon {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: rgba(47,107,71,0.10);
+      color: var(--primary-color);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .tip-text strong { display: block; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 3px; }
+    .tip-text span   { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+
+    /* Related / CTA Banner */
+    .cta-banner {
+      background: linear-gradient(135deg, #2f6b47, #3f8159);
+      border-radius: var(--border-radius-xl);
+      padding: 40px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: var(--shadow-dark);
+    }
+    .cta-banner h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .cta-banner p { color: rgba(255,255,255,0.82); margin: 0; font-size: 0.95rem; }
+    .btn-white {
+      flex-shrink: 0;
+      padding: 12px 28px;
+      background: #fff;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 999px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      white-space: nowrap;
+    }
+    .btn-white:hover { transform: scale(1.04); box-shadow: 0 8px 24px rgba(0,0,0,0.15); color: var(--primary-color); }
+
+    /* ── Footer ───────────────────────────────────────────────────────── */
+    .page-footer {
+      background: rgba(255,255,255,0.6);
+      border-top: 1px solid var(--border-color);
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* ── Animations ───────────────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(14px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+    .hero-grid       { animation: fadeUp 0.5s ease both; }
+    .recipe-layout   { animation: fadeUp 0.5s 0.1s ease both; }
+
+    /* ── Responsive ───────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .hero-grid    { grid-template-columns: 1fr; }
+      .hero-img-wrap { aspect-ratio: 16/9; }
+      .recipe-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .cta-banner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 540px) {
+      .quick-stats { gap: 10px; }
+      .stat-pill   { padding: 8px 12px; }
+      .nutrition-grid { grid-template-columns: repeat(4,1fr); }
+      .card { padding: 20px; }
+      .recipe-title { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ─────────────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="site-brand">
+          <div class="25dfa885-849b-4c13-96b2-5b312f3e9105"><i class="25dfa885-849b-4c13-96b2-5b312f3e9105.png"></i></div>
+          Switch To Vegan
+        </a>
+        <a href="recipes.html" class="back-btn">
+          <i class="fa-solid fa-arrow-left"></i> Back to Recipes
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ───────────────────────────────────────────────────────── -->
+  <section class="recipe-hero">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <span>/</span>
+        <a href="recipes.html">Recipes</a>
+        <span>/</span>
+        <span style="color:var(--text-primary);font-weight:500;">Berry Oat Bowl</span>
+      </nav>
+
+      <!-- Hero Grid -->
+      <div class="hero-grid">
+
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="hero-tag">
+            <i class="fa-solid fa-bowl-food"></i>
+            Breakfast · Healthy
+          </div>
+
+          <h1 class="recipe-title">Berry<br>Oat Bowl</h1>
+
+          <p class="recipe-desc">
+            A warm, cozy oat bowl loaded with juicy mixed berries, a drizzle of maple syrup,
+            and a creamy coconut yogurt finish — 100% plant-based and perfect for a nourishing start to your day.
+          </p>
+
+          <!-- Quick Stats -->
+          <div class="quick-stats">
+            <div class="stat-pill">
+              <div class="stat-icon"><i class="fa-regular fa-clock"></i></div>
+              <div>
+                <div class="stat-label">Total Time</div>
+                <div class="stat-value">15 mins</div>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-icon"><i class="fa-solid fa-utensils"></i></div>
+              <div>
+                <div class="stat-label">Servings</div>
+                <div class="stat-value">2 bowls</div>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <div class="stat-icon"><i class="fa-solid fa-gauge-simple"></i></div>
+              <div>
+                <div class="stat-label">Difficulty</div>
+                <div class="stat-value">Easy</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="badges">
+            <span class="badge badge-green"><i class="fa-solid fa-leaf" style="margin-right:4px"></i> Vegetarian</span>
+            <span class="badge badge-green">High Fibre</span>
+            <span class="badge badge-gold"><i class="fa-solid fa-wheat-awn-circle-exclamation" style="margin-right:4px"></i> Gluten-Free Option</span>
+            <span class="badge badge-blue">Antioxidant Rich</span>
+          </div>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="hero-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
+            alt="Berry Oat Bowl — fresh berries on creamy oats"
+            loading="lazy"
+          />
+          <div class="hero-img-badge">
+            <i class="fa-solid fa-star"></i>
+            Staff Pick
+          </div>
+        </div>
+
+      </div><!-- /hero-grid -->
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ── Recipe Body ─────────────────────────────────────────────────── -->
+  <section class="recipe-body">
+    <div class="container">
+      <div class="recipe-layout">
+
+        <!-- ── Sidebar ──────────────────────────────────────────────── -->
+        <aside class="sidebar">
+
+          <!-- Ingredients Card -->
+          <div class="card">
+            <div class="card-title">
+              <i class="fa-solid fa-list-check"></i>
+              Ingredients
+            </div>
+
+            <!-- Serving Adjuster -->
+            <div class="serving-row">
+              <span class="serving-label">Adjust servings</span>
+              <div class="serving-ctrl">
+                <button class="serving-btn" id="dec" onclick="changeServings(-1)" aria-label="Decrease">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <span id="serving-count">2</span>
+                <button class="serving-btn" id="inc" onclick="changeServings(1)" aria-label="Increase">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <ul class="ingredient-list" id="ingredients">
+              <!-- filled by JS -->
+            </ul>
+          </div>
+
+          <!-- Nutrition Card -->
+          <div class="card">
+            <div class="card-title">
+              <i class="fa-solid fa-chart-pie"></i>
+              Nutrition <small style="font-size:0.7rem;color:var(--text-secondary);font-family:var(--font-body);font-weight:400;">per serving</small>
+            </div>
+            <div class="nutrition-grid">
+              <div class="nut-item"><span class="nut-val">320</span><span class="nut-label">Calories</span></div>
+              <div class="nut-item"><span class="nut-val">52g</span><span class="nut-label">Carbs</span></div>
+              <div class="nut-item"><span class="nut-val">12g</span><span class="nut-label">Protein</span></div>
+              <div class="nut-item"><span class="nut-val">7g</span><span class="nut-label">Fat</span></div>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ── Main Column ───────────────────────────────────────────── -->
+        <main class="main-col">
+
+          <!-- Instructions -->
+          <div>
+            <h2 class="section-heading">How to Make It</h2>
+            <p class="section-subtext">Follow these simple steps — total time is about 15 minutes.</p>
+
+            <ol class="steps-list">
+              <li class="step-item" style="animation-delay:0.05s">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                  <div class="step-title">Heat the Milk</div>
+                  <p class="step-desc">Pour <strong>2 cups of milk</strong> (or almond milk) into a medium saucepan over medium heat. Bring it to a gentle simmer — you'll see small bubbles forming around the edges. Don't let it reach a full boil.</p>
+                </div>
+              </li>
+
+              <li class="step-item" style="animation-delay:0.1s">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                  <div class="step-title">Cook the Oats</div>
+                  <p class="step-desc">Add <strong>1 cup of rolled oats</strong>, a pinch of salt, and <strong>½ tsp cinnamon</strong> to the hot milk. Stir well, reduce heat to low, and let it simmer, stirring occasionally, until the oats are thick and creamy.</p>
+                  <div class="step-timer"><i class="fa-regular fa-clock"></i> Cook for 5 minutes</div>
+                </div>
+              </li>
+
+              <li class="step-item" style="animation-delay:0.15s">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                  <div class="step-title">Add Flavour</div>
+                  <p class="step-desc">Once cooked, stir in <strong>½ tsp vanilla extract</strong> and <strong>1 tbsp chia seeds</strong>. Mix well so everything is evenly combined, then turn off the heat.</p>
+                </div>
+              </li>
+
+              <li class="step-item" style="animation-delay:0.2s">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                  <div class="step-title">Prep the Berries</div>
+                  <p class="step-desc">Rinse <strong>1 cup of mixed berries</strong> (strawberries, blueberries, raspberries). Slice strawberries in half. Use them fresh, or give them a quick 60-second warm in a pan for a jammy, sauce-like texture.</p>
+                  <div class="step-timer"><i class="fa-regular fa-clock"></i> Optional warm: 1 minute</div>
+                </div>
+              </li>
+
+              <li class="step-item" style="animation-delay:0.25s">
+                <div class="step-num">5</div>
+                <div class="step-content">
+                  <div class="step-title">Assemble the Bowl</div>
+                  <p class="step-desc">Spoon the creamy oats into bowls. Add a generous dollop of <strong>Greek yogurt</strong>, pile on the berries, and finish with a drizzle of <strong>honey or maple syrup</strong>.</p>
+                </div>
+              </li>
+
+              <li class="step-item" style="animation-delay:0.3s">
+                <div class="step-num">6</div>
+                <div class="step-content">
+                  <div class="step-title">Serve &amp; Enjoy!</div>
+                  <p class="step-desc">Serve immediately while warm. For an overnight cold version, skip cooking — just soak oats in milk overnight in the fridge and add toppings fresh in the morning.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Tips -->
+          <div class="tips-card">
+            <h2 class="section-heading">Tips &amp; Variations</h2>
+            <p style="color:var(--text-secondary);font-size:0.92rem;margin-bottom:0;">Little tricks to make this recipe even better.</p>
+            <div class="tips-grid">
+              <div class="tip-item">
+                <div class="tip-icon"><i class="fa-solid fa-snowflake"></i></div>
+                <div class="tip-text">
+                  <strong>Frozen Berries Work!</strong>
+                  <span>Just thaw them or warm in a pan with a tiny splash of water — they become extra juicy.</span>
+                </div>
+              </div>
+              <div class="tip-item">
+                <div class="tip-icon"><i class="fa-solid fa-leaf"></i></div>
+                <div class="tip-text">
+                  <strong>Make it Vegan</strong>
+                  <span>Use plant-based milk + maple syrup. Swap Greek yogurt for coconut yogurt.</span>
+                </div>
+              </div>
+              <div class="tip-item">
+                <div class="tip-icon"><i class="fa-solid fa-box"></i></div>
+                <div class="tip-text">
+                  <strong>Meal Prep It</strong>
+                  <span>Cook a big batch and refrigerate up to 4 days. Add toppings fresh each morning.</span>
+                </div>
+              </div>
+              <div class="tip-item">
+                <div class="tip-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="tip-text">
+                  <strong>Add Crunch</strong>
+                  <span>Sprinkle granola, chopped walnuts, or pumpkin seeds for extra texture and nutrients.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Banner -->
+          <div class="cta-banner">
+            <div>
+              <h3>Loved this recipe?</h3>
+              <p>Explore our full collection of healthy breakfast bowls and smoothies.</p>
+            </div>
+            <a href="recipes.html" class="btn-white">Browse All Recipes →</a>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────── -->
+  <footer class="page-footer">
+    <div class="container">
+      <p style="margin:0">© 2025 NutriKitchen · Made with <i class="fa-solid fa-heart" style="color:#c96b6b"></i> for healthy eating</p>
+    </div>
+  </footer>
+
+  <!-- ── JavaScript: Serving Adjuster ──────────────────────────────── -->
+  <script>
+    // Base ingredient data (amounts per 1 serving)
+    const BASE = [
+      { name: "Rolled oats",                    amount: 0.5,  unit: "cup"  },
+      { name: "Milk (or almond milk)",           amount: 1,    unit: "cup"  },
+      { name: "Mixed berries",                   amount: 0.5,  unit: "cup"  },
+      { name: "Honey or maple syrup",            amount: 1,    unit: "tbsp" },
+      { name: "Chia seeds",                      amount: 0.5,  unit: "tbsp" },
+      { name: "Greek yogurt",                    amount: 0.25, unit: "cup"  },
+      { name: "Cinnamon",                        amount: 0.25, unit: "tsp"  },
+      { name: "Vanilla extract",                 amount: 0.25, unit: "tsp"  },
+      { name: "Salt",                            amount: 1,    unit: "pinch"},
+    ];
+
+    let servings = 2;
+
+    function fmt(val, unit) {
+      if (unit === "pinch") return val >= 2 ? `${val} pinches` : "1 pinch";
+      // Round to max 2 decimal places, remove trailing zeros
+      const n = Math.round(val * 100) / 100;
+      // Pretty fractions
+      const fracs = {0.25:"¼", 0.5:"½", 0.75:"¾", 0.33:"⅓", 0.67:"⅔", 1.5:"1½", 2.5:"2½"};
+      const label = fracs[n] !== undefined ? fracs[n] : (Number.isInteger(n) ? n : n);
+      return `${label} ${unit}`;
+    }
+
+    function render() {
+      const list = document.getElementById("ingredients");
+      list.innerHTML = BASE.map(ing => {
+        const scaled = ing.amount * servings;
+        return `<li>
+          <span class="ing-name">${ing.name}</span>
+          <span class="ing-amount">${fmt(scaled, ing.unit)}</span>
+        </li>`;
+      }).join("");
+      document.getElementById("serving-count").textContent = servings;
+    }
+
+    function changeServings(delta) {
+      servings = Math.max(1, Math.min(10, servings + delta));
+      render();
+    }
+
+    render(); // initial render
+  </script>
+
+</body>
+</html>

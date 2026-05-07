@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is Veganism — SwitchToVegan</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      color: #1f2a22;
+      background: #fcfaf5;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      border-bottom: 1px solid rgba(47, 107, 71, 0.12);
+      background: #fcfaf5;
+      padding: 0 2rem;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 64px;
+    }
+
+    .brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #2f6b47;
+    }
+
+    .breadcrumb-sep {
+      color: rgba(47, 107, 71, 0.3);
+      font-weight: 300;
+    }
+
+    .breadcrumb-label {
+      font-size: 0.95rem;
+      color: #5f6d63;
+    }
+
+    /* BADGE */
+    .badge {
+      display: inline-block;
+      background: #2f6b47;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(47, 107, 71, 0.12);
+      margin-top: 4rem;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      color: #5f6d63;
+      font-size: 0.88rem;
+    }
+
+    /* BLOG POST PAGE */
+    .post-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1rem 5rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #2f6b47;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .post-header {
+      margin-bottom: 1.25rem;
+    }
+
+    .post-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .post-header .meta {
+      display: flex;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: #5f6d63;
+    }
+
+    .post-hero {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      margin-bottom: 2.5rem;
+    }
+
+    .post-body h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: #1f2a22;
+    }
+
+    .post-body p {
+      color: #5f6d63;
+      line-height: 1.75;
+      margin-bottom: 1.1rem;
+      font-size: 1.02rem;
+    }
+
+    .post-body ul,
+    .post-body ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .post-body li {
+      color: #5f6d63;
+      margin-bottom: 0.4rem;
+      line-height: 1.65;
+    }
+
+    .post-body strong {
+      color: #1f2a22;
+    }
+
+    .post-body em {
+      font-style: italic;
+    }
+
+    .post-body table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.92rem;
+      margin-bottom: 1.25rem;
+      display: block;
+      overflow-x: auto;
+    }
+
+    .post-body th {
+      padding: 8px 14px;
+      background: #f0f7f2;
+      border-bottom: 2px solid rgba(47, 107, 71, 0.2);
+      text-align: left;
+      color: #2f6b47;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .post-body td {
+      padding: 8px 14px;
+      border-bottom: 1px solid rgba(47, 107, 71, 0.1);
+      color: #5f6d63;
+    }
+
+    .post-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(47, 107, 71, 0.12);
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #2f6b47;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 10px 22px;
+      border-radius: 999px;
+      transition: background 0.15s;
+    }
+
+    .btn-back:hover {
+      background: #255838;
+    }
+
+    @media (max-width: 700px) {
+      .post-header h1 {
+        font-size: 1.9rem;
+      }
+
+      .post-hero {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand" href="index.html">SwitchToVegan</a>
+      <span class="breadcrumb-sep">/</span>
+      <a class="breadcrumb-label" href="index.html">Blog</a>
+      <span class="breadcrumb-sep">/</span>
+      <span style="font-size:0.9rem; color:#2f6b47; font-weight:500;">What is Veganism</span>
+    </div>
+  </header>
+
+  <div class="post-container">
+
+    <a class="back-link" href="index.html">← All Posts</a>
+
+    <div class="post-header">
+      <span class="badge">Sustainability</span>
+      <h1>What is Veganism</h1>
+      <div class="meta">
+        <span>May 2, 2025</span>
+        <span>·</span>
+        <span>8 min read</span>
+      </div>
+    </div>
+
+    <img
+      class="post-hero"
+      src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&h=500"
+      alt="What is Veganism"
+    />
+
+    <div class="post-body">
+    
+
+
+content
+
+
+
+
+  <footer>
+    <p>© 2025 SwitchToVegan · Compassionate living for everyone</p>
+  </footer>
+
+</body>
+</html>

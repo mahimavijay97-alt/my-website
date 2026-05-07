@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding Veganism | Vegan Basics</title>
+  <meta name="description" content="A calm, beginner-friendly introduction to veganism — what it means, what changes, what you can eat, and the common myths and motivations explained simply." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="basics.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="nutrition-page basics-page">
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="site-brand">
+        <img src="25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
+        <span>Switch To Vegan</span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <ul class="main-nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="vegan-guide.html" class="active">Vegan guide</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="nutrition-hero">
+      <div class="container narrow-container">
+        <p class="breadcrumb">Resources / Beginner's Guide / Vegan Basics</p>
+        <p class="section-tag">Start Here</p>
+        <h1>Understanding <em>veganism</em>, simply</h1>
+        <p class="hero-subheading">A calm, beginner-friendly introduction — what veganism really means and what changes in your daily life if you decide to try it.</p>
+        <p class="hero-intro">This page is here to remove the noise. No preaching, no debate, no pressure. Just a clear picture of what veganism is, what it is not, and what you can comfortably eat — so you can decide what feels right for you.</p>
+        <div class="hero-meta">
+          <div><strong>5 min</strong><span>Read time</span></div>
+          <div><strong>7</strong><span>Short chapters</span></div>
+          <div><strong>0</strong><span>Pressure to be perfect</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. WHAT IS VEGANISM -->
+    <section class="section">
+      <div class="container narrow-container">
+        <h2>What is Veganism?</h2>
+        <div class="definition-box">
+          <p class="definition-quote">Veganism means choosing not to use animal products in food, clothing, or daily life — wherever it is reasonably possible.</p>
+          <p class="definition-note">That is the entire idea. Everything else on this page is just unpacking what that looks like in real life.</p>
+        </div>
+        <p>It is a personal choice that begins in the kitchen for most people and slowly extends into other parts of life. There is no certificate, no test, and no single “correct” way to do it.</p>
+      </div>
+    </section>
+
+    <!-- 2. WHAT CHANGES (tabs) -->
+    <section class="section alt-section">
+      <div class="container narrow-container">
+        <h2>What Changes When You Go Vegan</h2>
+        <p>Three areas of daily life are gently affected. Most people only think about the first one — but each is simpler than it sounds.</p>
+
+        <div class="change-tabs" role="tablist" aria-label="What changes when you go vegan">
+          <button type="button" class="change-tab is-active" role="tab" aria-selected="true" data-change-tab="food"><i class="fas fa-utensils"></i> Food</button>
+          <button type="button" class="change-tab" role="tab" aria-selected="false" data-change-tab="products"><i class="fas fa-bottle-droplet"></i> Products</button>
+          <button type="button" class="change-tab" role="tab" aria-selected="false" data-change-tab="clothing"><i class="fas fa-shirt"></i> Clothing</button>
+        </div>
+
+        <article class="change-panel is-active" data-change-panel="food" role="tabpanel">
+          <h3>Food</h3>
+          <p>This is the part of your day veganism touches the most. You move away from meat, dairy, and eggs — and toward plant-based versions of foods you already enjoy.</p>
+          <ul>
+            <li><strong>Out:</strong> meat, fish, dairy (milk, cheese, butter, ghee, yogurt), and eggs.</li>
+            <li><strong>In:</strong> plant milks, tofu, lentils, beans, vegan butter, nut-based cheese, plant-based yogurt.</li>
+          </ul>
+          <p class="panel-note">Most familiar meals — dal, rice, sabzi, pasta, salads, sandwiches — are already vegan or one small swap away.</p>
+        </article>
+
+        <article class="change-panel" data-change-panel="products" role="tabpanel" hidden>
+          <h3>Products</h3>
+          <p>Cosmetics, toiletries, and home products are checked for two things: animal-derived ingredients and animal testing.</p>
+          <ul>
+            <li><strong>Look at:</strong> skincare, makeup, soap, shampoo, toothpaste, cleaners.</li>
+            <li><strong>Look for:</strong> a vegan or cruelty-free label, or a quick brand search online.</li>
+          </ul>
+          <p class="panel-note">No need to throw anything out. Most people switch as their existing products run out.</p>
+        </article>
+
+        <article class="change-panel" data-change-panel="clothing" role="tabpanel" hidden>
+          <h3>Clothing</h3>
+          <p>The materials you buy gradually shift away from animal sources, and toward plant-based or synthetic alternatives.</p>
+          <ul>
+            <li><strong>Out:</strong> leather, wool, silk, suede, fur, and down.</li>
+            <li><strong>In:</strong> cotton, linen, hemp, bamboo, and quality synthetics.</li>
+          </ul>
+          <p class="panel-note">Wear what you already own. Vegan clothing is built one new purchase at a time, not by replacing your wardrobe overnight.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. WHAT YOU CAN EAT -->
+    <section class="section">
+      <div class="container narrow-container">
+        <h2>What You CAN Eat</h2>
+        <p>This is the part most beginners worry about — and it is the easiest one. The list of foods you can eat is much longer than the list of things you cannot.</p>
+
+        <div class="eat-grid">
+          <article class="eat-card">
+            <div class="eat-icon"><i class="fas fa-apple-whole"></i></div>
+            <h3>Fruits &amp; Vegetables</h3>
+            <p>Every fruit and vegetable. Fresh, frozen, raw, cooked — all of it counts.</p>
+          </article>
+          <article class="eat-card">
+            <div class="eat-icon"><i class="fas fa-wheat-awn"></i></div>
+            <h3>Grains</h3>
+            <p>Rice, roti, pasta, oats, quinoa, bread, noodles — your everyday staples.</p>
+          </article>
+          <article class="eat-card">
+            <div class="eat-icon"><i class="fas fa-bowl-rice"></i></div>
+            <h3>Lentils &amp; Beans</h3>
+            <p>Dal, chickpeas, rajma, black beans, soybeans — protein-rich, familiar, filling.</p>
+          </article>
+          <article class="eat-card">
+            <div class="eat-icon"><i class="fas fa-seedling"></i></div>
+            <h3>Nuts &amp; Seeds</h3>
+            <p>Almonds, walnuts, peanuts, chia, flax, pumpkin seeds — small, easy add-ons.</p>
+          </article>
+          <article class="eat-card">
+            <div class="eat-icon"><i class="fas fa-mug-hot"></i></div>
+            <h3>Plant Milks</h3>
+            <p>Soy, oat, almond, coconut. Use them exactly the way you used dairy milk.</p>
+          </article>
+          <article class="eat-card">
+            <div class="eat-icon"><i class="fas fa-cubes-stacked"></i></div>
+            <h3>Soy Foods</h3>
+            <p>Tofu, tempeh, soy chunks, soy yogurt — versatile, protein-rich kitchen helpers.</p>
+          </article>
+        </div>
+
+        <div class="comfort-callout">
+          <strong>The reassuring part:</strong> Most of what is already in your kitchen is vegan. You are not starting from zero — you are just adjusting a few things.
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MYTHS -->
+    <section class="section alt-section">
+      <div class="container narrow-container">
+        <h2>Common Myths</h2>
+        <p>A few worries come up almost every time. Short, honest answers below — tap any myth to see the response.</p>
+
+        <div class="myth-list" data-myth-group>
+          <details class="myth-item">
+            <summary>
+              <span class="myth-tag">Myth</span>
+              <span class="myth-title">“You won't get enough protein.”</span>
+              <span class="myth-chevron"><i class="fas fa-chevron-down"></i></span>
+            </summary>
+            <div class="myth-body">
+              <p><strong>Reality:</strong> Lentils, beans, tofu, soy, peanuts, and whole grains all contain plenty of protein. Most adults reach their daily needs without trying.</p>
+            </div>
+          </details>
+
+          <details class="myth-item">
+            <summary>
+              <span class="myth-tag">Myth</span>
+              <span class="myth-title">“Vegan food is expensive.”</span>
+              <span class="myth-chevron"><i class="fas fa-chevron-down"></i></span>
+            </summary>
+            <div class="myth-body">
+              <p><strong>Reality:</strong> The cheapest staples in the world — rice, lentils, beans, vegetables, fruits, oats — are vegan. Specialty products can be pricey, but they are completely optional.</p>
+            </div>
+          </details>
+
+          <details class="myth-item">
+            <summary>
+              <span class="myth-tag">Myth</span>
+              <span class="myth-title">“There won't be much left to eat.”</span>
+              <span class="myth-chevron"><i class="fas fa-chevron-down"></i></span>
+            </summary>
+            <div class="myth-body">
+              <p><strong>Reality:</strong> Almost every cuisine has dishes that are vegan or close to it. Once you spot the patterns, options open up everywhere — at home, at restaurants, and while travelling.</p>
+            </div>
+          </details>
+
+          <details class="myth-item">
+            <summary>
+              <span class="myth-tag">Myth</span>
+              <span class="myth-title">“It's hard to cook vegan meals.”</span>
+              <span class="myth-chevron"><i class="fas fa-chevron-down"></i></span>
+            </summary>
+            <div class="myth-body">
+              <p><strong>Reality:</strong> Most vegan meals use the same basic technique you already know — cook the grain, cook the protein, cook the vegetable, season it. The recipes are not new, only the ingredients.</p>
+            </div>
+          </details>
+
+          <details class="myth-item">
+            <summary>
+              <span class="myth-tag">Myth</span>
+              <span class="myth-title">“You have to give up your culture's food.”</span>
+              <span class="myth-chevron"><i class="fas fa-chevron-down"></i></span>
+            </summary>
+            <div class="myth-body">
+              <p><strong>Reality:</strong> Most traditional cuisines have a strong vegan base — Indian, Italian, Middle-Eastern, East Asian, Mexican. The familiar flavours stay; only a few ingredients change.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHY PEOPLE CHOOSE -->
+    <section class="section">
+      <div class="container narrow-container">
+        <h2>Why People Choose Veganism</h2>
+        <p>People arrive here for different reasons. None is more correct than the others — and most people end up with a mix of all three.</p>
+
+        <div class="reason-grid">
+          <article class="reason-card">
+            <div class="reason-icon"><i class="fas fa-paw"></i></div>
+            <h3>Ethical</h3>
+            <p>A wish to reduce the harm caused to animals raised for food, clothing, or testing.</p>
+          </article>
+          <article class="reason-card">
+            <div class="reason-icon"><i class="fas fa-earth-asia"></i></div>
+            <h3>Environmental</h3>
+            <p>Lowering the personal footprint linked to land use, water use, and emissions from animal agriculture.</p>
+          </article>
+          <article class="reason-card">
+            <div class="reason-icon"><i class="fas fa-heart-pulse"></i></div>
+            <h3>Personal Health</h3>
+            <p>Eating more whole plant foods often supports digestion, energy, and long-term wellbeing.</p>
+          </article>
+        </div>
+        <p class="why-note">You do not need to choose one reason. You do not need any reason at all to start trying it out.</p>
+      </div>
+    </section>
+
+    <!-- 6. WHAT VEGANISM IS NOT -->
+    <section class="section alt-section">
+      <div class="container narrow-container">
+        <h2>What Veganism is NOT</h2>
+        <p>This is the part that often makes the biggest difference for beginners. Veganism does not have to look the way social media sometimes makes it look.</p>
+
+        <div class="not-grid">
+          <article class="not-card">
+            <div class="not-icon"><i class="fas fa-circle-xmark"></i></div>
+            <h3>Not perfection</h3>
+            <p>Reading every label, getting every meal right, never making a mistake — that is not the goal. Doing your reasonable best is.</p>
+          </article>
+          <article class="not-card">
+            <div class="not-icon"><i class="fas fa-circle-xmark"></i></div>
+            <h3>Not extreme</h3>
+            <p>It is a quiet, everyday choice. No special rituals, no rigid rules, no debate at every meal. Most days look unremarkable.</p>
+          </article>
+          <article class="not-card">
+            <div class="not-icon"><i class="fas fa-circle-xmark"></i></div>
+            <h3>Not overnight</h3>
+            <p>You do not need to be vegan by tomorrow morning. Many people take weeks or months — and that pace is completely fine.</p>
+          </article>
+        </div>
+
+        <div class="reassure-callout">
+          If something on this list felt like a quiet relief — that is normal. Veganism is a direction, not a destination.
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. WHERE TO GO NEXT -->
+    <section class="section">
+      <div class="container narrow-container">
+        <h2>Where to Go Next</h2>
+        <p>Now that the basics are clear, the next two pages on this site take you a step deeper — one for understanding what to eat, the other for actually making the switch.</p>
+
+        <div class="bridge-grid">
+          <a class="bridge-card" href="Nutrition-Guide.html">
+            <div class="bridge-icon"><i class="fas fa-leaf"></i></div>
+            <p class="bridge-step">Step 02</p>
+            <h3>Nutrition Guide</h3>
+            <p>Understand the nutrients to keep an eye on, where to get them, and how to build balanced vegan meals.</p>
+            <span class="bridge-cta">Read the Nutrition Guide <i class="fas fa-arrow-right"></i></span>
+          </a>
+
+          <a class="bridge-card is-action" href="Transitioning-tips.html">
+            <div class="bridge-icon"><i class="fas fa-route"></i></div>
+            <p class="bridge-step">Step 03</p>
+            <h3>Transitioning Tips</h3>
+            <p>Learn the practical, day-by-day way to actually move toward a vegan lifestyle without the overwhelm.</p>
+            <span class="bridge-cta">Read the Transition Guide <i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <div class="path-strip">
+          <div class="path-step is-active">
+            <span class="path-dot"></span>
+            <div>
+              <strong>01 — Basics</strong>
+              <p>Understand what it means.</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <span class="path-dot"></span>
+            <div>
+              <strong>02 — Nutrition</strong>
+              <p>Know what to eat properly.</p>
+            </div>
+          </div>
+          <div class="path-step">
+            <span class="path-dot"></span>
+            <div>
+              <strong>03 — Transition</strong>
+              <p>Make the switch easily.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="section alt-section">
+      <div class="container narrow-container">
+        <div class="disclaimer-box">
+          <h2>A Quick Note</h2>
+          <p>This page is for educational purposes only. It is not medical or dietary advice. If you have a specific health condition, are pregnant, or are considering a vegan diet for a child, please speak with a qualified doctor or registered dietitian to make sure your plan fits your individual needs.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="site-footer site-footer--rich">
+  <div class="container footer-shell footer-shell--simple">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-brand__logo">
+        <img src="25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
+        <span>Switch To Vegan</span>
+      </a>
+      <p>
+        Practical, calm support for building a vegan lifestyle that feels clear,
+        realistic, and sustainable in everyday life.
+      </p>
+    </div>
+
+    <div class="footer-contact-block">
+      <h4>Contact</h4>
+      <a href="mailto:switchtovegan01@gmail.com" class="footer-email">
+        <i class="fas fa-envelope"></i>
+        <span>switchtovegan01@gmail.com</span>
+      </a>
+      <p class="footer-note">
+        Questions, suggestions, or feedback are always welcome.
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom footer-bottom--simple">
+    <p>&copy; 2026 Switch To Vegan. All rights reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js" defer></script>
+</body>
+</html>

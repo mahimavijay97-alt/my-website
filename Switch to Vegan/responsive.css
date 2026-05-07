@@ -1,0 +1,343 @@
+/* ====================
+   Responsive Style
+   ==================== */
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+    html {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    /* Header & Navigation */
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--spacing-xl) 0;
+        box-shadow: var(--shadow-medium);
+        transition: right var(--transition-medium);
+        z-index: 1001;
+    }
+    
+    .menu.active {
+        right: 0;
+    }
+    
+    .menu li {
+        margin: var(--spacing-md) 0;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    /* Features Section */
+    .features {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Happy Animals Section */
+    .animal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .animal-image {
+        max-width: 180px;
+    }
+    
+    /* Testimonials */
+    .testimonial-slider {
+        flex-direction: column;
+    }
+    
+    /* Newsletter */
+    .newsletter-form .form-group {
+        flex-direction: column;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+        margin-top: var(--spacing-sm);
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* About Page */
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-image {
+        order: 1;
+    }
+    
+    .story-text {
+        order: 2;
+    }
+    
+    /* Resources Page */
+    .category-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* Gallery Page */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    /* Experience & Suggestions Sections */
+    .experience-form-wrapper {
+        padding: var(--spacing-md);
+    }
+    
+    .suggestions-grid {
+        grid-template-columns: 1fr;
+    }
+/* ====================
+   TRANSITION GUIDE (MOBILE)
+   ==================== */
+
+/* Approach cards stack */
+.approach-card {
+    width: 100%;
+}
+
+/* Approach details spacing */
+[data-approach-detail] {
+    margin-top: var(--spacing-md);
+}
+
+/* Plate tabs stack */
+.plate-tabs {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Panels spacing */
+.plate-panel {
+    margin-top: var(--spacing-md);
+}
+
+/* Food swaps stack */
+.swap-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+/* Checklist spacing */
+#transitionChecklist li {
+    padding: 10px 12px;
+}
+
+/* Mistakes accordion */
+.mistake-list {
+    gap: var(--spacing-sm);
+}
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    /* Header & Navigation */
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--spacing-xl) 0;
+        box-shadow: var(--shadow-medium);
+        transition: right var(--transition-medium);
+        z-index: 1001;
+    }
+    
+    .menu.active {
+        right: 0;
+    }
+    
+    .menu li {
+        margin: var(--spacing-md) 0;
+    }
+    
+    /* Hero Section */Switch to Vegan
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Features Section */
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Happy Animals Section */
+    .animal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* About Page */
+    .story-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    /* Gallery Page */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Contact Page */
+    .contact-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    /* Experience & Suggestions Sections */
+    .suggestions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Desktop (1024px - 1199px) */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    /* No major changes needed, default style work well */
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    /* No major changes needed, default style work well */
+}
+
+/* Height-based Media Queries */
+@media (max-height: 600px) {
+    .hero {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .menu {
+        padding: var(--spacing-lg) 0;
+    }
+}
+
+/* Print Style */
+@media print {
+    header, 
+    footer,
+    .newsletter,
+    .cta-buttons,
+    form,
+    .social-icons,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background-color: #fff;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+        page-break-after: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+    }
+    
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+}

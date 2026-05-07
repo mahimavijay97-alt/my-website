@@ -14,6 +14,540 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="travel.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .travel-page {
+  --tp-primary: #2f6b47;
+  --tp-primary-dark: #214d33;
+  --tp-secondary: #5c9271;
+  --tp-accent: #d7efe1;
+  --tp-gold: #d6b970;
+  --tp-warm: #c98b6b;
+  --tp-sky: #6ea4b3;
+
+  --tp-text: #1f2a22;
+  --tp-muted: #5f6d63;
+  --tp-border: rgba(34, 55, 36, 0.12);
+
+  --tp-surface: rgba(255, 255, 255, 0.78);
+  --tp-surface-strong: #ffffff;
+
+  --tp-radius-sm: 12px;
+  --tp-radius-md: 18px;
+  --tp-radius-lg: 24px;
+
+  --tp-shadow-soft: 0 14px 32px rgba(21, 31, 23, 0.06);
+  --tp-shadow-medium: 0 24px 60px rgba(21, 31, 23, 0.10);
+
+  --tp-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.travel-page main { padding-bottom: 24px; }
+.travel-page .section { padding: 72px 0; }
+.travel-page .alt-section {
+  background:
+    radial-gradient(circle at top right, rgba(215, 239, 225, 0.55), transparent 45%),
+    rgba(255, 255, 255, 0.45);
+}
+.travel-page .narrow-container { max-width: 1200px; }
+.travel-page .nutrition-hero { padding: 88px 0 48px; }
+
+/* Typography */
+.travel-page h1 em {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-style: italic;
+  color: var(--tp-primary);
+}
+.travel-page h2 { font-size: clamp(1.9rem, 3.4vw, 2.4rem); margin-bottom: 16px; }
+.travel-page h3 { font-size: 1.2rem; }
+.travel-page p  { line-height: 1.75; }
+
+/* Hero meta */
+.travel-page .hero-meta {
+  display: flex; flex-wrap: wrap; gap: 28px;
+  margin-top: 28px; padding-top: 24px;
+  border-top: 1px solid var(--tp-border);
+}
+.travel-page .hero-meta div { display: flex; flex-direction: column; }
+.travel-page .hero-meta strong {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.6rem; color: var(--tp-primary); line-height: 1;
+}
+.travel-page .hero-meta span {
+  font-size: .78rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--tp-muted); margin-top: 6px;
+}
+
+/* ---------- 1. Definition / intro box ---------- */
+.travel-page .definition-box {
+  background: var(--tp-surface);
+  border: 1px solid var(--tp-border);
+  border-left: 4px solid var(--tp-primary);
+  border-radius: var(--tp-radius-md);
+  padding: 32px;
+  margin: 24px 0 20px;
+  box-shadow: var(--tp-shadow-soft);
+}
+.travel-page .definition-quote {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+  color: var(--tp-primary-dark);
+  line-height: 1.5;
+  margin: 0;
+}
+.travel-page .definition-note {
+  margin: 14px 0 0;
+  color: var(--tp-muted);
+  font-size: .95rem;
+}
+
+/* ---------- 2. Prep / situation cards ---------- */
+.travel-page .situation-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 18px; margin-top: 28px;
+}
+.travel-page .situation-card {
+  background: var(--tp-surface);
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius-md);
+  padding: 26px;
+  box-shadow: var(--tp-shadow-soft);
+  transition: transform .25s var(--tp-ease), box-shadow .25s var(--tp-ease), border-color .25s var(--tp-ease);
+}
+.travel-page .situation-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 107, 71, .35);
+  box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .situation-icon {
+  width: 46px; height: 46px; border-radius: 14px;
+  background: rgba(47, 107, 71, .1); color: var(--tp-primary);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.15rem; margin-bottom: 12px;
+}
+.travel-page .situation-card h3 { margin: 4px 0 6px; color: var(--tp-primary-dark); }
+.travel-page .situation-card p { color: var(--tp-muted); margin: 0; line-height: 1.65; }
+
+/* Comfort callout */
+.travel-page .comfort-callout {
+  margin-top: 28px; padding: 18px 22px;
+  border-radius: var(--tp-radius-sm);
+  background: rgba(215, 239, 225, .55);
+  border-left: 4px solid var(--tp-primary);
+  color: var(--tp-text); line-height: 1.6;
+}
+.travel-page .comfort-callout.soft {
+  background: rgba(214, 185, 112, .14);
+  border-left-color: var(--tp-gold);
+}
+
+/* ---------- 3. During-travel steps ---------- */
+.travel-page .check-steps {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+  display: grid; gap: 18px;
+}
+.travel-page .check-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 20px;
+  background: var(--tp-surface-strong);
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius-md);
+  padding: 24px 26px;
+  box-shadow: var(--tp-shadow-soft);
+  transition: transform .25s var(--tp-ease), box-shadow .25s var(--tp-ease);
+}
+.travel-page .check-step:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .step-num {
+  width: 44px; height: 44px; border-radius: 999px;
+  background: linear-gradient(135deg, var(--tp-primary), #3f8159);
+  color: #fff;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-size: 1.25rem; font-weight: 700;
+}
+.travel-page .step-body h3 {
+  margin: 4px 0 6px;
+  color: var(--tp-primary-dark);
+  font-size: 1.25rem;
+}
+.travel-page .step-body p { color: var(--tp-muted); margin: 0 0 10px; line-height: 1.65; }
+.travel-page .step-note {
+  margin-top: 8px;
+  padding: 10px 14px;
+  background: rgba(215, 239, 225, .55);
+  border-left: 3px solid var(--tp-primary);
+  border-radius: 8px;
+  font-size: .92rem; color: var(--tp-text);
+}
+
+/* Dish/food chips */
+.travel-page .dish-row {
+  display: flex; flex-wrap: wrap;
+  gap: 10px; margin: 12px 0 4px;
+}
+.travel-page .dish-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(47, 107, 71, .08);
+  color: var(--tp-primary-dark);
+  font-size: .9rem; font-weight: 600;
+  border: 1px solid rgba(47, 107, 71, .15);
+}
+.travel-page .dish-chip i { color: var(--tp-primary); font-size: .85rem; }
+
+/* ---------- 4. Eating-out / Q&A list ---------- */
+.travel-page .myth-list { margin-top: 24px; display: grid; gap: 10px; }
+.travel-page .myth-item {
+  background: var(--tp-surface); border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius-sm); box-shadow: var(--tp-shadow-soft);
+  overflow: hidden;
+  transition: border-color .25s var(--tp-ease), box-shadow .25s var(--tp-ease);
+}
+.travel-page .myth-item[open] {
+  border-color: var(--tp-primary); box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .myth-item summary {
+  list-style: none; cursor: pointer; padding: 16px 20px;
+  display: flex; align-items: center; gap: 14px;
+  font-weight: 500; color: var(--tp-text);
+}
+.travel-page .myth-item summary::-webkit-details-marker { display: none; }
+.travel-page .myth-tag {
+  background: rgba(47, 107, 71, .12); color: var(--tp-primary-dark);
+  font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px; border-radius: 999px; flex-shrink: 0;
+}
+.travel-page .myth-title { flex: 1; }
+.travel-page .myth-chevron {
+  color: var(--tp-muted);
+  transition: transform .25s var(--tp-ease);
+  font-size: .85rem;
+}
+.travel-page .myth-item[open] .myth-chevron {
+  transform: rotate(180deg); color: var(--tp-primary);
+}
+.travel-page .myth-body {
+  padding: 0 20px 20px 80px;
+  animation: tp-fade .3s var(--tp-ease);
+}
+.travel-page .myth-body p { margin: 0; color: var(--tp-muted); }
+
+@keyframes tp-fade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- 5. Carrying basics — backup kit ---------- */
+.travel-page .kit-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; margin-top: 28px;
+}
+.travel-page .kit-card {
+  background: var(--tp-surface);
+  border: 1px solid var(--tp-border);
+  border-top: 4px solid var(--tp-gold);
+  border-radius: var(--tp-radius-md);
+  padding: 22px;
+  box-shadow: var(--tp-shadow-soft);
+  text-align: center;
+  transition: transform .25s var(--tp-ease), box-shadow .25s var(--tp-ease);
+}
+.travel-page .kit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .kit-icon {
+  width: 50px; height: 50px; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(214,185,112,.22), rgba(215,239,225,.55));
+  color: #8a6f1f;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; margin: 0 auto 12px;
+}
+.travel-page .kit-card h3 { margin: 4px 0 6px; color: var(--tp-primary-dark); font-size: 1.05rem; }
+.travel-page .kit-card p { color: var(--tp-muted); margin: 0; line-height: 1.55; font-size: .92rem; }
+
+/* ---------- 6. Long trips — boarding cards ---------- */
+.travel-page .transport-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 18px; margin-top: 28px;
+}
+.travel-page .transport-card {
+  background: var(--tp-surface);
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius-md);
+  padding: 26px;
+  box-shadow: var(--tp-shadow-soft);
+  transition: transform .25s var(--tp-ease), box-shadow .25s var(--tp-ease);
+}
+.travel-page .transport-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .transport-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(110, 164, 179, .2), rgba(215, 239, 225, .55));
+  color: #3f7282;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; margin-bottom: 12px;
+}
+.travel-page .transport-card h3 { margin: 0 0 6px; color: var(--tp-primary-dark); }
+.travel-page .transport-card p { color: var(--tp-muted); margin: 0; line-height: 1.65; }
+.travel-page .transport-card ul {
+  list-style: none; padding: 0; margin: 12px 0 0;
+}
+.travel-page .transport-card ul li {
+  position: relative; padding-left: 22px;
+  color: var(--tp-text); line-height: 1.6;
+  margin-bottom: 6px; font-size: .94rem;
+}
+.travel-page .transport-card ul li::before {
+  content: "\f00c"; /* fa-check */
+  font-family: "Font Awesome 6 Free"; font-weight: 900;
+  position: absolute; left: 0; top: 2px;
+  color: var(--tp-primary); font-size: .8rem;
+}
+
+/* ---------- 7. Limited-options accordion ---------- */
+.travel-page .situation-accordion {
+  margin-top: 24px;
+  display: grid; gap: 10px;
+}
+.travel-page .situation-item {
+  background: var(--tp-surface); border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius-sm); box-shadow: var(--tp-shadow-soft);
+  overflow: hidden;
+  transition: border-color .25s var(--tp-ease), box-shadow .25s var(--tp-ease);
+}
+.travel-page .situation-item[open] {
+  border-color: var(--tp-primary); box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .situation-item summary {
+  list-style: none; cursor: pointer; padding: 16px 20px;
+  display: flex; align-items: center; gap: 14px;
+  font-weight: 500; color: var(--tp-text);
+}
+.travel-page .situation-item summary::-webkit-details-marker { display: none; }
+.travel-page .sit-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: rgba(47, 107, 71, .1); color: var(--tp-primary);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: .95rem; flex-shrink: 0;
+}
+.travel-page .sit-title { flex: 1; }
+.travel-page .sit-chevron {
+  color: var(--tp-muted);
+  transition: transform .25s var(--tp-ease);
+  font-size: .85rem;
+}
+.travel-page .situation-item[open] .sit-chevron {
+  transform: rotate(180deg); color: var(--tp-primary);
+}
+.travel-page .situation-body {
+  padding: 0 20px 20px 70px;
+  animation: tp-fade .3s var(--tp-ease);
+}
+.travel-page .situation-body p { margin: 0 0 8px; color: var(--tp-muted); }
+.travel-page .situation-body p:last-child { margin-bottom: 0; }
+
+/* ---------- 8. What you DON'T need to do ---------- */
+.travel-page .not-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 18px; margin-top: 28px;
+}
+.travel-page .not-card {
+  background: var(--tp-surface); border: 1px solid var(--tp-border);
+  border-top: 4px solid #c96b6b; border-radius: var(--tp-radius-md);
+  padding: 26px; box-shadow: var(--tp-shadow-soft);
+  transition: transform .25s var(--tp-ease), box-shadow .25s var(--tp-ease);
+}
+.travel-page .not-card:hover {
+  transform: translateY(-3px); box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .not-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(201, 107, 107, .12); color: #c96b6b;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; margin-bottom: 12px;
+}
+.travel-page .not-card h3 { margin: 0 0 6px; color: #b85a5a; }
+.travel-page .not-card p { color: var(--tp-muted); margin: 0; line-height: 1.65; }
+
+.travel-page .reassure-callout {
+  margin-top: 28px; padding: 20px 24px;
+  border-radius: var(--tp-radius-sm);
+  background: linear-gradient(135deg, rgba(47,107,71,.08), rgba(215,239,225,.6));
+  border-left: 4px solid var(--tp-primary);
+  font-style: italic; color: var(--tp-text); line-height: 1.6;
+}
+
+/* ---------- 9. Mindset shift ---------- */
+.travel-page .mindset-box {
+  background: var(--tp-surface-strong);
+  border: 1px solid var(--tp-border);
+  border-radius: var(--tp-radius-lg);
+  padding: 40px;
+  margin-top: 24px;
+  text-align: center;
+  box-shadow: var(--tp-shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+.travel-page .mindset-box::before {
+  content: "";
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(215, 239, 225, .8), transparent 70%);
+  pointer-events: none;
+}
+.travel-page .mindset-quote {
+  font-family: var(--font-heading, 'Cormorant Garamond', serif);
+  font-style: italic;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  color: var(--tp-primary-dark);
+  line-height: 1.4;
+  margin: 0 auto 14px;
+  max-width: 720px;
+  position: relative;
+}
+.travel-page .mindset-note {
+  color: var(--tp-muted);
+  margin: 0 auto;
+  max-width: 620px;
+  line-height: 1.7;
+  position: relative;
+}
+
+/* ---------- 10. First-step box ---------- */
+.travel-page .first-step-box {
+  background: linear-gradient(135deg, rgba(47, 107, 71, .92), rgba(63, 129, 89, .92));
+  color: #fff;
+  border-radius: var(--tp-radius-lg);
+  padding: 44px 40px;
+  box-shadow: var(--tp-shadow-medium);
+  text-align: left;
+}
+.travel-page .first-step-box .step-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+  font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.travel-page .first-step-box h2 {
+  color: #fff;
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  line-height: 1.25;
+}
+.travel-page .first-step-box p {
+  color: rgba(255,255,255,.92);
+  margin: 0;
+  max-width: 720px;
+  line-height: 1.7;
+}
+
+/* ---------- 11. Bridge cards ---------- */
+.travel-page .bridge-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 28px;
+}
+.travel-page .bridge-card {
+  display: block; background: var(--tp-surface-strong);
+  border: 1px solid var(--tp-border); border-radius: var(--tp-radius-lg);
+  padding: 30px; text-decoration: none; color: inherit;
+  box-shadow: var(--tp-shadow-soft);
+  transition: transform .25s var(--tp-ease), box-shadow .25s var(--tp-ease), border-color .25s var(--tp-ease);
+  position: relative; overflow: hidden;
+}
+.travel-page .bridge-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--tp-primary);
+  box-shadow: var(--tp-shadow-medium);
+}
+.travel-page .bridge-card.is-action {
+  background: linear-gradient(135deg, var(--tp-primary), #3f8159);
+  color: #fff; border-color: transparent;
+}
+.travel-page .bridge-card.is-action h3,
+.travel-page .bridge-card.is-action .bridge-step,
+.travel-page .bridge-card.is-action .bridge-cta { color: #fff; }
+.travel-page .bridge-card.is-action p { color: rgba(255,255,255,.88); }
+.travel-page .bridge-card.is-action .bridge-icon {
+  background: rgba(255,255,255,.18); color: #fff;
+}
+.travel-page .bridge-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(47, 107, 71, .1); color: var(--tp-primary);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; margin-bottom: 12px;
+}
+.travel-page .bridge-step {
+  font-size: .75rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--tp-muted); margin: 0 0 4px; font-weight: 700;
+}
+.travel-page .bridge-card h3 {
+  margin: 0 0 8px; font-size: 1.4rem; color: var(--tp-primary-dark);
+}
+.travel-page .bridge-card p {
+  color: var(--tp-muted); margin: 0 0 16px; line-height: 1.6;
+}
+.travel-page .bridge-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 600; color: var(--tp-primary); font-size: .95rem;
+  transition: gap .25s var(--tp-ease);
+}
+.travel-page .bridge-card:hover .bridge-cta { gap: 12px; }
+
+/* ---------- Disclaimer ---------- */
+.travel-page .disclaimer-box {
+  padding: 24px 28px;
+  background: rgba(214, 185, 112, .12);
+  border-left: 4px solid var(--tp-gold);
+  border-radius: var(--tp-radius-sm);
+}
+.travel-page .disclaimer-box h2 {
+  color: #8a6f1f; font-size: 1.4rem; margin-top: 0;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 880px) {
+  .travel-page .section { padding: 56px 0; }
+  .travel-page .situation-grid,
+  .travel-page .kit-grid,
+  .travel-page .transport-grid,
+  .travel-page .not-grid,
+  .travel-page .bridge-grid { grid-template-columns: 1fr; }
+  .travel-page .myth-body,
+  .travel-page .situation-body { padding-left: 20px; }
+  .travel-page .hero-meta { gap: 18px; }
+  .travel-page .first-step-box,
+  .travel-page .mindset-box { padding: 32px 26px; }
+}
+
+@media (max-width: 520px) {
+  .travel-page .check-step {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 22px;
+  }
+  .travel-page .step-num { margin-bottom: 4px; }
+  .travel-page .definition-box { padding: 24px; }
+}
+
+  </style>
 </head>
 <body class="nutrition-page travel-page">
   <header class="site-header" id="siteHeader">

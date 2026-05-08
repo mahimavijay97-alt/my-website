@@ -73,38 +73,77 @@ a:focus-visible, button:focus-visible {
    HEADER
    ========================================================= */
 .site-header {
-  position: sticky; top: 0; z-index: 50;
+  position: sticky;
+  top: 0;
+  z-index: 50;
   background: rgba(252,250,245,0.8);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(28,36,33,0.06);
 }
-.site-header .inner {
-  height: 64px; display: flex; align-items: center; justify-content: space-between;
-  max-width: var(--max); margin: 0 auto; padding: 0 20px;
+
+.site-header .header-inner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
 }
-@media (min-width: 768px) { .site-header .inner { padding: 0 24px; } }
-.brand { display: inline-flex; align-items: center; gap: 8px; }
-.brand .leaf-chip {
-  width: 32px; height: 32px; border-radius: 9999px;
-  background: rgba(47,107,71,0.1);
-  display: inline-flex; align-items: center; justify-content: center;
-  color: var(--primary); transition: background .3s, color .3s;
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
-.brand:hover .leaf-chip { background: var(--primary); color: var(--primary-fg); }
-.brand .name {
-  font-family: var(--serif); font-weight: 700; font-size: 18px;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary);
+
+.site-brand img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 12px;
 }
-.nav { display: none; align-items: center; gap: 32px; }
-@media (min-width: 768px) { .nav { display: flex; } }
-.nav a {
-  font-size: 14px; font-weight: 500; letter-spacing: 0.02em;
-  color: var(--muted); transition: color .2s;
+
+.site-brand span {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
 }
-.nav a:hover { color: var(--primary); }
-.nav a.active {
-  color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 4px;
+
+.main-nav {
+  display: none;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+  }
+}
+
+.main-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.main-nav__links a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 4px;
 }
 
 /* =========================================================

@@ -721,6 +721,89 @@ border: 1px solid rgba(34, 55, 36, 0.12);
 .about-page .mission-heading h2 {
     width: 50%;
 }
+
+    .site-footer.site-footer--rich {
+  padding: 56px 0 24px;
+  border-top: 1px solid rgba(34, 55, 36, 0.12);
+  background:
+    radial-gradient(circle at top left, rgba(215, 239, 225, 0.45), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 244, 236, 0.96));
+}
+
+.site-footer--rich .footer-shell--simple {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.site-footer--rich .footer-brand__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-family: var(--home-font-heading, "Cormorant Garamond", serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: var(--home-text, #1f2a22);
+}
+
+.site-footer--rich .footer-brand__logo img {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.site-footer--rich .footer-brand p,
+.site-footer--rich .footer-note,
+.site-footer--rich .footer-bottom p {
+  color: var(--home-muted, #5f6d63);
+  line-height: 1.7;
+}
+
+.site-footer--rich .footer-contact-block h4 {
+  margin-bottom: 14px;
+  font-family: var(--home-font-heading, "Cormorant Garamond", serif);
+  font-size: 1.2rem;
+  color: var(--home-text, #1f2a22);
+}
+
+.site-footer--rich .footer-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(47, 107, 71, 0.08);
+  color: var(--home-primary, #2f6b47);
+  font-weight: 600;
+}
+
+.site-footer--rich .footer-note {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  max-width: 28rem;
+}
+
+.site-footer--rich .footer-bottom--simple {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(34, 55, 36, 0.1);
+}
+
+@media (max-width: 768px) {
+  .site-footer.site-footer--rich {
+    padding: 44px 0 22px;
+  }
+
+  .site-footer--rich .footer-shell--simple {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
   </style>
 </head>
 <body class="about-page">

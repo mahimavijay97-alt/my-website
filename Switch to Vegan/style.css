@@ -166,4 +166,26 @@ img {
   }
 }
 
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="/index.html" class="site-brand">
+      <img src="/25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
+      <span>Switch To Vegan</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul class="main-nav__links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/vegan-guide" class="active">Vegan Guide</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+      </ul>
+    </nav>
+
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
 

@@ -1,1098 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - SwitchToVegan</title>
-  <meta name="description" content="Learn about the mission and values of SwitchToVegan, promoting veganism and cruelty-free lifestyles for a more compassionate world." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Switch To Vegan</title>
+  <meta name="description" content="The real story behind Switch To Vegan — who built it, why it exists, and why it was made specifically for people navigating veganism in India." />
   <link rel="canonical" href="https://switchtovegan.in/about">
   <link rel="icon" href="/favicon.png" type="image/png">
-  <meta property="og:title" content="About - SwitchToVegan" />
-  <meta property="og:description" content="Learn about the mission and values of SwitchToVegan, promoting veganism and cruelty-free lifestyles for a more compassionate world." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-
-  <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/style.css"></noscript>
+
+<link rel="preload" href="/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/index.css"></noscript>
 
 <link rel="preload" href="/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/responsive.css"></noscript>
+
+
   <style>
-    .story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-    align-items: center;
-}
-
-.philosophy-image {
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    padding: var(--spacing-lg);
-}
-
-.main-philosophy-image {
-    width: 80%;
-    max-width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    box-shadow: var(--shadow-medium);
-    border-radius: var(--border-radius-lg);
-}
-
-.secondary-philosophy-image {
-    width: 60%;
-    max-width: 200px;
-    position: absolute;
-    top: 15%;
-    right: 10%;
-    z-index: 2;
-    box-shadow: var(--shadow-small);
-    border-radius: var(--border-radius-md);
-    transform: rotate(8deg);
-}
-
-.animal-philosophy-image {
-    width: 40%;
-    max-width: 150px;
-    position: absolute;
-    bottom: 15%;
-    left: 10%;
-    z-index: 2;
-    transform: rotate(-8deg);
-}
-
-.veganism-pillars {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-}
-
-.pillar {
-    background: rgba(255, 255, 255, 0.82);
-border: 1px solid rgba(34, 55, 36, 0.12);
-    border-radius: var(--border-radius-md);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-small);
-    border-top: 3px solid var(--primary-color);
-}
-
-.pillar h3 {
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-md);
-}
-
-.personal-approach, .join-movement {
-    text-align: center;
-    padding: var(--spacing-xxl) 0;
-}
-
-.join-movement {
-    background-color: var(--light-bg);
-}
-
-.join-movement .container {
-    max-width: 700px;
-}
-
-.join-movement h2 {
-    margin-bottom: var(--spacing-md);
-}
-
-.join-movement p {
-    margin-bottom: var(--spacing-lg);
-}
-
-.join-movement .btn {
-    margin-top: var(--spacing-md);
-}
-
-/* ====================
-   Experience & Suggestions Sections
-   ==================== */
-.share-experience-section {
-    padding: var(--spacing-xxl) 0;
-    background-color: var(--light-bg);
-    position: relative;
-}
-
-.experience-form-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.82);
-border: 1px solid rgba(34, 55, 36, 0.12);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-xl);
-    box-shadow: var(--shadow-medium);
-    border: 1px solid var(--border-color);
-}
-
-.experience-form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.experience-form .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
-.experience-form label {
-    font-weight: 500;
-    font-size: 0.95rem;
-    color: var(--text-primary);
-}
-
-.experience-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.suggestions-section {
-    padding: var(--spacing-xxl) 0;
-    background: linear-gradient(145deg, #fff5f8, #f5f0ff);
-    position: relative;
-}
-
-.suggestions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-xl);
-}
-
-.suggestion-card {
-    background: rgba(255, 255, 255, 0.82);
-border: 1px solid rgba(34, 55, 36, 0.12);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-xl);
-    text-align: center;
-    box-shadow: var(--shadow-light);
-    transition: all var(--transition-medium);
-    border: 1px solid var(--border-color);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.suggestion-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.suggestion-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: var(--border-radius-round);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--spacing-md);
-    background: linear-gradient(135deg, rgba(var(--primary-rgb), 0.1), rgba(var(--secondary-rgb), 0.1));
-    color: var(--primary-color);
-    font-size: 1.5rem;
-}
-
-.suggestion-card h3 {
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.3rem;
-}
-
-.suggestion-card p {
-    margin-bottom: var(--spacing-lg);
-    font-size: 0.95rem;
-}
-
-.text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: all var(--transition-fast);
-}
-
-.text-link:hover {
-    color: var(--secondary-color);
-    gap: 0.75rem;
-}
-
-.text-link i {
-    font-size: 0.8rem;
-    transition: transform var(--transition-fast);
-}
-
-/* ========================= */
-/* ABOUT PAGE HEADER STYLE  */
-/* ========================= */
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  background: rgba(252, 250, 245, 0.72);
-  border-bottom: 1px solid transparent;
-  transition: all 0.25s ease;
-}
-
-.site-header.scrolled {
-  border-bottom-color: rgba(34, 55, 36, 0.12);
-  box-shadow: 0 10px 30px rgba(18, 30, 21, 0.05);
-}
-
-.header-inner {
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto;
-  min-height: 82px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  position: relative;
-}
-
-.site-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  color: #1f2a22;
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.site-brand img {
-  width: 42px;
-  height: 42px;
-  max-width: 42px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 14px 32px rgba(21, 31, 23, 0.06);
-  display: block;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-}
-
-.main-nav__links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav__links li {
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav__links a {
-  color: #1f2a22;
-  font-family: "Outfit", sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.2;
-  position: relative;
-  text-decoration: none;
-}
-
-.main-nav__links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 100%;
-  height: 2px;
-  background: #2f6b47;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-.main-nav__links a:hover::after,
-.main-nav__links a.active::after {
-  transform: scaleX(1);
-}
-
-.mobile-toggle {
-  display: none;
-  border: 0;
-  background: transparent;
-  color: #1f2a22;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .header-inner {
-    min-height: 74px;
-  }
-
-  .mobile-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-  }
-
-  .main-nav {
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 20px;
-    right: 20px;
-    display: block;
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(34, 55, 36, 0.12);
-    border-radius: 20px;
-    box-shadow: 0 14px 32px rgba(21, 31, 23, 0.06);
-    padding: 16px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.22s ease;
-    margin-left: 0;
-  }
-
-  .main-nav.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-
-  .main-nav__links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-}
-
-/* ========================= */
-/* ABOUT PAGE MISSION STYLE */
-/* ========================= */
-
-/* ========================= */
-/* MISSION SECTION CLEAN FIX */
-/* ========================= */
-
-.about-page .mission-section {
-    padding: 80px 0;
-    background: #ffffff;
-}
-
-.about-page .mission-heading,
-.about-page .mission-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.about-page .mission-heading {
-    margin-bottom: 40px;
-}
-
-.about-page .mission-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 60px;
-}
-
-.about-page .mission-text {
-    flex: 1;
-    text-align: left;
-}
-
-.about-page .mission-image {
-    flex: 1;
-}
-
-.about-page .mission-image img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-@media (max-width: 768px) {
-    .about-page .mission-content {
-        flex-direction: column;
+    :root {
+      --green:       #2f6b47;
+      --green-faint: rgba(47,107,71,0.07);
+      --green-mid:   rgba(47,107,71,0.18);
+      --green-line:  rgba(47,107,71,0.20);
+      --ink:         #1a2420;
+      --ink-2:       #3a4a40;
+      --muted:       #6b7c72;
+      --paper:       #faf8f3;
+      --paper-2:     #f3efe6;
+      --white:       #ffffff;
+      --border:      rgba(34,55,36,0.11);
+      --sh-s:        0 2px 14px rgba(20,30,22,0.07);
+      --sh-m:        0 10px 40px rgba(20,30,22,0.10);
+      --sh-l:        0 24px 70px rgba(20,30,22,0.13);
+      --r-sm: 8px; --r-md: 14px; --r-lg: 22px;
+      --ease: cubic-bezier(0.22,1,0.36,1);
+      --display: 'Cormorant Garamond', serif;
+      --body:    'Outfit', sans-serif;
     }
-}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--body); background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a   { text-decoration: none; color: inherit; }
 
-/* ============================= */
-/* ABOUT PAGE PHILOSOPHY STYLE  */
-/* ============================= */
+    /* containers */
+    .w    { width: min(1080px, calc(100% - 48px)); margin: 0 auto; }
+    .w-md { width: min(860px,  calc(100% - 48px)); margin: 0 auto; }
+    .w-sm { width: min(680px,  calc(100% - 48px)); margin: 0 auto; }
 
-.about-page .philosophy-section {
-    padding: 80px 20px;
-    background: #f9f9f9;
-}
-
-.about-page .philosophy-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.about-page .philosophy-content div {
-    flex: 1;
-}
-
-.about-page .philosophy-section img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .about-page .philosophy-content {
-        flex-direction: column;
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(250,248,243,0.86);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .25s, box-shadow .25s;
     }
-}
-
-/* =================================== */
-/* ABOUT PAGE UNDERSTANDING SECTION   */
-/* =================================== */
-
-.about-page .understanding-section {
-    padding: 80px 20px;
-    background: #ffffff;
-}
-
-.about-page .understanding-section h2 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.about-page .understanding-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto 60px auto;
-}
-
-.about-page .understanding-top div {
-    flex: 1;
-}
-
-.about-page .understanding-top img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* Cards Layout */
-.about-page .understanding-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto 40px auto;
-}
-
-.about-page .understanding-cards > div {
-    flex: 1;
-    background: #f9f9f9;
-    padding: 25px;
-    border-radius: 12px;
-    transition: 0.3s ease;
-}
-
-.about-page .understanding-cards > div:hover {
-    transform: translateY(-5px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .about-page .understanding-top,
-    .about-page .understanding-cards {
-        flex-direction: column;
+    .nav.up { border-bottom-color: var(--border); box-shadow: 0 6px 24px rgba(20,30,22,0.05); }
+    .nav__r {
+      width: min(1140px, calc(100% - 48px));
+      margin: 0 auto; height: 76px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; position: relative;
     }
-}
-
-/* ============================= */
-/* ABOUT PAGE APPROACH SECTION  */
-/* ============================= */
-
-.about-page .approach-section {
-    padding: 80px 20px;
-    background: #f9f9f9;
-}
-
-.about-page .approach-section h2 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.about-page .approach-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto 40px auto;
-}
-
-.about-page .approach-content div {
-    flex: 1;
-}
-
-.about-page .approach-content img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .about-page .approach-content {
-        flex-direction: column;
+    .brand {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: var(--body); font-weight: 700; font-size: .88rem;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--ink);
     }
-}
-
-/* ============================== */
-/* ABOUT PAGE MOVEMENT SECTION   */
-/* ============================== */
-
-.about-page .movement-section {
-    padding: 80px 20px;
-    background: #fcfaf5;
-}
-
-.about-page .movement-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.about-page .movement-content div {
-    flex: 1;
-}
-
-.about-page .movement-content img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .about-page .movement-content {
-        flex-direction: column;
-        text-align: center;
+    .brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: var(--sh-s); }
+    .nav__ul {
+      display: flex; align-items: center; gap: 30px;
+      list-style: none; margin-left: auto;
     }
-}
-
-/* ========================== */
-/* ABOUT PAGE IMAGE CLEANUP  */
-/* ========================== */
-
-.about-page .about-image {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* ============================ */
-/* ABOUT PAGE TEXT STYLING     */
-/* ============================ */
-
-.about-page p {
-    line-height: 1.7;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.about-page h2 {
-    margin-bottom: 30px;
-}
-
-.about-page h3 {
-    margin-bottom: 15px;
-}
-
-/* ======================== */
-/* GLOBAL BUTTON STYLE     */
-/* ======================== */
-
-.btn-gradient {
-    display: inline-block;
-    padding: 12px 25px;
-    background: linear-gradient(135deg, #2f6b47, #d7efe1);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s ease;
-}
-
-.btn-gradient:hover {
-    opacity: 0.85;
-}
-
-/* ============================ */
-/* ABOUT PAGE FINAL SPACING    */
-/* ============================ */
-
-.about-page section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-.about-page h2 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.about-page .container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* ============================== */
-/* ABOUT PAGE NEWSLETTER SECTION  */
-/* ============================== */
-
-.about-page .newsletter-section {
-    background: linear-gradient(180deg, #fcfaf5 0%, #f6f2e9 100%);
-    text-align: center;
-}
-
-.about-page .newsletter-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.about-page .newsletter-form {
-    margin-top: 30px;
-}
-
-.about-page .newsletter-form__input-group {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.about-page .newsletter-form__input {
-    padding: 12px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .about-page .newsletter-form__input-group {
-        flex-direction: column;
-        align-items: center;
+    .nav__ul a {
+      font-size: .9rem; font-weight: 500; color: var(--ink); position: relative;
+    }
+    .nav__ul a::after {
+      content: ''; position: absolute; bottom: -5px; left: 0;
+      width: 100%; height: 1.5px; background: var(--green);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .22s var(--ease);
+    }
+    .nav__ul a:hover::after, .nav__ul a[aria-current]::after { transform: scaleX(1); }
+    .nav__btn { display: none; background: none; border: none; color: var(--ink); font-size: 1.25rem; cursor: pointer; margin-left: auto; }
+    @media (max-width: 700px) {
+      .nav__btn { display: flex; align-items: center; }
+      .nav__menu {
+        position: absolute; top: calc(100% + 8px); left: 16px; right: 16px;
+        background: rgba(255,255,255,0.97); border: 1px solid var(--border);
+        border-radius: 18px; box-shadow: var(--sh-m); padding: 14px;
+        opacity: 0; pointer-events: none; transform: translateY(-8px);
+        transition: all .2s var(--ease);
+      }
+      .nav__menu.on { opacity: 1; pointer-events: auto; transform: none; }
+      .nav__ul { flex-direction: column; align-items: flex-start; gap: 14px; }
     }
 
-    .about-page .newsletter-form__input {
-        width: 100%;
-        max-width: 300px;
+    /* ════════════════════════════════════════════
+       HEADER — editorial magazine opener
+       Two columns: giant headline left,
+       full-bleed image right (flush to edge).
+    ════════════════════════════════════════════ */
+    .hdr {
+      background: var(--paper);
+      position: relative; overflow: hidden;
+      padding: 96px 0 80px;
+      text-align: center;
     }
-}
+    /* subtle radial glow behind text */
+    .hdr::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(47,107,71,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hdr__inner {
+      width: min(720px, calc(100% - 48px));
+      margin: 0 auto;
+      position: relative; z-index: 2;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font-size: .7rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; color: var(--green); margin-bottom: 28px;
+    }
+    .eyebrow::before {
+      content: ''; display: block;
+      width: 26px; height: 1.5px; background: var(--green);
+    }
+    .hdr h1 {
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 6.5vw, 5rem);
+      font-weight: 700; line-height: 1.08;
+      color: var(--ink); letter-spacing: -.015em;
+    }
+    .hdr h1 em { font-style: italic; color: var(--green); }
+    .hdr__sub {
+      margin: 30px auto 0;
+      padding-top: 26px;
+      border-top: 1px solid var(--border);
+      max-width: 480px;
+      font-size: .9rem; color: var(--muted); line-height: 1.65;
+    }
+    @media (max-width: 600px) {
+      .hdr { padding: 72px 0 60px; }
+    }
 
-.about-page .mission-heading {
-    max-width: 1100px;
-    margin: 0 auto 30px auto;
-}
+    /* thin rule — chapter break */
+    .rule { width: min(1080px, calc(100% - 48px)); margin: 0 auto; height: 1px; background: linear-gradient(90deg, var(--green) 0%, transparent 100%); }
 
-.about-page .mission-heading h2 {
-    width: 50%;
-}
+    /* ════════════════════════════════════════════
+       BODY PROSE SHARED
+    ════════════════════════════════════════════ */
+    .stag {
+      font-size: .7rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--green);
+      display: block; margin-bottom: 20px;
+    }
+    .sh2 {
+      font-family: var(--display);
+      font-size: clamp(1.8rem, 3.5vw, 2.9rem);
+      font-weight: 700; line-height: 1.16; color: var(--ink);
+    }
+    .sh2 em { font-style: italic; color: var(--green); }
+    .prose {
+      font-size: 1rem; line-height: 1.85; color: var(--ink-2);
+    }
+    .prose + .prose { margin-top: 18px; }
 
-    /* ===== ABOUT PAGE FOOTER FIX - SAME AS VEGAN GUIDE ===== */
+    /* pull quote — editorial standout */
+    .pq {
+      margin: 34px 0;
+      padding: 26px 30px;
+      border-left: 3px solid var(--green);
+      background: var(--paper);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+    }
+    .pq p {
+      font-family: var(--display);
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-style: italic; font-weight: 600;
+      color: var(--ink); line-height: 1.42;
+    }
 
-.about-page .site-footer.site-footer--rich {
-  padding: 56px 0 24px !important;
-  border-top: 1px solid rgba(34, 55, 36, 0.12) !important;
-  background:
-    radial-gradient(circle at top left, rgba(215, 239, 225, 0.45), transparent 30%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(248, 244, 236, 0.96)) !important;
-}
+    /* ════════════════════════════════════════════
+       S1 — THE MOMENT  (origin)
+       Asymmetric split: 55/45, image sticky right
+    ════════════════════════════════════════════ */
+    .s1 { padding: 96px 0 88px; background: var(--white); }
+    .s1__g {
+      display: grid;
+      grid-template-columns: 55% 1fr;
+      gap: 68px; align-items: start;
+    }
+    .s1__img-col { position: sticky; top: 108px; }
+    .s1__img {
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: var(--r-lg);
+      box-shadow: var(--sh-l);
+    }
+    .img-cap { margin-top: 12px; font-size: .77rem; color: var(--muted); line-height: 1.5; padding-left: 3px; }
+    @media (max-width: 740px) {
+      .s1__g { grid-template-columns: 1fr; gap: 36px; }
+      .s1__img-col { position: static; }
+      .s1__img { aspect-ratio: 4/3; }
+    }
 
-.about-page .site-footer--rich .footer-shell--simple {
-  display: grid !important;
-  grid-template-columns: 1.4fr 1fr !important;
-  gap: 32px !important;
-  align-items: start !important;
-}
+    /* ════════════════════════════════════════════
+       S2 — THE METHOD  (how I transitioned)
+       Paper bg. Big centred display.
+       Feature box + vertical timeline.
+    ════════════════════════════════════════════ */
+    .s2 {
+      padding: 88px 0 96px;
+      background: var(--paper);
+      position: relative; overflow: hidden;
+    }
+    .s2::after {
+      content: 'slowly';
+      position: absolute; bottom: -40px; right: -16px;
+      font-family: var(--display); font-size: clamp(90px, 15vw, 170px);
+      font-weight: 700; font-style: italic;
+      color: rgba(47,107,71,0.04); line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+    .s2__hd { text-align: center; margin-bottom: 58px; }
+    .s2__hd .sh2 { font-size: clamp(2.2rem, 5vw, 3.8rem); max-width: 640px; margin: 18px auto 0; }
 
-.about-page .site-footer--rich .footer-brand__logo {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  margin-bottom: 16px !important;
-  font-family: "Cormorant Garamond", serif !important;
-  font-size: 1.55rem !important;
-  font-weight: 700 !important;
-  color: #1f2a22 !important;
-  text-decoration: none !important;
-}
+    /* the headline method card */
+    .m-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 40px 44px;
+      box-shadow: var(--sh-m);
+      max-width: 760px; margin: 0 auto 64px;
+      position: relative; overflow: hidden;
+    }
+    .m-card::before {
+      content: '"';
+      position: absolute; top: -28px; left: 20px;
+      font-family: var(--display); font-size: 180px;
+      color: rgba(47,107,71,0.05); line-height: 1;
+      pointer-events: none;
+    }
+    .m-card__tag {
+      font-size: .68rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--green);
+      display: block; margin-bottom: 14px;
+    }
+    .m-card h3 {
+      font-family: var(--display);
+      font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+      font-weight: 700; font-style: italic;
+      color: var(--ink); margin-bottom: 18px; line-height: 1.28;
+    }
+    .m-card p { font-size: .97rem; line-height: 1.82; color: var(--ink-2); }
 
-.about-page .site-footer--rich .footer-brand__logo img {
-  width: 46px !important;
-  height: 46px !important;
-  max-width: 46px !important;
-  border-radius: 14px !important;
-  object-fit: cover !important;
-  display: block !important;
-}
+    /* timeline */
+    .tl { display: flex; flex-direction: column; max-width: 760px; margin: 0 auto; }
+    .tl__item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 0 26px;
+      position: relative;
+    }
+    .tl__item:not(:last-child)::before {
+      content: '';
+      position: absolute; left: 25px; top: 52px; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--green-line), transparent);
+    }
+    .tl__n {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: var(--white); border: 1.5px solid var(--green-line);
+      color: var(--green);
+      font-family: var(--display); font-size: 1.05rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; position: relative; z-index: 1;
+    }
+    .tl__body { padding: 12px 0 46px; }
+    .tl__body h4 { font-size: .97rem; font-weight: 600; color: var(--ink); margin-bottom: 7px; line-height: 1.4; }
+    .tl__body p  { font-size: .93rem; color: var(--muted); line-height: 1.75; }
 
-.about-page .site-footer--rich .footer-brand p {
-  max-width: 460px !important;
-  color: #5f6d63 !important;
-  line-height: 1.7 !important;
-  margin: 0 !important;
-}
+    /* ════════════════════════════════════════════
+       S3 — WHY THIS SITE EXISTS
+       Centred column — reads like a personal letter.
+       No cards. No lists. Pure prose.
+    ════════════════════════════════════════════ */
+    .s3 { padding: 96px 0; background: var(--white); }
+    .s3 .sh2 { margin: 18px 0 28px; }
+    .s3__hl {
+      margin: 34px 0;
+      background: var(--paper);
+      border-radius: var(--r-md);
+      padding: 32px 36px;
+    }
+    .s3__hl p {
+      font-family: var(--display);
+      font-size: clamp(1.1rem, 1.9vw, 1.38rem);
+      font-style: italic; font-weight: 600;
+      color: var(--ink); line-height: 1.52;
+    }
 
-.about-page .site-footer--rich .footer-contact-block h4 {
-  margin: 0 0 14px !important;
-  font-family: "Cormorant Garamond", serif !important;
-  font-size: 1.2rem !important;
-  color: #1f2a22 !important;
-  text-align: left !important;
-}
+    /* ════════════════════════════════════════════
+       S4 — WHAT I STAND FOR
+       Dark section — inverted palette.
+       Sticky heading left, scrollable items right.
+    ════════════════════════════════════════════ */
+    .s4 {
+      background: var(--ink);
+      padding: 96px 0;
+      position: relative; overflow: hidden;
+    }
+    .s4::before {
+      content: '';
+      position: absolute; top: -160px; right: -160px;
+      width: 520px; height: 520px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(47,107,71,0.16) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .s4__g {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px; align-items: start;
+    }
+    .s4__hd { position: sticky; top: 108px; }
+    .s4__hd .stag { color: rgba(215,239,225,0.5); }
+    .s4__hd h2 {
+      font-family: var(--display);
+      font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+      font-weight: 700; line-height: 1.15; color: #fff;
+      margin-top: 16px;
+    }
+    .s4__hd h2 em { font-style: italic; color: #d7efe1; }
+    .s4__hd p { margin-top: 18px; color: rgba(255,255,255,0.45); font-size: .92rem; line-height: 1.7; }
+    .vl { display: flex; flex-direction: column; }
+    .vl__item {
+      display: grid; grid-template-columns: 34px 1fr;
+      gap: 20px; padding: 26px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      align-items: start;
+    }
+    .vl__item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+    .vl__n {
+      font-family: var(--display); font-size: 1.15rem; font-weight: 700;
+      color: rgba(47,107,71,0.5); margin-top: 3px;
+    }
+    .vl__item h3 { font-size: .97rem; font-weight: 600; color: rgba(255,255,255,0.88); margin-bottom: 7px; }
+    .vl__item p  { font-size: .9rem;  color: rgba(255,255,255,0.4); line-height: 1.72; }
+    @media (max-width: 740px) {
+      .s4__g { grid-template-columns: 1fr; gap: 36px; }
+      .s4__hd { position: static; }
+    }
 
-.about-page .site-footer--rich .footer-email {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  padding: 10px 16px !important;
-  border-radius: 999px !important;
-  background: rgba(47, 107, 71, 0.08) !important;
-  color: #2f6b47 !important;
-  font-weight: 600 !important;
-  text-decoration: none !important;
-}
+    /* ════════════════════════════════════════════
+       S5 — EDITORIAL / RESEARCH APPROACH
+       Paper bg. Plain list — no cards.
+    ════════════════════════════════════════════ */
+    .s5 { padding: 96px 0; background: var(--paper); }
+    .s5 .sh2 { margin: 14px 0 20px; }
+    .tl2 { margin: 48px 0; }
+    .tl2__item {
+      display: grid; grid-template-columns: 44px 1fr;
+      gap: 24px; padding: 26px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .tl2__item:first-child { border-top: 1px solid var(--border); }
+    .tl2__n {
+      font-family: var(--display); font-size: 2rem; font-weight: 700;
+      color: var(--green-mid); line-height: 1; margin-top: 4px;
+    }
+    .tl2__item h3 { font-size: .97rem; font-weight: 600; color: var(--ink); margin-bottom: 7px; }
+    .tl2__item p  { font-size: .92rem; color: var(--muted); line-height: 1.72; }
 
-.about-page .site-footer--rich .footer-note {
-  margin-top: 16px !important;
-  max-width: 28rem !important;
-  color: #5f6d63 !important;
-  line-height: 1.7 !important;
-}
+    /* disclaimer */
+    .disc {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--r-md); padding: 20px 24px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .disc__i {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--green-faint); color: var(--green);
+      font-size: .72rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .disc p { font-size: .87rem; color: var(--muted); line-height: 1.65; }
+    .disc strong { color: var(--ink-2); }
 
-.about-page .site-footer--rich .footer-bottom--simple {
-  margin-top: 30px !important;
-  padding-top: 18px !important;
-  border-top: 1px solid rgba(34, 55, 36, 0.1) !important;
-}
+    /* ════════════════════════════════════════════
+       CTA — quiet, centred close
+    ════════════════════════════════════════════ */
+    .cta-s {
+      padding: 96px 0 80px;
+      background: var(--white);
+      text-align: center;
+    }
+    .cta-s h2 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      font-weight: 700; line-height: 1.15; color: var(--ink);
+      max-width: 520px; margin: 18px auto 22px;
+    }
+    .cta-s h2 em { font-style: italic; color: var(--green); }
+    .cta-s p { font-size: .97rem; color: var(--muted); max-width: 440px; margin: 0 auto 40px; line-height: 1.75; }
+    .cta-r { display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 28px; border-radius: var(--r-sm);
+      font-size: .93rem; font-weight: 600;
+      transition: all .2s var(--ease); cursor: pointer; border: none;
+    }
+    .btn-p { background: var(--green); color: #fff; }
+    .btn-p:hover { background: #225236; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(47,107,71,0.26); }
+    .btn-g { background: transparent; color: var(--green); border: 1.5px solid var(--green-line); }
+    .btn-g:hover { background: var(--green-faint); transform: translateY(-2px); }
 
-.about-page .site-footer--rich .footer-bottom p {
-  color: #5f6d63 !important;
-  line-height: 1.7 !important;
-  margin: 0 !important;
-}
+    /* ── FOOTER ── */
+    .ft {
+      padding: 50px 0 22px;
+      border-top: 1px solid var(--border);
+      background: linear-gradient(180deg, #fff 0%, #f8f4ec 100%);
+    }
+    .ft__g {
+      display: grid; grid-template-columns: 1.4fr 1fr;
+      gap: 32px; align-items: start;
+    }
+    .ft__logo {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: var(--display); font-size: 1.4rem; font-weight: 700;
+      color: var(--ink); margin-bottom: 14px;
+    }
+    .ft__logo img { width: 40px; height: 40px; border-radius: 11px; object-fit: cover; }
+    .ft__brand p { color: var(--muted); font-size: .9rem; line-height: 1.7; max-width: 400px; }
+    .ft__contact h4 { font-family: var(--display); font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+    .ft__email {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 9px 16px; border-radius: 99px;
+      background: var(--green-faint); color: var(--green);
+      font-weight: 600; font-size: .9rem;
+    }
+    .ft__note { margin-top: 12px; color: var(--muted); font-size: .85rem; line-height: 1.65; }
+    .ft__bottom { margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--border); }
+    .ft__bottom p { color: var(--muted); font-size: .83rem; }
+    @media (max-width: 620px) { .ft__g { grid-template-columns: 1fr; gap: 24px; } }
 
-@media (max-width: 768px) {
-  .about-page .site-footer--rich .footer-shell--simple {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-}
-
-
+    /* scroll reveal */
+    .rv { opacity: 0; transform: translateY(26px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+    .rv.on { opacity: 1; transform: none; }
+    .rv.d1 { transition-delay: .1s; }
+    .rv.d2 { transition-delay: .2s; }
   </style>
 </head>
-<body class="about-page">
-  <header class="site-header" id="siteHeader">
-  <div class="container header-inner">
+<body>
 
-    <a href="/" class="site-brand">
-      <img src="25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
-      <span>Switch To Vegan</span>
-    </a>
-
-   <nav class="main-nav" id="mainNav">
-  <ul class="main-nav__links">
-    <a href="/index">Home</a>
-<a href="/about" class="active">About</a>
-<a href="/blog">Blog</a>
-<a href="/vegan-guide">Vegan Guide</a>
-<a href="/gallery">Gallery</a>
-      </ul>
-    </nav>
-
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
-      <i class="fas fa-bars"></i>
-    </button>
-
-  </div>
-</header>
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__r">
+      <a class="brand" href="/">
+        <img src="https://switchtovegan.in/25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan" />
+        Switch To Vegan
+      </a>
+      <button class="nav__btn" id="nb" aria-label="Menu">☰</button>
+      <nav class="nav__menu" id="nm">
+        <ul class="nav__ul">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about" aria-current="page">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/vegan-guide">Vegan Guide</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main>
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
-        <div class="header-content">
-          <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">About <span class="gradient-text">SwitchToVegan</span></h1>
-          <p class="text-lg text-textSecondary mb-8">The mission, philosophy, and approach behind this vegan advocacy platform</p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- The Mission Section -->
-    <section class="mission-section">
 
-    <!-- NEW wrapper -->
-    <div class="mission-heading">
-      <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">
-        The <span class="gradient-text">Mission</span>
-      </h2>
+    <!-- ═════ PAGE HEADER — centred editorial hero ═════ -->
+    <div class="hdr">
+      <div class="hdr__inner">
+        <span class="eyebrow">The story behind this site</span>
+        <h1>
+          Built by someone<br />
+          who struggled with<br />
+          the <em>exact same</em><br />
+          things you might.
+        </h1>
+        <p class="hdr__sub">A personal account — not a brand page.<br />Written for beginners, by someone who was one.</p>
+      </div>
     </div>
+    <div class="rule"></div>
 
-    <div class="mission-content">
 
-      <div class="mission-text">
-        <p>
-          At SwitchToVegan, the belief is that simple, mindful choices can create profound change. 
-          The mission is to empower individuals with knowledge, resources, and support to embrace 
-          a vegan, cruelty-free lifestyle that benefits personal health, animal welfare, and the planet's future.
-        </p>
+    <!-- ═════ S1 — THE MOMENT IT STARTED ═════
+         Asymmetric: wider text left, sticky image right.
+         Pull quote breaks the reading pace deliberately.
+    ══════════════════════════════════════════ -->
+    <section class="s1">
+      <div class="w">
+        <div class="s1__g">
 
-        <p>
-          This platform strives to make veganism accessible, enjoyable, and sustainable for everyone, 
-          regardless of where they are on their journey.
-        </p>
-        </div>
+          <div class="rv">
+            <span class="stag">How it started</span>
+            <h2 class="sh2">A video I<br /><em>couldn't un-see</em></h2>
 
-      <div class="mission-image">
-        <img 
-          src="https://images.unsplash.com/photo-1530469912745-a215c6b256ea?q=70&w=700&auto=format&fit=crop"
-          alt="Person holding fresh vegetables"
-            loading="lazy"
-            decoding="async"
-        />
-      </div>
-
-    </div>
-
-</section>
-    
-    <!-- The Philosophy Section -->
-    <section class="philosophy-section">
-      <div class="container">
-        <div class="philosophy-content">
-          <div class="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1521986329282-0436c1f1e212?q=70&w=700&auto=format&fit=crop" 
-              alt="Plant-based meal with vegetables and fruits" 
-              class="rounded-xl shadow-lg object-cover w-full h-80 relative z-10"
-                loading="lazy"
-                decoding="async"
-            />
-            <div class="absolute -bottom-4 -right-4 h-full w-full" style="background: rgba(215,239,225,0.3); border-radius: 16px;"></div>
-          </div>
-          
-          <div>
-            <h2 class="font-heading text-3xl font-bold mb-6">The <span class="gradient-text">Philosophy</span></h2>
-            <div>
-              <p>SwitchToVegan represents a journey of learning about and sharing the ethical, environmental, and health benefits of veganism. What started as a commitment to making more compassionate choices has grown into this digital platform dedicated to helping others understand the impact of their daily decisions.</p>
-              <p>This site was created to provide an educational resource for those exploring and embracing veganism and cruelty-free living. It aims to be a place where research, practical advice, and ethical perspectives are easily accessible to everyone.</p>
-              <p>The name "SwitchToVegan" reflects the philosophy that transitioning to a more peaceful relationship with animals through our food and lifestyle choices creates a gentler world for all beings.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Understanding Veganism Section -->
-    <section class="understanding-section">
-      <div class="container">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8 text-center">Understanding <span class="gradient-text">Veganism</span></h2>
-          
-          <div class="understanding-top">
-            <div>
-              <div class="prose prose-lg">
-                <p>Veganism is a philosophy and way of living that seeks to exclude—as far as is possible and practicable—all forms of exploitation of, and cruelty to, animals for food, clothing, or any other purpose. It extends beyond diet to encompass all aspects of life, from personal care products to entertainment choices.</p>
-              </div>
-            </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=70&w=700&auto=format&fit=crop" 
-                alt="Colorful vegan food spread" 
-                class="rounded-xl shadow-lg object-cover w-full h-64"
-                  loading="lazy"
-                  decoding="async"
-              />
-            </div>
-          </div>
-          
-          <div class="understanding-cards">
-            <div class="bg-lightBg p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-              <h3 class="font-heading text-xl font-bold mb-4">Ethical Considerations</h3>
-              <p>Veganism recognizes that animals are sentient beings capable of suffering and seeks to minimize harm to them. This includes avoiding animal products and byproducts in food, clothing, personal care items, and entertainment.</p>
-            </div>
-            
-            <div class="bg-lightBg p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-              <h3 class="font-heading text-xl font-bold mb-4">Environmental Impact</h3>
-              <p class="text-textSecondary">Animal agriculture is a leading cause of deforestation, greenhouse gas emissions, water pollution, and biodiversity loss. A vegan diet significantly reduces one's environmental footprint.</p>
-            </div>
-            
-            <div class="bg-lightBg p-6 rounded-xl shadow-sm hover:shadow-md transition-all">
-              <h3 class="font-heading text-xl font-bold mb-4">Health Benefits</h3>
-              <p class="text-textSecondary">Well-planned vegan diets can provide all necessary nutrients while being associated with lower rates of heart disease, certain cancers, and type 2 diabetes. They're typically higher in fiber, antioxidants, and phytonutrients.</p>
-            </div>
-          </div>
-          
-          <p class="text-textSecondary text-center">At SwitchToVegan, the understanding is that transitioning to a vegan lifestyle is a journey, not a destination. This platform supports incremental changes and believes that any step toward reducing animal product consumption and cruelty is valuable and worth celebrating.</p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- The Approach Section -->
-    <section class="approach-section">
-      <div class="container">
-        <div class="max-w-4xl mx-auto">
-          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-8 text-center">The <span class="gradient-text">Approach</span></h2>
-          
-          <div class="approach-content">
-            <div class="order-2 md:order-1">
-              <div class="prose prose-lg">
-                <p>SwitchToVegan focuses on providing clear, science-based information about veganism while respecting everyone's individual journey. The goal is to help people understand the consequences of their daily choices and inspire them to consider more compassionate alternatives.</p>
-                <p>Through this website, visitors can access resources, recipes, and practical advice that make it easier to adopt and maintain a vegan lifestyle.</p>
-              </div>
-            </div>
-            <div class="order-1 md:order-2">
-              <img 
-                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=70&w=700&auto=format&fit=crop" 
-                alt="Person preparing plant-based meal" 
-                class="rounded-xl shadow-lg object-cover w-full h-72"
-                  loading="lazy"
-                  decoding="async"
-              />
-            </div>
-          </div>
-          
-          <div class="prose prose-lg max-w-none mx-auto">
-            <p class="text-center text-textSecondary">The emphasis is on education rather than judgment, and on empowering people with knowledge rather than imposing beliefs.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Join The Movement Section -->
-    <section class="movement-section">
-      <div class="container">
-        <div class="movement-content">
-          <div>
-            <img 
-              src="https://images.unsplash.com/photo-1472653525502-fc569e405a74?q=70&w=700&auto=format&fit=crop" 
-              alt="Group of people working together" 
-              class="rounded-xl shadow-lg object-cover w-full h-80"
-                loading="lazy"
-                decoding="async"
-            />
-          </div>
-          <div class="text-center md:text-left">
-            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Join The <span class="gradient-text">Movement</span></h2>
-            <p class="text-lg text-textSecondary mb-8">Be part of a growing movement of compassionate individuals working toward a more sustainable and ethical world.</p>
-            <a 
-              href="contact.html"
-              class="btn-gradient"
-            >
-              Get Involved
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-      <div class="container">
-        <div class="newsletter-content">
-          <h2 class="font-heading text-3xl font-bold mb-6">Join Our <span class="gradient-text">Newsletter</span></h2>
-          <p class="text-textSecondary mb-8">
-            Sign up to receive our weekly newsletter with the latest articles, recipes, and plant-based inspiration.
-          </p>
-          
-          <form class="newsletter-form">
-            <div class="newsletter-form__input-group">
-              <div class="flex-1">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  class="newsletter-form__input"
-                />
-              </div>
-              <button
-                type="submit"
-                class="btn-gradient whitespace-nowrap"
-              >
-                Subscribe Now
-              </button>
-            </div>
-            <p class="newsletter-form__disclaimer">
-              We respect your privacy. Unsubscribe at any time.
+            <p class="prose" style="margin-top:24px;">
+              It wasn't a conversation, a book, or a health scare. It was a video — the kind that arrives without warning — showing how animals are treated inside the dairy industry. Not in some faraway factory. By local suppliers. The kind most people, including me, had always assumed were fine.
             </p>
-          </form>
+            <p class="prose">
+              I couldn't absorb what I saw and keep doing what I was doing. So I decided I wanted to stop contributing to it. That part was simple. Everything that came after was not.
+            </p>
+
+            <div class="pq" style="margin-top:34px;">
+              <p>"I didn't go vegan. I started trying to go vegan. Those felt like two very different things — and that distinction made all the difference for me."</p>
+            </div>
+
+            <p class="prose">
+              The first few weeks were genuinely disorienting. I didn't know what to eat in the morning. I didn't know how to explain it at the dinner table. Every source I found online contradicted the last. I knew what I didn't want to do — I just didn't know how to actually do anything differently.
+            </p>
+            <p class="prose">
+              That confusion — and finding my own slow, imperfect way through it — is the entire reason this website exists.
+            </p>
+          </div>
+
+          <div class="s1__img-col rv d2">
+            <img
+              class="s1__img"
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80"
+              alt="Colourful whole plant foods arranged on a table" />
+            <p class="img-cap">The start is rarely dramatic. It's usually just a quiet moment of noticing something you can't stop noticing.</p>
+          </div>
+
         </div>
       </div>
     </section>
+
+
+    <!-- ═════ S2 — HOW THE TRANSITION ACTUALLY HAPPENED ═════
+         Different bg. Big centred display heading.
+         Feature moment card + vertical timeline.
+         Most personal section — given most space.
+    ══════════════════════════════════════════════════════ -->
+    <section class="s2">
+      <div class="w-md">
+
+        <div class="s2__hd rv">
+          <span class="stag">The real process</span>
+          <h2 class="sh2">Slow. Imperfect.<br /><em>And it worked.</em></h2>
+        </div>
+
+        <div class="m-card rv d1">
+          <span class="m-card__tag">The thing that actually helped</span>
+          <h3>"Not today. Maybe tomorrow."</h3>
+          <p>
+            The most important thing I noticed in myself: the harder I told myself <em>"I can never eat this again,"</em> the more my mind fixated on exactly that thing. For me, fighting it head-on made it worse. So I tried delaying instead. When I craved ice cream, I told myself: not today — maybe tomorrow. Tomorrow came, and I said it again. Over weeks, the craving got quieter. It stopped feeling like deprivation and started feeling like a choice I was making, at my own pace, for my own reasons.
+          </p>
+        </div>
+
+        <div class="tl rv d2">
+
+          <div class="tl__item">
+            <div class="tl__n">1</div>
+            <div class="tl__body">
+              <h4>Stopped ordering dairy outside first</h4>
+              <p>Restaurants gave me control without disrupting anything at home. A small, private decision — and for me, that felt far easier to keep than any dramatic announcement.</p>
+            </div>
+          </div>
+
+          <div class="tl__item">
+            <div class="tl__n">2</div>
+            <div class="tl__body">
+              <h4>Reduced cheese and desserts gradually — not all at once</h4>
+              <p>One swap at a time, at my pace. I didn't declare anything. I just started choosing differently, occasionally, then more often. Progress without performance.</p>
+            </div>
+          </div>
+
+          <div class="tl__item">
+            <div class="tl__n">3</div>
+            <div class="tl__body">
+              <h4>Stopped dairy at home over many months</h4>
+              <p>The hardest part wasn't food — it was routine. Morning chai. Familiar comfort. I had to find alternatives I actually liked, not just tolerated, for any of it to last.</p>
+            </div>
+          </div>
+
+          <div class="tl__item">
+            <div class="tl__n">4</div>
+            <div class="tl__body">
+              <h4>Started reading actual research instead of wellness blogs</h4>
+              <p>For me, switching from random wellness blogs to peer-reviewed sources — registered dietitians, academic institutions, published studies — made nutrition feel less scary and more navigable. I stopped feeling overwhelmed and started feeling curious.</p>
+            </div>
+          </div>
+
+          <div class="tl__item">
+            <div class="tl__n">5</div>
+            <div class="tl__body">
+              <h4>Learned veganism extends beyond food</h4>
+              <p>Leather, silk, honey, cosmetics tested on animals — most beginners don't know this at the start. I didn't either. That's not a failure. It's just how learning works: in layers, over time, without a deadline.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═════ S3 — WHY THIS SITE WAS BUILT ═════
+         Centred narrow column — reads like a letter.
+         Highlighted quote block. No cards or lists.
+         Pure prose with rhythm.
+    ══════════════════════════════════════════ -->
+    <section class="s3">
+      <div class="w-sm">
+        <div class="rv">
+          <span class="stag">Why this exists</span>
+          <h2 class="sh2">I needed a resource<br />that didn't <em>exist yet.</em></h2>
+
+          <p class="prose" style="margin-top:26px;">
+            Transitioning to veganism in India has specific friction points that most vegan resources I found never addressed — because they weren't built with this context in mind. Personally, the nutrition questions felt overwhelming. Vegan alternatives were expensive and hard to find. Indian cooking is built around dairy in ways that aren't easy to work around. Social situations carry weight that goes beyond food. And figuring out which sources online to actually trust took more energy than I had when I was already confused.
+          </p>
+
+          <div class="s3__hl">
+            <p>"I didn't start this to become a vegan authority. I started it because the calm, practical, India-aware resource I was looking for didn't seem to exist — so I started putting one together."</p>
+          </div>
+
+          <p class="prose">
+            I struggled personally with ice cream cravings that felt impossible to reason with. With not knowing how to get enough protein for the gym. With expensive almond milk and no affordable alternative. With conflicting things I'd read about B12, omega-3, and iron — none of which agreed with each other. With Indian family dinners. With not finding a single recipe site that cooked with the ingredients actually available in an Indian kitchen, at an Indian budget.
+          </p>
+
+          <p class="prose">
+            Every tool, guide, and article on this site came from one of those specific frustrations I ran into. A meal planner that tries to work with Indian ingredients. Nutrition information that links back to published research rather than opinion. Affordable local alternatives where I could find them. Honest attempts at the questions I kept hitting. Not inspiration. Just trying to be practically useful.
+          </p>
+
+          <p class="prose">
+            This site is not about being perfect. It is not about shame. It is not about converting anyone. It's about making an already difficult transition a little less confusing — for people who are somewhere in the middle of figuring it out, exactly as I was.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═════ S4 — WHAT THIS PLACE STANDS FOR ═════
+         Dark section — strongest visual contrast.
+         Sticky heading left, scrollable values right.
+         5 commitments — stated plainly, no decoration.
+    ══════════════════════════════════════════════ -->
+    <section class="s4">
+      <div class="w">
+        <div class="s4__g">
+
+          <div class="s4__hd rv">
+            <span class="stag">What this place stands for</span>
+            <h2>Five things<br />that won't<br /><em>change here.</em></h2>
+            <p>Not marketing copy. The actual principles this site was built around — and the things I wish I'd found earlier.</p>
+          </div>
+
+          <div class="vl rv d1">
+            <div class="vl__item">
+              <span class="vl__n">01</span>
+              <div>
+                <h3>No shame. Not ever.</h3>
+                <p>You will never be made to feel guilty for where you are. Slow transitions count. Slipping up counts. Starting again counts. All of it counts.</p>
+              </div>
+            </div>
+            <div class="vl__item">
+              <span class="vl__n">02</span>
+              <div>
+                <h3>Research over opinion.</h3>
+                <p>Where possible, nutrition information on this site links back to published research rather than personal opinion. When something is uncertain or debated, the aim is to say so clearly rather than overstate what's known.</p>
+              </div>
+            </div>
+            <div class="vl__item">
+              <span class="vl__n">03</span>
+              <div>
+                <h3>India first, always.</h3>
+                <p>Grocery lists, recipes, protein sources, social situations — built around Indian kitchens, Indian budgets, Indian families, and Indian culture. Not retrofitted from elsewhere.</p>
+              </div>
+            </div>
+            <div class="vl__item">
+              <span class="vl__n">04</span>
+              <div>
+                <h3>Practical over inspirational.</h3>
+                <p>Inspiration is easy to find. A clear, specific answer on a Tuesday evening when you don't know what to cook is much harder. That's what this tries to be.</p>
+              </div>
+            </div>
+            <div class="vl__item">
+              <span class="vl__n">05</span>
+              <div>
+                <h3>Your pace. Not anyone else's.</h3>
+                <p>There is no right speed. No correct version. The only thing that matters is that you keep going — in whatever way fits your life, your family, your reality.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═════ S5 — EDITORIAL / RESEARCH APPROACH ═════
+         Paper bg. Simple numbered list — not cards.
+         Honest, matter-of-fact, trust-building.
+         Ends with a transparent personal disclaimer.
+    ══════════════════════════════════════════════ -->
+    <section class="s5">
+      <div class="w-md">
+        <div class="rv">
+          <span class="stag">How content is approached</span>
+          <h2 class="sh2">What this site tries<br />to <em>be honest about.</em></h2>
+          <p class="prose" style="margin-top:16px;">
+            I am not a doctor, dietitian, or researcher. I'm someone who went through this transition, got confused, and tried to find better information. Here's how I try to approach the content on this site — and where its limits are.
+          </p>
+        </div>
+
+        <div class="tl2 rv d1">
+          <div class="tl2__item">
+            <span class="tl2__n">1</span>
+            <div>
+              <h3>Links to published sources where possible</h3>
+              <p>When nutrition information is shared, I try to link it back to published research — institutions like the Academy of Nutrition and Dietetics, Harvard T.H. Chan, or the NHS — so you can read the original source yourself rather than just taking my word for it.</p>
+            </div>
+          </div>
+          <div class="tl2__item">
+            <span class="tl2__n">2</span>
+            <div>
+              <h3>Tries to be honest when things are uncertain</h3>
+              <p>A lot of nutrition science is genuinely contested or still evolving. The aim here is to say "this isn't fully settled" when that's true, rather than sounding more confident than the research actually supports.</p>
+            </div>
+          </div>
+          <div class="tl2__item">
+            <span class="tl2__n">3</span>
+            <div>
+              <h3>Updated when things change or improve</h3>
+              <p>Guidance changes over time. I try to revisit content when I become aware it's outdated, and articles carry a "last reviewed" date where possible. It won't always be perfect — but the intention is for it to stay accurate.</p>
+            </div>
+          </div>
+          <div class="tl2__item">
+            <span class="tl2__n">4</span>
+            <div>
+              <h3>Not a substitute for professional advice</h3>
+              <p>This is a personal website, not a medical or clinical resource. If you have a health condition, are pregnant, or have specific nutritional concerns, please speak with a qualified doctor or registered dietitian — not a website.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="disc rv d2">
+          <div class="disc__i">i</div>
+          <p>
+            <strong>To be completely clear:</strong> I'm not a doctor, dietitian, or nutrition professional. I'm someone who went through this transition, got confused by a lot of conflicting information, tried to find better sources, and wanted to share what helped me. Everything here is personal experience combined with my best attempt to find reliable information — not professional advice. Please treat it as a starting point, and always consult a qualified professional for anything health-related.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═════ CLOSING CTA ═════
+         White bg. Centred. Quiet and warm.
+         Not a feature pitch — just an open door.
+    ══════════════════════════════════════════ -->
+    <section class="cta-s">
+      <div class="w-sm">
+        <div class="rv">
+          <span class="stag">Where to go from here</span>
+          <h2>You don't need it all<br />figured out <em>to begin.</em></h2>
+          <p>The guides and tools here are built to meet you exactly where you are — day one, month six, or anywhere quietly in between.</p>
+          <div class="cta-r">
+            <a href="/vegan-guide" class="btn btn-p">Start with the Vegan Guide</a>
+            <a href="/blog"        class="btn btn-g">Read the Blog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-<footer class="site-footer site-footer--rich">
-  <div class="container footer-shell footer-shell--simple">
-    <div class="footer-brand">
-      <a href="index.html" class="footer-brand__logo">
-        <img src="25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
-        <span>Switch To Vegan</span>
-      </a>
-      <p>
-        Practical, calm support for building a vegan lifestyle that feels clear,
-        realistic, and sustainable in everyday life.
-      </p>
+
+  <!-- FOOTER -->
+  <footer class="ft">
+    <div class="w">
+      <div class="ft__g">
+        <div class="ft__brand">
+          <a class="ft__logo" href="/">
+            <img src="https://switchtovegan.in/25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan" />
+            Switch To Vegan
+          </a>
+          <p>Practical, calm support for building a vegan lifestyle that feels clear, realistic, and sustainable in everyday life.</p>
+        </div>
+        <div class="ft__contact">
+          <h4>Contact</h4>
+          <a class="ft__email" href="mailto:switchtovegan01@gmail.com">✉ switchtovegan01@gmail.com</a>
+          <p class="ft__note">Questions, suggestions, or feedback are always welcome.</p>
+        </div>
+      </div>
+      <div class="ft__bottom">
+        <p>© 2026 Switch To Vegan. All rights reserved.</p>
+      </div>
     </div>
+  </footer>
 
-    <div class="footer-contact-block">
-      <h4>Contact</h4>
-      <a href="mailto:switchtovegan01@gmail.com" class="footer-email">
-        <span aria-hidden="true">✉</span>
-        <span>switchtovegan01@gmail.com</span>
-      </a>
-      <p class="footer-note">
-        Questions, suggestions, or feedback are always welcome.
-      </p>
-    </div>
-  </div>
 
-  <div class="container footer-bottom footer-bottom--simple">
-    <p>&copy; 2026 Switch To Vegan. All rights reserved.</p>
-  </div>
-</footer>
+  <script src="script.js" defer></script>
 
-<script src="script.js" defer></script>
 </body>
 </html>

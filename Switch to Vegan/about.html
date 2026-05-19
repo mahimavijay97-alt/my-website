@@ -3,15 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Switch To Vegan</title>
-  <meta name="description" content="The real story behind Switch To Vegan — who built it, why it exists, and why it was made specifically for people navigating veganism in India." />
-  <link rel="canonical" href="https://switchtovegan.in/about">
-    <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>About Mahima | Switch To Vegan — India & Global Vegan Guide</title>
+  <meta name="description" content="I'm Mahima — I built SwitchToVegan.in after going through a vegan transition in India with no practical guide that actually fit my life. This site is what I wish had existed." />
+  <link rel="canonical" href="https://switchtovegan.in/about" />
+  <<link rel="icon" href="/favicon.png" type="image/png">
 
-   <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- ═══ GLOBAL ENGLISH TARGETING — tells Google this is for all English speakers, not just India ═══ -->
+  <link rel="alternate" hreflang="en"       href="https://switchtovegan.in/about" />
+  <link rel="alternate" hreflang="x-default" href="https://switchtovegan.in/about" />
+
+  <!-- ═══ AUTHOR / E-E-A-T SCHEMA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://switchtovegan.in/about",
+    "name": "About Mahima — Switch To Vegan",
+    "description": "Mahima built SwitchToVegan.in after navigating a vegan transition in India with no practical, judgment-free guide that actually fit her life.",
+    "author": {
+      "@type": "Person",
+      "name": "Mahima",
+      "url": "https://switchtovegan.in/about",
+      "knowsAbout": ["veganism", "plant-based diet", "vegan transition", "vegan nutrition", "Indian vegan food"]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Switch To Vegan",
+      "url": "https://switchtovegan.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://switchtovegan.in/25dfa885-849b-4c13-96b2-5b312f3e9105.png"
+      }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700\&family=Outfit:wght@400;500;600;700\&display=swap" rel="stylesheet">
+  <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/style.css"></noscript>
 
 <link rel="preload" href="/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -19,7 +51,6 @@
 
 <link rel="preload" href="/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/responsive.css"></noscript>
-
   <style>
     :root {
       --green:       #2f6b47;
@@ -44,10 +75,9 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { font-family: var(--body); background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    img { display: block; max-width: 100%; }
-    a   { text-decoration: none; color: inherit; }
+    img  { display: block; max-width: 100%; }
+    a    { text-decoration: none; color: inherit; }
 
-    /* containers */
     .w    { width: min(1080px, calc(100% - 48px)); margin: 0 auto; }
     .w-md { width: min(860px,  calc(100% - 48px)); margin: 0 auto; }
     .w-sm { width: min(680px,  calc(100% - 48px)); margin: 0 auto; }
@@ -86,7 +116,8 @@
       transform: scaleX(0); transform-origin: left;
       transition: transform .22s var(--ease);
     }
-    .nav__ul a:hover::after, .nav__ul a[aria-current]::after { transform: scaleX(1); }
+    .nav__ul a:hover::after,
+    .nav__ul a[aria-current]::after { transform: scaleX(1); }
     .nav__btn { display: none; background: none; border: none; color: var(--ink); font-size: 1.25rem; cursor: pointer; margin-left: auto; }
     @media (max-width: 700px) {
       .nav__btn { display: flex; align-items: center; }
@@ -101,35 +132,9 @@
       .nav__ul { flex-direction: column; align-items: flex-start; gap: 14px; }
     }
 
-    /* ════════════════════════════════════════════
-       HEADER — editorial magazine opener
-       Two columns: giant headline left,
-       full-bleed image right (flush to edge).
-    ════════════════════════════════════════════ */
-    .hdr {
-      background: var(--paper);
-      position: relative; overflow: hidden;
-      padding: 96px 0 80px;
-      text-align: center;
-    }
-    /* subtle radial glow behind text */
-    .hdr::before {
-      content: '';
-      position: absolute;
-      top: -80px; left: 50%;
-      transform: translateX(-50%);
-      width: 700px; height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(ellipse, rgba(47,107,71,0.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hdr__inner {
-      width: min(720px, calc(100% - 48px));
-      margin: 0 auto;
-      position: relative; z-index: 2;
-    }
+    /* ── SHARED TYPE ── */
     .eyebrow {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      display: inline-flex; align-items: center; gap: 10px;
       font-size: .7rem; font-weight: 600; letter-spacing: .16em;
       text-transform: uppercase; color: var(--green); margin-bottom: 28px;
     }
@@ -137,6 +142,70 @@
       content: ''; display: block;
       width: 26px; height: 1.5px; background: var(--green);
     }
+    .stag {
+      font-size: .7rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--green);
+      display: block; margin-bottom: 20px;
+    }
+    .sh2 {
+      font-family: var(--display);
+      font-size: clamp(1.8rem, 3.5vw, 2.9rem);
+      font-weight: 700; line-height: 1.16; color: var(--ink);
+    }
+    .sh2 em { font-style: italic; color: var(--green); }
+    .prose { font-size: 1rem; line-height: 1.85; color: var(--ink-2); }
+    .prose + .prose { margin-top: 18px; }
+
+    /* ── HEADER ── */
+    .hdr {
+      background: var(--paper);
+      position: relative; overflow: hidden;
+      padding: 96px 0 80px;
+      text-align: center;
+    }
+    .hdr::before {
+      content: '';
+      position: absolute; top: -80px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 500px; border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(47,107,71,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hdr__inner {
+      width: min(720px, calc(100% - 48px));
+      margin: 0 auto; position: relative; z-index: 2;
+    }
+
+    /* ══ AUTHOR IDENTITY CARD — the most important new element ══ */
+    .author-card {
+      display: inline-flex; align-items: center; gap: 16px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 10px 22px 10px 10px;
+      box-shadow: var(--sh-s);
+      margin-bottom: 36px;
+    }
+    .author-card__avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--green-faint);
+      border: 2px solid var(--green-line);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--display); font-size: 1.3rem; font-weight: 700;
+      color: var(--green); flex-shrink: 0;
+      /* Replace the letter M with a real photo when ready:
+         background-image: url('/your-photo.jpg');
+         background-size: cover; background-position: center; */
+    }
+    .author-card__text { text-align: left; }
+    .author-card__name {
+      display: block; font-size: .93rem; font-weight: 600; color: var(--ink);
+      line-height: 1.3;
+    }
+    .author-card__role {
+      display: block; font-size: .78rem; color: var(--muted); line-height: 1.3;
+    }
+
     .hdr h1 {
       font-family: var(--display);
       font-size: clamp(2.8rem, 6.5vw, 5rem);
@@ -151,36 +220,35 @@
       max-width: 480px;
       font-size: .9rem; color: var(--muted); line-height: 1.65;
     }
-    @media (max-width: 600px) {
-      .hdr { padding: 72px 0 60px; }
-    }
 
-    /* thin rule — chapter break */
+    /* ── GLOBAL REACH STRIP — new addition ── */
+    .geo-strip {
+      background: var(--green);
+      padding: 14px 24px;
+      text-align: center;
+    }
+    .geo-strip p {
+      font-size: .82rem; color: rgba(255,255,255,0.85);
+      letter-spacing: .03em;
+    }
+    .geo-strip strong { color: #fff; font-weight: 600; }
+
     .rule { width: min(1080px, calc(100% - 48px)); margin: 0 auto; height: 1px; background: linear-gradient(90deg, var(--green) 0%, transparent 100%); }
 
-    /* ════════════════════════════════════════════
-       BODY PROSE SHARED
-    ════════════════════════════════════════════ */
-    .stag {
-      font-size: .7rem; font-weight: 600; letter-spacing: .15em;
-      text-transform: uppercase; color: var(--green);
-      display: block; margin-bottom: 20px;
+    /* ── S1 ORIGIN ── */
+    .s1 { padding: 96px 0 88px; background: var(--white); }
+    .s1__g {
+      display: grid; grid-template-columns: 55% 1fr;
+      gap: 68px; align-items: start;
     }
-    .sh2 {
-      font-family: var(--display);
-      font-size: clamp(1.8rem, 3.5vw, 2.9rem);
-      font-weight: 700; line-height: 1.16; color: var(--ink);
+    .s1__img-col { position: sticky; top: 108px; }
+    .s1__img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border-radius: var(--r-lg); box-shadow: var(--sh-l);
     }
-    .sh2 em { font-style: italic; color: var(--green); }
-    .prose {
-      font-size: 1rem; line-height: 1.85; color: var(--ink-2);
-    }
-    .prose + .prose { margin-top: 18px; }
-
-    /* pull quote — editorial standout */
+    .img-cap { margin-top: 12px; font-size: .77rem; color: var(--muted); line-height: 1.5; padding-left: 3px; }
     .pq {
-      margin: 34px 0;
-      padding: 26px 30px;
+      margin: 34px 0; padding: 26px 30px;
       border-left: 3px solid var(--green);
       background: var(--paper);
       border-radius: 0 var(--r-sm) var(--r-sm) 0;
@@ -191,68 +259,38 @@
       font-style: italic; font-weight: 600;
       color: var(--ink); line-height: 1.42;
     }
-
-    /* ════════════════════════════════════════════
-       S1 — THE MOMENT  (origin)
-       Asymmetric split: 55/45, image sticky right
-    ════════════════════════════════════════════ */
-    .s1 { padding: 96px 0 88px; background: var(--white); }
-    .s1__g {
-      display: grid;
-      grid-template-columns: 55% 1fr;
-      gap: 68px; align-items: start;
-    }
-    .s1__img-col { position: sticky; top: 108px; }
-    .s1__img {
-      width: 100%; aspect-ratio: 3/4;
-      object-fit: cover;
-      border-radius: var(--r-lg);
-      box-shadow: var(--sh-l);
-    }
-    .img-cap { margin-top: 12px; font-size: .77rem; color: var(--muted); line-height: 1.5; padding-left: 3px; }
     @media (max-width: 740px) {
       .s1__g { grid-template-columns: 1fr; gap: 36px; }
       .s1__img-col { position: static; }
       .s1__img { aspect-ratio: 4/3; }
     }
 
-    /* ════════════════════════════════════════════
-       S2 — THE METHOD  (how I transitioned)
-       Paper bg. Big centred display.
-       Feature box + vertical timeline.
-    ════════════════════════════════════════════ */
+    /* ── S2 JOURNEY ── */
     .s2 {
-      padding: 88px 0 96px;
-      background: var(--paper);
+      padding: 88px 0 96px; background: var(--paper);
       position: relative; overflow: hidden;
     }
     .s2::after {
       content: 'slowly';
       position: absolute; bottom: -40px; right: -16px;
-      font-family: var(--display); font-size: clamp(90px, 15vw, 170px);
+      font-family: var(--display); font-size: clamp(90px,15vw,170px);
       font-weight: 700; font-style: italic;
       color: rgba(47,107,71,0.04); line-height: 1;
       pointer-events: none; user-select: none;
     }
     .s2__hd { text-align: center; margin-bottom: 58px; }
     .s2__hd .sh2 { font-size: clamp(2.2rem, 5vw, 3.8rem); max-width: 640px; margin: 18px auto 0; }
-
-    /* the headline method card */
     .m-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      padding: 40px 44px;
-      box-shadow: var(--sh-m);
-      max-width: 760px; margin: 0 auto 64px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 40px 44px;
+      box-shadow: var(--sh-m); max-width: 760px; margin: 0 auto 64px;
       position: relative; overflow: hidden;
     }
     .m-card::before {
       content: '"';
       position: absolute; top: -28px; left: 20px;
       font-family: var(--display); font-size: 180px;
-      color: rgba(47,107,71,0.05); line-height: 1;
-      pointer-events: none;
+      color: rgba(47,107,71,0.05); line-height: 1; pointer-events: none;
     }
     .m-card__tag {
       font-size: .68rem; font-weight: 600; letter-spacing: .15em;
@@ -260,32 +298,25 @@
       display: block; margin-bottom: 14px;
     }
     .m-card h3 {
-      font-family: var(--display);
-      font-size: clamp(1.45rem, 2.6vw, 1.9rem);
-      font-weight: 700; font-style: italic;
-      color: var(--ink); margin-bottom: 18px; line-height: 1.28;
+      font-family: var(--display); font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+      font-weight: 700; font-style: italic; color: var(--ink);
+      margin-bottom: 18px; line-height: 1.28;
     }
     .m-card p { font-size: .97rem; line-height: 1.82; color: var(--ink-2); }
-
-    /* timeline */
     .tl { display: flex; flex-direction: column; max-width: 760px; margin: 0 auto; }
     .tl__item {
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 0 26px;
-      position: relative;
+      display: grid; grid-template-columns: 52px 1fr;
+      gap: 0 26px; position: relative;
     }
     .tl__item:not(:last-child)::before {
-      content: '';
-      position: absolute; left: 25px; top: 52px; bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--green-line), transparent);
+      content: ''; position: absolute; left: 25px; top: 52px; bottom: 0;
+      width: 2px; background: linear-gradient(to bottom, var(--green-line), transparent);
     }
     .tl__n {
       width: 52px; height: 52px; border-radius: 50%;
       background: var(--white); border: 1.5px solid var(--green-line);
-      color: var(--green);
-      font-family: var(--display); font-size: 1.05rem; font-weight: 700;
+      color: var(--green); font-family: var(--display);
+      font-size: 1.05rem; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0; position: relative; z-index: 1;
     }
@@ -293,55 +324,53 @@
     .tl__body h4 { font-size: .97rem; font-weight: 600; color: var(--ink); margin-bottom: 7px; line-height: 1.4; }
     .tl__body p  { font-size: .93rem; color: var(--muted); line-height: 1.75; }
 
-    /* ════════════════════════════════════════════
-       S3 — WHY THIS SITE EXISTS
-       Centred column — reads like a personal letter.
-       No cards. No lists. Pure prose.
-    ════════════════════════════════════════════ */
+    /* ── S3 WHY BUILT ── */
     .s3 { padding: 96px 0; background: var(--white); }
     .s3 .sh2 { margin: 18px 0 28px; }
     .s3__hl {
-      margin: 34px 0;
-      background: var(--paper);
-      border-radius: var(--r-md);
-      padding: 32px 36px;
+      margin: 34px 0; background: var(--paper);
+      border-radius: var(--r-md); padding: 32px 36px;
     }
     .s3__hl p {
-      font-family: var(--display);
-      font-size: clamp(1.1rem, 1.9vw, 1.38rem);
-      font-style: italic; font-weight: 600;
-      color: var(--ink); line-height: 1.52;
+      font-family: var(--display); font-size: clamp(1.1rem, 1.9vw, 1.38rem);
+      font-style: italic; font-weight: 600; color: var(--ink); line-height: 1.52;
     }
 
-    /* ════════════════════════════════════════════
-       S4 — WHAT I STAND FOR
-       Dark section — inverted palette.
-       Sticky heading left, scrollable items right.
-    ════════════════════════════════════════════ */
+    /* ══ GLOBAL AUDIENCE NOTE — new addition ══ */
+    .global-note {
+      margin-top: 36px;
+      background: var(--green-faint);
+      border: 1px solid var(--green-line);
+      border-radius: var(--r-md);
+      padding: 26px 30px;
+    }
+    .global-note__tag {
+      font-size: .68rem; font-weight: 600; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--green);
+      display: block; margin-bottom: 10px;
+    }
+    .global-note p {
+      font-size: .93rem; color: var(--ink-2); line-height: 1.75;
+    }
+    .global-note strong { color: var(--ink); }
+
+    /* ── S4 VALUES (dark) ── */
     .s4 {
-      background: var(--ink);
-      padding: 96px 0;
+      background: var(--ink); padding: 96px 0;
       position: relative; overflow: hidden;
     }
     .s4::before {
-      content: '';
-      position: absolute; top: -160px; right: -160px;
+      content: ''; position: absolute; top: -160px; right: -160px;
       width: 520px; height: 520px; border-radius: 50%;
       background: radial-gradient(circle, rgba(47,107,71,0.16) 0%, transparent 70%);
       pointer-events: none;
     }
-    .s4__g {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 72px; align-items: start;
-    }
+    .s4__g { display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: start; }
     .s4__hd { position: sticky; top: 108px; }
     .s4__hd .stag { color: rgba(215,239,225,0.5); }
     .s4__hd h2 {
-      font-family: var(--display);
-      font-size: clamp(1.9rem, 3.2vw, 2.8rem);
-      font-weight: 700; line-height: 1.15; color: #fff;
-      margin-top: 16px;
+      font-family: var(--display); font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+      font-weight: 700; line-height: 1.15; color: #fff; margin-top: 16px;
     }
     .s4__hd h2 em { font-style: italic; color: #d7efe1; }
     .s4__hd p { margin-top: 18px; color: rgba(255,255,255,0.45); font-size: .92rem; line-height: 1.7; }
@@ -349,43 +378,26 @@
     .vl__item {
       display: grid; grid-template-columns: 34px 1fr;
       gap: 20px; padding: 26px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      align-items: start;
+      border-bottom: 1px solid rgba(255,255,255,0.07); align-items: start;
     }
     .vl__item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
-    .vl__n {
-      font-family: var(--display); font-size: 1.15rem; font-weight: 700;
-      color: rgba(47,107,71,0.5); margin-top: 3px;
-    }
+    .vl__n { font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: rgba(47,107,71,0.5); margin-top: 3px; }
     .vl__item h3 { font-size: .97rem; font-weight: 600; color: rgba(255,255,255,0.88); margin-bottom: 7px; }
-    .vl__item p  { font-size: .9rem;  color: rgba(255,255,255,0.4); line-height: 1.72; }
-    @media (max-width: 740px) {
-      .s4__g { grid-template-columns: 1fr; gap: 36px; }
-      .s4__hd { position: static; }
-    }
+    .vl__item p  { font-size: .9rem; color: rgba(255,255,255,0.4); line-height: 1.72; }
+    @media (max-width: 740px) { .s4__g { grid-template-columns: 1fr; gap: 36px; } .s4__hd { position: static; } }
 
-    /* ════════════════════════════════════════════
-       S5 — EDITORIAL / RESEARCH APPROACH
-       Paper bg. Plain list — no cards.
-    ════════════════════════════════════════════ */
+    /* ── S5 HONESTY ── */
     .s5 { padding: 96px 0; background: var(--paper); }
     .s5 .sh2 { margin: 14px 0 20px; }
     .tl2 { margin: 48px 0; }
     .tl2__item {
       display: grid; grid-template-columns: 44px 1fr;
-      gap: 24px; padding: 26px 0;
-      border-bottom: 1px solid var(--border);
-      align-items: start;
+      gap: 24px; padding: 26px 0; border-bottom: 1px solid var(--border); align-items: start;
     }
     .tl2__item:first-child { border-top: 1px solid var(--border); }
-    .tl2__n {
-      font-family: var(--display); font-size: 2rem; font-weight: 700;
-      color: var(--green-mid); line-height: 1; margin-top: 4px;
-    }
+    .tl2__n { font-family: var(--display); font-size: 2rem; font-weight: 700; color: var(--green-mid); line-height: 1; margin-top: 4px; }
     .tl2__item h3 { font-size: .97rem; font-weight: 600; color: var(--ink); margin-bottom: 7px; }
     .tl2__item p  { font-size: .92rem; color: var(--muted); line-height: 1.72; }
-
-    /* disclaimer */
     .disc {
       background: var(--white); border: 1px solid var(--border);
       border-radius: var(--r-md); padding: 20px 24px;
@@ -401,17 +413,32 @@
     .disc p { font-size: .87rem; color: var(--muted); line-height: 1.65; }
     .disc strong { color: var(--ink-2); }
 
-    /* ════════════════════════════════════════════
-       CTA — quiet, centred close
-    ════════════════════════════════════════════ */
-    .cta-s {
-      padding: 96px 0 80px;
-      background: var(--white);
-      text-align: center;
+    /* ══ SIGN-OFF — new personal closing ══ */
+    .signoff {
+      padding: 72px 0 48px; background: var(--white); text-align: center;
     }
+    .signoff__name {
+      font-family: var(--display); font-size: clamp(1.8rem, 4vw, 3rem);
+      font-style: italic; font-weight: 700; color: var(--green);
+      display: block; margin-bottom: 8px;
+    }
+    .signoff__role {
+      font-size: .82rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .signoff__line {
+      width: 48px; height: 2px; background: var(--green);
+      margin: 22px auto;
+    }
+    .signoff p {
+      font-size: .95rem; color: var(--muted); line-height: 1.75;
+      max-width: 400px; margin: 0 auto;
+    }
+
+    /* ── CTA ── */
+    .cta-s { padding: 80px 0; background: var(--paper); text-align: center; }
     .cta-s h2 {
-      font-family: var(--display);
-      font-size: clamp(2rem, 4.5vw, 3.3rem);
+      font-family: var(--display); font-size: clamp(2rem, 4.5vw, 3.3rem);
       font-weight: 700; line-height: 1.15; color: var(--ink);
       max-width: 520px; margin: 18px auto 22px;
     }
@@ -431,14 +458,10 @@
 
     /* ── FOOTER ── */
     .ft {
-      padding: 50px 0 22px;
-      border-top: 1px solid var(--border);
+      padding: 50px 0 22px; border-top: 1px solid var(--border);
       background: linear-gradient(180deg, #fff 0%, #f8f4ec 100%);
     }
-    .ft__g {
-      display: grid; grid-template-columns: 1.4fr 1fr;
-      gap: 32px; align-items: start;
-    }
+    .ft__g { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: start; }
     .ft__logo {
       display: inline-flex; align-items: center; gap: 12px;
       font-family: var(--display); font-size: 1.4rem; font-weight: 700;
@@ -463,11 +486,17 @@
     .rv.on { opacity: 1; transform: none; }
     .rv.d1 { transition-delay: .1s; }
     .rv.d2 { transition-delay: .2s; }
+
+    @media (max-width: 600px) {
+      .hdr { padding: 72px 0 60px; }
+      .author-card { flex-direction: column; border-radius: var(--r-lg); padding: 16px; text-align: center; }
+      .author-card__text { text-align: center; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- ═════ NAV — fixed href="/" (was /index) ═════ -->
   <header class="nav" id="nav">
     <div class="nav__r">
       <a class="brand" href="/">
@@ -480,35 +509,53 @@
           <li><a href="/">Home</a></li>
           <li><a href="/about" aria-current="page">About</a></li>
           <li><a href="/blog">Blog</a></li>
+          <li><a href="/how-to-go-vegan">Start Here</a></li><!-- replaced Gallery with this -->
           <li><a href="/vegan-guide">Vegan Guide</a></li>
-          <li><a href="/gallery">Gallery</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- ═════ GLOBAL REACH STRIP ═════ -->
+  <div class="geo-strip">
+    <p>Designed for anyone anywhere trying to be vegan in real life.</p>
+  </div>
+
   <main>
 
-    <!-- ═════ PAGE HEADER — centred editorial hero ═════ -->
+    <!-- ═════ PAGE HEADER ═════ -->
     <div class="hdr">
-      <div class="hdr__inner">
-        <span class="eyebrow">The story behind this site</span>
+      <div class="hdr__inner rv">
+
+        <!-- AUTHOR IDENTITY — the most important new element -->
+        <div class="author-card">
+          <div class="author-card__avatar" aria-hidden="true">M</div>
+          <!-- When you have a photo, replace the div above with:
+               <img class="author-card__avatar" src="/your-photo.jpg" alt="Mahima, founder of Switch To Vegan" style="object-fit:cover;" /> -->
+          <div class="author-card__text">
+            <span class="author-card__name">Mahima</span>
+            <span class="author-card__role">Founder, Switch To Vegan · India</span>
+          </div>
+        </div>
+
         <h1>
           Created by someone<br />
           who has lived the <em>exact same</em><br />
           experiences<br />
           you might have.
         </h1>
-        <p class="hdr__sub">An individual perspective — not a brand page.<br />Written for beginners, by someone who was one.</p>
+        <p class="hdr__sub">
+          An individual perspective — not a brand page.<br />
+          Written for beginners, by someone who was one.<br />
+          From India. For the world.
+        </p>
+        <!-- Header kept as provided by Mahima -->
       </div>
     </div>
     <div class="rule"></div>
 
 
-    <!-- ═════ S1 — THE MOMENT IT STARTED ═════
-         Asymmetric: wider text left, sticky image right.
-         Pull quote breaks the reading pace deliberately.
-    ══════════════════════════════════════════ -->
+    <!-- ═════ S1 — THE MOMENT IT STARTED ═════ -->
     <section class="s1">
       <div class="w">
         <div class="s1__g">
@@ -518,21 +565,33 @@
             <h2 class="sh2">A video I<br /><em>couldn't ignore</em></h2>
 
             <p class="prose" style="margin-top:24px;">
-              It's not a conversation, a book, or a health scare. It was a video. That kind you don't expect. Showing how animals are treated inside the dairy industry. Not in a distant factory. From local suppliers. The kind most people, including me, always thought were fine.
+              At first, I didn't even want to see it. It was difficult to watch, disturbing, and hurtful. However, after realizing that their pain is continuous while mine was temporary I decided that if I was benefitting, then I needed to be knowledgeable about it.
             </p>
             <p class="prose">
-              I could not process what I watched and continue doing what I was doing. So I made a decision to want to no longer contribute to it. That decision was simple. Everything that came after it was not.
+              That's why I forced myself to look.<br />
+              Not out of the wish to hurt myself, but out of the need to be realistic.<br />
+              As I didn't want to say:<br />
+              "I cannot watch this."<br />
+              When the truth is that they:<br />
+              "Cannot BEAR that."<br /><br />
+              The more I saw, the less possible it became for me to separate my decisions from their reality.<br />
+              At that point, my view of veganism completely changed.<br />
+              It wasn't something I was doing just for fashion, but rather a necessity.<br /><br />
+              This website is not meant to criticize anyone.<br />
+              Rather, it's meant to assist people into becoming aware, asking questions, learning what veganism really is and how to get into a vegan lifestyle.<br />
+              As ignoring cruelty does not mean its non-existence.<br />
+              Awareness is what makes change possible.
             </p>
 
             <div class="pq" style="margin-top:34px;">
-              <p>"I didn't go vegan. I started trying to go vegan. Those felt like two very different things — and that set my pace."</p>
+              <p>"I didn't go vegan. I kept trying to go vegan. That felt like two entirely very different things, and that difference kept my speed up."</p>
             </div>
 
             <p class="prose">
-              The first few weeks were truly confusing. I didn't have ideas about what to eat on a morning. I didn't feel comfortable explaining it on a dinner table. Every recommendation I found online clashed with the previous one. I knew I didn't want to do what I didn't want to do — I just had to figure out how to do it.
+              I was genuinely baffled in the first couple of weeks. I didn't know what to eat in the mornings. I didn't know how to say it around the dinner table. Every internet guide I saw contradicted the next guide. I knew what I didn't want. Now I just had to work out how to do it right, as an Indian, in an Indian diet, with an Indian family, on a real budget.
             </p>
             <p class="prose">
-              That confusion — and having to do it alone, imperfect and at my own pace — led to this website.
+              That's the baffling process, doing it alone, imperfectly, on my own speed, that inspired this website.
             </p>
           </div>
 
@@ -540,8 +599,8 @@
             <img
               class="s1__img"
               src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80"
-              alt="Colourful whole plant foods arranged on a table" />
-            <p class="img-cap">The beginning is never so dramatic. It is an unnoticeable change of just noticing something you just can't help noticing.</p>
+              alt="Colourful whole plant foods — vegetables, grains, legumes — arranged on a table" />
+            <p class="img-cap">The beginning's barely that serious. Just quietly acknowledging something you can't ignore anymore.</p>
           </div>
 
         </div>
@@ -549,24 +608,20 @@
     </section>
 
 
-    <!-- ═════ S2 — HOW THE TRANSITION ACTUALLY HAPPENED ═════
-         Different bg. Big centred display heading.
-         Feature moment card + vertical timeline.
-         Most personal section — given most space.
-    ══════════════════════════════════════════════════════ -->
+    <!-- ═════ S2 — THE ACTUAL TRANSITION ═════ -->
     <section class="s2">
       <div class="w-md">
 
         <div class="s2__hd rv">
-          <span class="stag">The real journey</span>
-          <h2 class="sh2">Unnoticeable. Imperfect.<br /><em>And it worked.</em></h2>
+          <span class="stag">The real change</span>
+          <h2 class="sh2">Imperfect. Gradual.<br /><em>And it worked.</em></h2>
         </div>
 
         <div class="m-card rv d1">
-          <span class="m-card__tag">The real tool</span>
-          <h3>"Not today. Maybe tomorrow."</h3>
+          <span class="m-card__tag">The thing that actually helped</span>
+          <h3>"Maybe not today. Maybe tomorrow."</h3>
           <p>
-            The most significant thing I observed in myself: the harder I told myself <em>"I can never have this again,"</em> the more my mind fixated on that very thing. For me, combating it head-on made it worse. So I chose to stay away. When I wanted an ice cream, I expressed — not today — maybe tomorrow. Tomorrow came, and I told myself the same thing. Over weeks, the craving was less intense. It dissolved away — instead of going so far as to make me feel like I was deprived, it started feeling like a choice I was making, in my own way, at my own time and for my own little reasons.
+            The biggest thing I noticed in myself: the more I commanded myself "I can never eat this again," the more I kept thinking about that exact food. Making rules was making the cravings worse. So whenever I wanted something, ice-cream, chai in the mornings, cheese, I told myself: not today, maybe tomorrow. Tomorrow happened. I told myself the same thing. With time, the craving eased. It no longer felt like deprivation. It felt like a choice that I was making on my own, for my own reasons, as the need arose.
           </p>
         </div>
 
@@ -575,40 +630,40 @@
           <div class="tl__item">
             <div class="tl__n">1</div>
             <div class="tl__body">
-              <h4>Not ordering dairy outside first</h4>
-              <p>Restaurants gave me option without disturbing anything at home. Small, private decision — and for me, that felt so much easier to follow than even the most dramatic statement.</p>
+              <h4>First not ordering dairy on eating out</h4>
+              <p>Becoming a vegan outside was easier, was not involved with family, didn't have to justify. A tiny, achievable change. That's where I began.</p>
             </div>
           </div>
 
           <div class="tl__item">
             <div class="tl__n">2</div>
             <div class="tl__body">
-              <h4>Dairy reduced step-by-step — not all at once</h4>
-              <p>All at once with cheese and desserts, one choice at a time. I didn't declare anything. I simply took to choosing differently, occasionally at first and then more and more often. Success without performance.</p>
+              <h4>Cut back dairy at home, one thing at a time</h4>
+              <p>Not everything all at once. First cheese, then cheese less regularly, then milk with tea, slowly, every month, not every day. Without a press conference. Without any compulsory display. Simply a quiet switch.</p>
             </div>
           </div>
 
           <div class="tl__item">
             <div class="tl__n">3</div>
             <div class="tl__body">
-              <h4>Dairy omitted at home — over many months</h4>
-              <p>It was not food that was difficult — it was habit. Tea in the morning. A familiar comfort. I had to identify alternatives I actually liked and not only tolerated — for any of it to be sustainable.</p>
+              <h4>Found substitutes I actually liked, not just tolerated</h4>
+              <p>Oatmilk for tea. Coconut Yoghurt. Tofu bhurji that didn't make me gag. The switch came when I stopped looking for exact duplicates and experimented more in the kitchen.</p>
             </div>
           </div>
 
           <div class="tl__item">
             <div class="tl__n">4</div>
             <div class="tl__body">
-              <h4>Actual research started — and I stopped reading wellness blogs</h4>
-              <p>Switching from chosen wellness blogs to peer-reviewed materials — registered dietitians, well-known institutions, research — made nutrition feel much less unmanageable and much more steerable. I stopped feeling overwhelmed and started feeling curious.</p>
+              <h4>Chucked out wellness blogs and read genuine research</h4>
+              <p>Switching from opinion articles to GP resources, proper research and guidelines made me feel I could catch up with the information. I no longer felt anxious. I felt intrigued.</p>
             </div>
           </div>
 
           <div class="tl__item">
             <div class="tl__n">5</div>
             <div class="tl__body">
-              <h4>Realised veganism is not just about food</h4>
-              <p>Leather, silk, honey and cosmetics tested on animals — most initial ideas do not know this at the beginning. I did not either. That's not being wrong. That is learning through stages, over a period of time, without a deadline.</p>
+              <h4>Realised veganism exists beyond food</h4>
+              <p>Leather, silk, honey, tests on animals on skincare, beginners don't have a clue till they're a few weeks in. I didn't either. That's not a mistake. That's a process of discovery, at your own pace, no timing involved.</p>
             </div>
           </div>
 
@@ -617,54 +672,46 @@
     </section>
 
 
-    <!-- ═════ S3 — WHY THIS SITE WAS BUILT ═════
-         Centred narrow column — reads like a letter.
-         Highlighted quote block. No cards or lists.
-         Pure prose with rhythm.
-    ══════════════════════════════════════════ -->
+    <!-- ═════ S3 — WHY THIS SITE WAS BUILT ═════ -->
     <section class="s3">
       <div class="w-sm">
         <div class="rv">
-          <span class="stag">The reason I created this platform</span>
-          <h2 class="sh2">I was in need of something<br />that didn't <em>exist yet.</em></h2>
+          <span class="stag">The reason for the website</span>
+          <h2 class="sh2">What I search for<br />didn't <em>exist.</em></h2>
 
           <p class="prose" style="margin-top:26px;">
-            The Indian experience has specific hurdles that most of the vegan literature I came across failed to address — as it wasn't designed considering this background. For me, responses related to nutrition felt a bit much. Vegan options demanded high prices and difficult accessibility. Indian dishes revolve around dairy in terms of familiarity that is difficult to manipulate. Social occasions have a significance that extends beyond just the food. And identifying whose articles on the internet one can genuinely trust took greater push from me than I had left when I was so confused.
+            The Indian take on being vegan has specific needs most vegan topics ignore, because it was not created with the idea of Indian circumstances. Protein gifts ranged from weird to eye-watering. Vegan products were costly and in short supply. Indian dishes are based on dairy in ways that feel intimately Indian, not just alimentary. Social occasions are overwhelming and over-significant. And figuring out who to genuinely trust on the internet took longer than I had to spare when I was already this confused.
           </p>
 
           <div class="s3__hl">
-            <p>"I did not begin this with the aim of being the pioneer among vegans. I just aimed to serve the space I did miss — a sane, practical, India-centred resource, and so began building one."</p>
+            <p>"I didn't aim to be a vegan royal. I simply wanted to fill the space I kept running into, a stoic, straightforward, India grounded support system. So I built one."</p>
           </div>
 
           <p class="prose">
-            I did not find this easy. Especially ideas which felt almost impossible to combat. About craving for ice cream you do not find rational explanations for. About not knowing how to get enough protein to train in the gym. About not being able to buy cost-effective almond milk. About all the clutter I read about actual facts like B12, omega-3, and iron — none of which suited each other. About Indian family dinners. About not finding a single repository of recipes which cooked with what you actually found in an Indian kitchen, in an Indian budget.
+            All content on this site stems from a problem I encountered. A meal planner based around ingredients readily available in Indian kitchens. Guides on nourishment based on research not opinions. Affordable options wherever I found them. Accurate accounts of questions I used to search on Google at midnight. Inspiration, but the initial ideas, not the closing ones.
           </p>
 
-          <p class="prose">
-            Every gadget, guide and article in this website originated from just one of those specific difficulties I encountered. A recipe masterplanner tailor-made to Indian ingredients. Nutrition resources that referenced research documents, degrees and tables rather than opinions. Cost-conscious alternatives as and where I was able to source them. Upfront records of difficult questions I encountered. Not inspiration. Purely starting points.
-          </p>
+          <div class="global-note">
+            <span class="global-note__tag">For those outside India</span>
+            <p>
+              This website was created from an Indian perspective, but the issues it discusses universally apply. Whether you are in the UK, US, CA or Aus. The initial everyday confusion, the credit concerns, the social pressure, the embarrassments, the anxiety, are consistent throughout. The advice is written for all of the above. Examples from India are always marked out. Everything else is relatable.
+            </p>
+          </div>
 
-          <p class="prose">
-            This platform is not about fixing oneself. It is not about shame. It is not about changing anyone's heart — just attempting to make it a little uncomplicated for individuals who are somewhere in the middle of searching for it, precisely how I was.
-          </p>
         </div>
       </div>
     </section>
 
 
-    <!-- ═════ S4 — WHAT THIS PLACE STANDS FOR ═════
-         Dark section — strongest visual contrast.
-         Sticky heading left, scrollable values right.
-         5 commitments — stated plainly, no decoration.
-    ══════════════════════════════════════════════ -->
+    <!-- ═════ S4 — WHAT THIS SITE STANDS FOR ═════ -->
     <section class="s4">
       <div class="w">
         <div class="s4__g">
 
           <div class="s4__hd rv">
-            <span class="stag">What this place stands for</span>
-            <h2>Five things<br />that won't<br /><em>change here.</em></h2>
-            <p>Not marketing copy. The actual principles this site was built around — and the things I wish I'd found earlier.</p>
+            <span class="stag">The principles on which this place is built</span>
+            <h2>5 factors that<br />will never<br /><em>vary.</em></h2>
+            <p>Not a marketing tag line. The direct principles I formed this place upon, and wish I'd noticed when I began.</p>
           </div>
 
           <div class="vl rv d1">
@@ -672,28 +719,28 @@
               <span class="vl__n">01</span>
               <div>
                 <h3>No shame. Not ever.</h3>
-                <p>You will never be made to feel guilty for where you are. Slow transitions count. Slipping up counts. Starting again counts. All of it counts.</p>
+                <p>You will not be made to feel guilty for where you are. Slow transitions count. Slipping up counts. Starting again counts. All of it counts.</p>
               </div>
             </div>
             <div class="vl__item">
               <span class="vl__n">02</span>
               <div>
                 <h3>Research over opinion.</h3>
-                <p>Where possible, nutrition information on this site links back to published research rather than personal opinion. When something is uncertain or debated, the aim is to say so clearly rather than overstate what's known.</p>
+                <p>Wherever nutrition information is shared on this site, the aim is to link it to published sources — not personal belief. When something is uncertain or debated, I say so clearly rather than pretending otherwise.</p>
               </div>
             </div>
             <div class="vl__item">
               <span class="vl__n">03</span>
               <div>
-                <h3>India first, always.</h3>
-                <p>Grocery lists, recipes, protein sources, social situations — built around Indian kitchens, Indian budgets, Indian families, and Indian culture. Not retrofitted from elsewhere.</p>
+                <h3>India first. Globally useful.</h3>
+                <p>Grocery lists, recipes, protein sources, social situations — built around Indian kitchens and Indian realities. And for visitors elsewhere: the principles apply universally, the examples are always contextualised.</p>
               </div>
             </div>
             <div class="vl__item">
               <span class="vl__n">04</span>
               <div>
                 <h3>Practical over inspirational.</h3>
-                <p>Inspiration is easy to find. A clear, specific answer on a Tuesday evening when you don't know what to cook is much harder. That's what this tries to be.</p>
+                <p>Motivation is easy to find. A specific, clear answer on a Tuesday night when you don't know what to cook is much harder. That's what this tries to be.</p>
               </div>
             </div>
             <div class="vl__item">
@@ -710,18 +757,14 @@
     </section>
 
 
-    <!-- ═════ S5 — EDITORIAL / RESEARCH APPROACH ═════
-         Paper bg. Simple numbered list — not cards.
-         Honest, matter-of-fact, trust-building.
-         Ends with a transparent personal disclaimer.
-    ══════════════════════════════════════════════ -->
+    <!-- ═════ S5 — HONESTY ABOUT LIMITATIONS ═════ -->
     <section class="s5">
       <div class="w-md">
         <div class="rv">
-          <span class="stag">All that this site seeks to be honest about</span>
-          <h2 class="sh2">What this site tries<br />to <em>be honest about.</em></h2>
+          <span class="stag">What this site tries to be honest about</span>
+          <h2 class="sh2">What I am, and<br />what I am <em>not.</em></h2>
           <p class="prose" style="margin-top:16px;">
-            I am not a clinical expert — a researcher or a doctor. I am an individual who went through this transition, fell by the wayside, intensely sought better information and wanted to help share the factors that eased my move. Here is what I attempt as a principle to approach content generated for this website — and how its limitations lay.
+            I am not a clinical expert, a researcher, or a dietitian. I am someone who went through this transition, got confused, searched hard for better information, and wanted to share what actually helped. Here is how I try to approach content on this site — and where its limits are.
           </p>
         </div>
 
@@ -729,29 +772,29 @@
           <div class="tl2__item">
             <span class="tl2__n">1</span>
             <div>
-              <h3>All references to authentic documents</h3>
-              <p>Wherever nutrition data is shared, I aim to link it back to the original report from a source such as the Academy of Nutrition and Dietetics, Harvard T.H. Chan or NHS — so that you may view the original document and not just hear me talk.</p>
+              <h3>All claims linked to original sources</h3>
+              <p>Where nutrition data is shared, I aim to link directly to original reports from organisations such as the Academy of Nutrition and Dietetics, Harvard T.H. Chan School of Public Health, or the NHS — so you can read the source yourself, not just take my word for it.</p>
             </div>
           </div>
           <div class="tl2__item">
             <span class="tl2__n">2</span>
             <div>
-              <h3>Aims to be honest when topics are still maturing</h3>
-              <p>A lot of nutrition science as far as we present it is genuinely disputed or still in a framework of progression. The goal is to communicate "this topic is currently in progress" as accurately as I can into the write-up and prevent exaggerating or giving false confidence.</p>
+              <h3>Honest when the science is still developing</h3>
+              <p>A lot of nutrition research is genuinely contested or still evolving. Where that's the case, I try to say so clearly — rather than overstating what's actually known.</p>
             </div>
           </div>
           <div class="tl2__item">
             <span class="tl2__n">3</span>
             <div>
-              <h3>Updates the pages when information improves</h3>
-              <p>Knowledge around us is always advancing. I hope to review any web content as I realise it is stale. However, some pages may be less evidence-based rather than more in the beginning. If you spot any inaccuracies or can present research I do not seem to have come across, I would be grateful.</p>
+              <h3>Pages updated when information changes</h3>
+              <p>Knowledge moves. I intend to review content when I know it has become outdated. If you find something inaccurate or have research I haven't cited, I would genuinely like to know.</p>
             </div>
           </div>
           <div class="tl2__item">
             <span class="tl2__n">4</span>
             <div>
-              <h3>Not a replacement for professional counselling</h3>
-              <p>This is a personal blog, not a clinical webpage. If you have a medical condition, are expecting, or require personal dietary input, consult with a registered dietitian or an experienced health practitioner — not a blog.</p>
+              <h3>Not a replacement for professional advice</h3>
+              <p>This is a personal resource, not a clinical service. If you have a health condition, are pregnant, or need individual dietary guidance — please speak with a registered dietitian or qualified healthcare professional, not a website.</p>
             </div>
           </div>
         </div>
@@ -759,7 +802,7 @@
         <div class="disc rv d2">
           <div class="disc__i">i</div>
           <p>
-            <strong>To be completely clear:</strong> I am not an experienced health practitioner, a researcher or dietician. I am a person who just transitioned and became overwhelmed by a plethora of more likely confusing information — looked for better advice, and hope to give a starting point for realising what goes into finding strict information as a first step. Treat this material as a stepping off point and keep talking to expert professionals for anything that concerns health.
+            <strong>To be completely clear:</strong> I am Mahima — not a doctor, dietitian, or nutrition researcher. I am someone who went through this transition, got overwhelmed by contradictory information, found better sources over time, and built this site to share what I actually found useful. Use this as a starting point. Always verify health-related decisions with qualified professionals.
           </p>
         </div>
 
@@ -767,19 +810,25 @@
     </section>
 
 
-    <!-- ═════ CLOSING CTA ═════
-         White bg. Centred. Quiet and warm.
-         Not a feature pitch — just an open door.
-    ══════════════════════════════════════════ -->
+    <!-- ═════ PERSONAL SIGN-OFF — new section ═════ -->
+    <section class="signoff rv">
+      <span class="signoff__name">— Mahima</span>
+      <span class="signoff__role">Founder · Switch To Vegan · India</span>
+      <div class="signoff__line"></div>
+      <p>Veganism is not a personality. It is not an identity test.<br />It is simply a choice — made one meal, one day, one question at a time.</p>
+    </section>
+
+
+    <!-- ═════ CTA ═════ -->
     <section class="cta-s">
       <div class="w-sm">
         <div class="rv">
           <span class="stag">Moving forward</span>
-          <h2>What you do not need to have<br />completely organised right now<br />is a good place <em>to begin.</em></h2>
-          <p>The resources provided here meet you directly at the level you are at — the first day, the sixth month, or somewhere comfortably in the middle.</p>
+          <h2>Not having it all figured out<br />is actually a <em>fine place to start.</em></h2>
+          <p>Whatever stage you're at — day one, month six, or somewhere in the middle — there's something here for where you are right now.</p>
           <div class="cta-r">
-            <a href="/vegan-guide" class="btn btn-p">Start with the Vegan Guide</a>
-            <a href="/blog"        class="btn btn-g">Read the Blog</a>
+            <a href="/how-to-go-vegan" class="btn btn-p">Start Here →</a>
+            <a href="/blog"           class="btn btn-g">Read the Blog</a>
           </div>
         </div>
       </div>
@@ -797,36 +846,38 @@
             <img src="https://switchtovegan.in/25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan" />
             Switch To Vegan
           </a>
-          <p>Practical, calm support for building a vegan lifestyle that feels clear, realistic, and sustainable in everyday life.</p>
+          <p>Practical, calm support for building a vegan lifestyle that feels clear, realistic, and sustainable — from India, for the world.</p>
         </div>
         <div class="ft__contact">
           <h4>Contact</h4>
           <a class="ft__email" href="mailto:switchtovegan01@gmail.com">✉ switchtovegan01@gmail.com</a>
-          <p class="ft__note">Questions, suggestions, or feedback are always welcome.</p>
+          <p class="ft__note">Questions, suggestions, or feedback — always welcome.</p>
         </div>
       </div>
       <div class="ft__bottom">
-        <p>© 2026 Switch To Vegan. All rights reserved.</p>
+        <p>© 2026 Switch To Vegan · Created by Mahima · All rights reserved.</p>
       </div>
     </div>
   </footer>
 
 
   <script>
-    // nav scroll
+    // nav scroll shadow
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('up', window.scrollY > 14);
     }, { passive: true });
 
-    // mobile nav
+    // mobile nav toggle
     document.getElementById('nb').addEventListener('click', () => {
       document.getElementById('nm').classList.toggle('on');
     });
 
     // scroll reveal
     const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+      });
     }, { threshold: 0.09, rootMargin: '0px 0px -36px 0px' });
     document.querySelectorAll('.rv').forEach(el => io.observe(el));
   </script>

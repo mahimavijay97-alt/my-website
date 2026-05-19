@@ -82,55 +82,7 @@
     .w-md { width: min(860px,  calc(100% - 48px)); margin: 0 auto; }
     .w-sm { width: min(680px,  calc(100% - 48px)); margin: 0 auto; }
 
-    /* ── NAV ── */
-    .nav {
-      position: sticky; top: 0; z-index: 200;
-      background: rgba(250,248,243,0.86);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid transparent;
-      transition: border-color .25s, box-shadow .25s;
-    }
-    .nav.up { border-bottom-color: var(--border); box-shadow: 0 6px 24px rgba(20,30,22,0.05); }
-    .nav__r {
-      width: min(1140px, calc(100% - 48px));
-      margin: 0 auto; height: 76px;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 20px; position: relative;
-    }
-    .brand {
-      display: inline-flex; align-items: center; gap: 12px;
-      font-family: var(--body); font-weight: 700; font-size: .88rem;
-      letter-spacing: .08em; text-transform: uppercase; color: var(--ink);
-    }
-    .brand img { width: 36px; height: 36px; border-radius: 9px; box-shadow: var(--sh-s); }
-    .nav__ul {
-      display: flex; align-items: center; gap: 30px;
-      list-style: none; margin-left: auto;
-    }
-    .nav__ul a {
-      font-size: .9rem; font-weight: 500; color: var(--ink); position: relative;
-    }
-    .nav__ul a::after {
-      content: ''; position: absolute; bottom: -5px; left: 0;
-      width: 100%; height: 1.5px; background: var(--green);
-      transform: scaleX(0); transform-origin: left;
-      transition: transform .22s var(--ease);
-    }
-    .nav__ul a:hover::after,
-    .nav__ul a[aria-current]::after { transform: scaleX(1); }
-    .nav__btn { display: none; background: none; border: none; color: var(--ink); font-size: 1.25rem; cursor: pointer; margin-left: auto; }
-    @media (max-width: 700px) {
-      .nav__btn { display: flex; align-items: center; }
-      .nav__menu {
-        position: absolute; top: calc(100% + 8px); left: 16px; right: 16px;
-        background: rgba(255,255,255,0.97); border: 1px solid var(--border);
-        border-radius: 18px; box-shadow: var(--sh-m); padding: 14px;
-        opacity: 0; pointer-events: none; transform: translateY(-8px);
-        transition: all .2s var(--ease);
-      }
-      .nav__menu.on { opacity: 1; pointer-events: auto; transform: none; }
-      .nav__ul { flex-direction: column; align-items: flex-start; gap: 14px; }
-    }
+    
 
     /* ── SHARED TYPE ── */
     .eyebrow {

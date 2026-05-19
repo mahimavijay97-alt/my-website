@@ -440,7 +440,11 @@
     @media (max-width: 620px) { .ft__g { grid-template-columns: 1fr; gap: 24px; } }
 
     /* scroll reveal */
-    .rv { opacity: 0; transform: translateY(26px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+    .rv {
+  opacity: 1;
+  transform: none;
+  transition: opacity .6s var(--ease), transform .6s var(--ease);
+}
     .rv.on { opacity: 1; transform: none; }
     .rv.d1 { transition-delay: .1s; }
     .rv.d2 { transition-delay: .2s; }

@@ -26,29 +26,36 @@
   <link rel="alternate" hreflang="x-default" href="https://switchtovegan.in/about" />
 
   <!-- ═══ AUTHOR / E-E-A-T SCHEMA ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "url": "https://switchtovegan.in/about",
-    "name": "About Mahima — Switch To Vegan",
-    "description": "Mahima built SwitchToVegan.in after navigating a vegan transition in India with no practical, judgment-free guide that actually fit her life.",
-    "author": {
-      "@type": "Person",
-      "name": "Mahima",
-      "url": "https://switchtovegan.in/about",
-      "knowsAbout": ["veganism", "plant-based diet", "vegan transition", "vegan nutrition", "Indian vegan food"]
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Switch To Vegan",
-      "url": "https://switchtovegan.in",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://switchtovegan.in/25dfa885-849b-4c13-96b2-5b312f3e9105.png"
-      }
+  <script  const siteHeader = document.getElementById('siteHeader');
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  window.addEventListener('scroll', () => {
+    if (siteHeader) {
+      siteHeader.classList.toggle('up', window.scrollY > 14);
     }
+  }, { passive: true });
+
+  if (mobileToggle && mainNav) {
+    mobileToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+      mobileToggle.setAttribute(
+        'aria-expanded',
+        mainNav.classList.contains('active')
+      );
+    });
   }
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('on');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.09, rootMargin: '0px 0px -36px 0px' });
+
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
   </script>
   <style>
     :root {

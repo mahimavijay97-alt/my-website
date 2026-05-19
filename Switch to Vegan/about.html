@@ -445,28 +445,30 @@
     }
   </style>
 </head>
-<body>
+<body class="blog-page">
+  <header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="/index.html" class="site-brand">
+      <img src="/25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan logo">
+      <span>Switch To Vegan</span>
+    </a>
 
-  <!-- ═════ NAV — fixed href="/" (was /index) ═════ -->
-  <header class="nav" id="nav">
-    <div class="nav__r">
-      <a class="brand" href="/">
-        <img src="https://switchtovegan.in/25dfa885-849b-4c13-96b2-5b312f3e9105.png" alt="Switch To Vegan" />
-        Switch To Vegan
-      </a>
-      <button class="nav__btn" id="nb" aria-label="Menu">☰</button>
-      <nav class="nav__menu" id="nm">
-        <ul class="nav__ul">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about" aria-current="page">About</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/how-to-go-vegan">Start Here</a></li><!-- replaced Gallery with this -->
-          <li><a href="/vegan-guide">Vegan Guide</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul class="main-nav__links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog" class="active">Blog</a></li>
+        <li><a href="/vegan-guide">Vegan Guide</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+      </ul>
+    </nav>
 
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</header>
+  
   <!-- ═════ GLOBAL REACH STRIP ═════ -->
   <div class="geo-strip">
     <p>Designed for anyone anywhere trying to be vegan in real life.</p>
